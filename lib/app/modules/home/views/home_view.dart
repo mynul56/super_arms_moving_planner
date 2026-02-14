@@ -138,10 +138,13 @@ class HomeView extends GetView<HomeController> {
   }
 
   Widget _buildNotificationButton() {
-    return SizedBox(
-      width: 40,
-      height: 40,
-      child: SvgPicture.asset('assets/icons/notification.svg'),
+    return GestureDetector(
+      onTap: () => Get.toNamed(Routes.NOTIFICATIONS),
+      child: SizedBox(
+        width: 40,
+        height: 40,
+        child: SvgPicture.asset('assets/icons/notification.svg'),
+      ),
     );
   }
 
@@ -259,8 +262,16 @@ class HomeView extends GetView<HomeController> {
               'Routes',
               onTap: () => Get.toNamed(Routes.ROUTE),
             ),
-            _buildServiceItemSvg('assets/icons/clients.svg', 'Clients'),
-            _buildServiceItemSvg('assets/icons/payment.svg', 'Payment'),
+            _buildServiceItemSvg(
+              'assets/icons/clients.svg',
+              'Clients',
+              onTap: () => Get.toNamed(Routes.CLIENTS),
+            ),
+            _buildServiceItemSvg(
+              'assets/icons/payment.svg',
+              'Payment',
+              onTap: () => Get.toNamed(Routes.PAYMENT),
+            ),
           ],
         ),
       ],

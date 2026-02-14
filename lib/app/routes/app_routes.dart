@@ -35,6 +35,9 @@ abstract class Routes {
   static const DELIVERY_PROOF = _Paths.DELIVERY_PROOF;
   static const ROUTE = _Paths.ROUTE;
   static const ROUTE_OFFERS = _Paths.ROUTE_OFFERS;
+  static const CLIENTS = _Paths.CLIENTS;
+  static const CLIENT_PROFILE = _Paths.CLIENT_PROFILE;
+  static const NOTIFICATIONS = _Paths.NOTIFICATIONS;
 }
 
 abstract class _Paths {
@@ -71,4 +74,7 @@ abstract class _Paths {
   static const DELIVERY_PROOF = '/delivery-proof';
   static const ROUTE = '/route';
   static const ROUTE_OFFERS = '/route-offers';
+  static const CLIENTS = '/clients';
+  static const CLIENT_PROFILE = '/client-profile';
+  static const NOTIFICATIONS = '/notifications';
 }

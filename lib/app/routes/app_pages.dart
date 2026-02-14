@@ -61,6 +61,12 @@ import '../modules/route/bindings/route_binding.dart';
 import '../modules/route/views/route_view.dart';
 import '../modules/route_offers/bindings/route_offers_binding.dart';
 import '../modules/route_offers/views/route_offers_view.dart';
+import '../modules/clients/bindings/clients_binding.dart';
+import '../modules/clients/views/clients_view.dart';
+import '../modules/client_profile/bindings/client_profile_binding.dart';
+import '../modules/client_profile/views/client_profile_view.dart';
+import '../modules/notifications/bindings/notifications_binding.dart';
+import '../modules/notifications/views/notifications_view.dart';
 
 part 'app_routes.dart';
 
@@ -229,6 +235,21 @@ class AppPages {
       name: _Paths.ROUTE_OFFERS,
       page: () => const RouteOffersView(),
       binding: RouteOffersBinding(),
+    ),
+    GetPage(
+      name: _Paths.CLIENTS,
+      page: () => const ClientsView(),
+      binding: ClientsBinding(),
+    ),
+    GetPage(
+      name: _Paths.CLIENT_PROFILE,
+      page: () => const ClientProfileView(),
+      binding: ClientProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.NOTIFICATIONS,
+      page: () => const NotificationsView(),
+      binding: NotificationsBinding(),
     ),
   ];
 }
