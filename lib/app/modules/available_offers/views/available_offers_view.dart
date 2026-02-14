@@ -369,7 +369,7 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
       children: [
         Expanded(
           child: GestureDetector(
-            onTap: () => Get.toNamed(Routes.MOVING_PLANNER_DETAILS),
+            onTap: () => Get.toNamed(Routes.CONCIERGE_DETAILS),
             child: Container(
               height: 48,
               decoration: BoxDecoration(

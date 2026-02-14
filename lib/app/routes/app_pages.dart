@@ -47,12 +47,12 @@ import '../modules/profile/views/update_card_info_view.dart';
 import '../modules/profile/views/edit_document_view.dart';
 import '../modules/profile/views/manage_company_view.dart';
 import '../modules/profile/views/add_employee_view.dart';
-import '../modules/details/bindings/details_binding.dart';
-import '../modules/details/views/details_view.dart';
 import '../modules/waybill/bindings/waybill_binding.dart';
 import '../modules/waybill/views/waybill_view.dart';
 import '../modules/moving_planner_details/bindings/moving_planner_details_binding.dart';
 import '../modules/moving_planner_details/views/moving_planner_details_view.dart';
+import '../modules/concoerge_details/bindings/concoerge_details_binding.dart';
+import '../modules/concoerge_details/views/concoerge_details_view.dart';
 
 part 'app_routes.dart';
 
@@ -196,6 +196,11 @@ class AppPages {
       name: _Paths.MOVING_PLANNER_DETAILS,
       page: () => const MovingPlannerDetailsView(),
       binding: MovingPlannerDetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.CONCIERGE_DETAILS,
+      page: () => const ConciergeDetailsView(),
+      binding: ConciergeDetailsBinding(),
     ),
   ];
 }
