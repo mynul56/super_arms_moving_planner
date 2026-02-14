@@ -36,6 +36,8 @@ import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 import '../modules/search_offers/bindings/search_offers_binding.dart';
 import '../modules/search_offers/views/search_offers_view.dart';
+import '../modules/details/bindings/details_binding.dart';
+import '../modules/details/views/details_view.dart';
 
 part 'app_routes.dart';
 
@@ -134,6 +136,11 @@ class AppPages {
       name: _Paths.SEARCH_OFFERS,
       page: () => const SearchOffersView(),
       binding: SearchOffersBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAILS,
+      page: () => const DetailsView(),
+      binding: DetailsBinding(),
     ),
   ];
 }

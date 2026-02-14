@@ -373,7 +373,7 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
       children: [
         Expanded(
           child: GestureDetector(
-            onTap: () => controller.onViewDetails(offer),
+            onTap: () => Get.toNamed(Routes.DETAILS),
             child: Container(
               height: 48,
               decoration: BoxDecoration(
