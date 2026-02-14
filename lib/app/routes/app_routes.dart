@@ -32,6 +32,9 @@ abstract class Routes {
   static const MOVING_PLANNER_DETAILS = _Paths.MOVING_PLANNER_DETAILS;
   static const CONCIERGE_DETAILS = _Paths.CONCIERGE_DETAILS;
   static const MOVE_WITHOUT_TRUCK_DETAILS = _Paths.MOVE_WITHOUT_TRUCK_DETAILS;
+  static const DELIVERY_PROOF = _Paths.DELIVERY_PROOF;
+  static const ROUTE = _Paths.ROUTE;
+  static const ROUTE_OFFERS = _Paths.ROUTE_OFFERS;
 }
 
 abstract class _Paths {
@@ -65,4 +68,7 @@ abstract class _Paths {
   static const MOVING_PLANNER_DETAILS = '/moving-planner-details';
   static const CONCIERGE_DETAILS = '/concierge-details';
   static const MOVE_WITHOUT_TRUCK_DETAILS = '/move-without-truck-details';
+  static const DELIVERY_PROOF = '/delivery-proof';
+  static const ROUTE = '/route';
+  static const ROUTE_OFFERS = '/route-offers';
 }

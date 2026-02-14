@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/congratulations_controller.dart';
+import '../../../../routes/app_pages.dart';
 
 class CongratulationsView extends GetView<CongratulationsController> {
   const CongratulationsView({super.key});
@@ -28,7 +29,11 @@ class CongratulationsView extends GetView<CongratulationsController> {
                         color: const Color(0xFFEFB94C).withOpacity(0.1),
                         borderRadius: BorderRadius.circular(200),
                       ),
-                      child: const Icon(Icons.arrow_back_ios_new, size: 18, color: Color(0xFFEFB94C)),
+                      child: const Icon(
+                        Icons.arrow_back_ios_new,
+                        size: 18,
+                        color: Color(0xFFEFB94C),
+                      ),
                     ),
                   ),
                 ],
@@ -51,19 +56,28 @@ class CongratulationsView extends GetView<CongratulationsController> {
                         Container(
                           width: 193,
                           height: 193,
-                          decoration: BoxDecoration(shape: BoxShape.circle, color: const Color(0xFF3AE15D).withOpacity(0.1)),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: const Color(0xFF3AE15D).withOpacity(0.1),
+                          ),
                         ),
                         // Middle circle
                         Container(
                           width: 153,
                           height: 153,
-                          decoration: BoxDecoration(shape: BoxShape.circle, color: const Color(0xFF3AE15D).withOpacity(0.1)),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: const Color(0xFF3AE15D).withOpacity(0.1),
+                          ),
                         ),
                         // Inner circle
                         Container(
                           width: 111,
                           height: 111,
-                          decoration: BoxDecoration(shape: BoxShape.circle, color: const Color(0xFF3AE15D).withOpacity(0.1)),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: const Color(0xFF3AE15D).withOpacity(0.1),
+                          ),
                         ),
                         // Success illustration with gradient
                         Container(
@@ -77,7 +91,11 @@ class CongratulationsView extends GetView<CongratulationsController> {
                               radius: 1.0,
                             ),
                           ),
-                          child: const Icon(Icons.check, size: 50, color: Colors.white),
+                          child: const Icon(
+                            Icons.check,
+                            size: 50,
+                            color: Colors.white,
+                          ),
                         ),
                         // Decorative elements
                         // Top right triangle
@@ -89,7 +107,10 @@ class CongratulationsView extends GetView<CongratulationsController> {
                             child: Container(
                               width: 12,
                               height: 12,
-                              decoration: const BoxDecoration(color: Color(0xFFAAE849), shape: BoxShape.circle),
+                              decoration: const BoxDecoration(
+                                color: Color(0xFFAAE849),
+                                shape: BoxShape.circle,
+                              ),
                             ),
                           ),
                         ),
@@ -132,7 +153,10 @@ class CongratulationsView extends GetView<CongratulationsController> {
                           child: Container(
                             width: 11,
                             height: 11,
-                            decoration: const BoxDecoration(color: Color(0xFF8DDB52), shape: BoxShape.circle),
+                            decoration: const BoxDecoration(
+                              color: Color(0xFF8DDB52),
+                              shape: BoxShape.circle,
+                            ),
                           ),
                         ),
                       ],
@@ -162,7 +186,7 @@ class CongratulationsView extends GetView<CongratulationsController> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text(
-                      'Admin Has Approved Your Request. From Now You Can Provide Moving Service.',
+                      'Move Complete',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.poppins(
                         color: Colors.black.withOpacity(0.5),
@@ -177,7 +201,7 @@ class CongratulationsView extends GetView<CongratulationsController> {
 
                   // Welcome box button
                   GestureDetector(
-                    onTap: () => controller.navigateToHome(),
+                    onTap: () => Get.offAllNamed(Routes.HOME),
                     child: Container(
                       margin: const EdgeInsets.symmetric(horizontal: 64),
                       padding: const EdgeInsets.all(24),
@@ -186,7 +210,7 @@ class CongratulationsView extends GetView<CongratulationsController> {
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Text(
-                        'Welcome To Super Arms.',
+                        'Back to Home',
                         textAlign: TextAlign.center,
                         style: GoogleFonts.poppins(
                           color: const Color(0xFFEFB94C),

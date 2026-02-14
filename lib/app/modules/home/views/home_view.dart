@@ -254,7 +254,11 @@ class HomeView extends GetView<HomeController> {
               'Live\nTracking',
               onTap: () => Get.toNamed(Routes.LIVE_TRACKING),
             ),
-            _buildServiceItemSvg('assets/icons/routes.svg', 'Routes'),
+            _buildServiceItemSvg(
+              'assets/icons/routes.svg',
+              'Routes',
+              onTap: () => Get.toNamed(Routes.ROUTE),
+            ),
             _buildServiceItemSvg('assets/icons/clients.svg', 'Clients'),
             _buildServiceItemSvg('assets/icons/payment.svg', 'Payment'),
           ],

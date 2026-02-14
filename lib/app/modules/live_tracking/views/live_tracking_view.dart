@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/live_tracking_controller.dart';
+import '../../../routes/app_pages.dart';
 
 class LiveTrackingView extends GetView<LiveTrackingController> {
   const LiveTrackingView({super.key});
@@ -408,7 +409,8 @@ class LiveTrackingView extends GetView<LiveTrackingController> {
                     child: GestureDetector(
                       onTap: () {
                         controller.updateStatus(move['id'], 'Delivered');
-                        Get.back();
+                        Get.back(); // Close dialog
+                        Get.toNamed(Routes.DELIVERY_PROOF);
                       },
                       child: Container(
                         height: 48,

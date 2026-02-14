@@ -55,6 +55,12 @@ import '../modules/concierge_details/bindings/concierge_details_binding.dart';
 import '../modules/concierge_details/views/concierge_details_view.dart';
 import '../modules/move_without_truck_details/bindings/move_without_truck_details_binding.dart';
 import '../modules/move_without_truck_details/views/move_without_truck_details_view.dart';
+import '../modules/delivery_proof/bindings/delivery_proof_binding.dart';
+import '../modules/delivery_proof/views/delivery_proof_view.dart';
+import '../modules/route/bindings/route_binding.dart';
+import '../modules/route/views/route_view.dart';
+import '../modules/route_offers/bindings/route_offers_binding.dart';
+import '../modules/route_offers/views/route_offers_view.dart';
 
 part 'app_routes.dart';
 
@@ -208,6 +214,21 @@ class AppPages {
       name: _Paths.MOVE_WITHOUT_TRUCK_DETAILS,
       page: () => const MoveWithoutTruckDetailsView(),
       binding: MoveWithoutTruckDetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.DELIVERY_PROOF,
+      page: () => const DeliveryProofView(),
+      binding: DeliveryProofBinding(),
+    ),
+    GetPage(
+      name: _Paths.ROUTE,
+      page: () => const RouteView(),
+      binding: RouteBinding(),
+    ),
+    GetPage(
+      name: _Paths.ROUTE_OFFERS,
+      page: () => const RouteOffersView(),
+      binding: RouteOffersBinding(),
     ),
   ];
 }
