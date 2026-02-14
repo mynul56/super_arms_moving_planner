@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/live_tracking_controller.dart';
-import '../../../routes/app_pages.dart';
 
 class LiveTrackingView extends GetView<LiveTrackingController> {
   const LiveTrackingView({super.key});
@@ -75,106 +74,109 @@ class LiveTrackingView extends GetView<LiveTrackingController> {
   }
 
   Widget _buildMissionCard(Map<String, dynamic> move) {
-    return Container(
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: const Color(0xFFEFB94C).withOpacity(0.1),
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                width: 52,
-                padding: const EdgeInsets.all(14),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF7E6DB),
-                  borderRadius: BorderRadius.circular(30),
+    return Obx(() {
+      final isExpanded = controller.expandedMoveId.value == move['id'];
+      return Container(
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: const Color(0xFFEFB94C).withOpacity(0.1),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 52,
+                  padding: const EdgeInsets.all(14),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFF7E6DB),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Image.asset(
+                    'assets/images/box.png',
+                    width: 24,
+                    height: 24,
+                  ),
                 ),
-                child: Image.asset(
-                  'assets/images/box.png',
-                  width: 24,
-                  height: 24,
-                ),
-              ),
-              const SizedBox(width: 8),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Order ID: ${move['id']}24769746ZX',
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: const Color(0xFF212529),
-                        height: 1.5,
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Order ID: ${move['id']}24769746ZX',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700,
+                          color: const Color(0xFF212529),
+                          height: 1.5,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 4),
-                    Row(
-                      children: [
-                        Text(
-                          'Moving price: ',
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            color: const Color(0xFFEFB94C),
-                            height: 1.5,
+                      const SizedBox(height: 4),
+                      Row(
+                        children: [
+                          Text(
+                            'Moving price: ',
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                              color: const Color(0xFFEFB94C),
+                              height: 1.5,
+                            ),
                           ),
-                        ),
-                        Text(
-                          '€${move['price']}',
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            color: const Color(0xFFEFB94C),
-                            height: 1.5,
+                          Text(
+                            '€${move['price']}',
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                              color: const Color(0xFFEFB94C),
+                              height: 1.5,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          '${move['from']}',
-                          style: GoogleFonts.poppins(
-                            fontSize: 14,
-                            color: const Color(0xFF495057),
-                            height: 1.5,
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            '${move['from']}',
+                            style: GoogleFonts.poppins(
+                              fontSize: 14,
+                              color: const Color(0xFF495057),
+                              height: 1.5,
+                            ),
                           ),
-                        ),
-                        const SizedBox(width: 8),
-                        const Icon(
-                          Icons.arrow_forward,
-                          size: 16,
-                          color: Color(0xFF495057),
-                        ),
-                        const SizedBox(width: 8),
-                        Text(
-                          '${move['to']}',
-                          style: GoogleFonts.poppins(
-                            fontSize: 14,
-                            color: const Color(0xFF495057),
-                            height: 1.5,
+                          const SizedBox(width: 8),
+                          const Icon(
+                            Icons.arrow_forward,
+                            size: 16,
+                            color: Color(0xFF495057),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          const SizedBox(width: 8),
+                          Text(
+                            '${move['to']}',
+                            style: GoogleFonts.poppins(
+                              fontSize: 14,
+                              color: const Color(0xFF495057),
+                              height: 1.5,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-          _buildMissionDetails(move),
-          const SizedBox(height: 12),
-          _buildContinueButton(),
-        ],
-      ),
-    );
+              ],
+            ),
+            const SizedBox(height: 12),
+            _buildMissionDetails(move),
+            const SizedBox(height: 12),
+            isExpanded ? _buildStatusButtons(move) : _buildContinueButton(move),
+          ],
+        ),
+      );
+    });
   }
 
   Widget _buildMissionDetails(Map<String, dynamic> move) {
@@ -279,9 +281,9 @@ class LiveTrackingView extends GetView<LiveTrackingController> {
     );
   }
 
-  Widget _buildContinueButton() {
+  Widget _buildContinueButton(Map<String, dynamic> move) {
     return GestureDetector(
-      onTap: () => Get.toNamed(Routes.DETAILS),
+      onTap: () => controller.toggleExpanded(move['id']),
       child: Container(
         width: double.infinity,
         height: 48,
@@ -298,6 +300,159 @@ class LiveTrackingView extends GetView<LiveTrackingController> {
               color: const Color(0xFFEFB94C),
               height: 1.5,
             ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildStatusButtons(Map<String, dynamic> move) {
+    return Column(
+      children: [
+        _buildStatusButton(
+          title: 'On The Way To Pickup',
+          color: const Color(0xFF38B000),
+          textColor: Colors.white,
+          isFilled: true,
+          onTap: () =>
+              controller.updateStatus(move['id'], 'On The Way To Pickup'),
+        ),
+        const SizedBox(height: 10),
+        _buildStatusButton(
+          title: 'On The Way To Delivery',
+          color: const Color(0xFFEFB94C),
+          textColor: const Color(0xFFEFB94C),
+          isFilled: false,
+          onTap: () =>
+              controller.updateStatus(move['id'], 'On The Way To Delivery'),
+        ),
+        const SizedBox(height: 10),
+        _buildStatusButton(
+          title: 'Delivered',
+          color: const Color(0xFFEFB94C),
+          textColor: const Color(0xFFEFB94C),
+          isFilled: false,
+          onTap: () {
+            _showDeliveredDialog(move);
+          },
+        ),
+      ],
+    );
+  }
+
+  Widget _buildStatusButton({
+    required String title,
+    required Color color,
+    required Color textColor,
+    required bool isFilled,
+    required VoidCallback onTap,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: double.infinity,
+        height: 48,
+        decoration: BoxDecoration(
+          color: isFilled ? color : Colors.transparent,
+          border: isFilled ? null : Border.all(color: color),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              if (isFilled) ...[
+                const Icon(Icons.check_circle, color: Colors.white, size: 20),
+                const SizedBox(width: 8),
+              ],
+              Text(
+                title,
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                  color: textColor,
+                  height: 1.5,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _showDeliveredDialog(Map<String, dynamic> move) {
+    Get.dialog(
+      Dialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'Mark this consignment\nas delivered?',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  color: const Color(0xFF212529),
+                ),
+              ),
+              const SizedBox(height: 32),
+              Row(
+                children: [
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        controller.updateStatus(move['id'], 'Delivered');
+                        Get.back();
+                      },
+                      child: Container(
+                        height: 48,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFEFB94C),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Yes',
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () => Get.back(),
+                      child: Container(
+                        height: 48,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: const Color(0xFFAAAAAA)),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'No',
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: const Color(0xFF212529),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),

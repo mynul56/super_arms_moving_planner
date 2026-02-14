@@ -30,6 +30,29 @@ class LiveTrackingController extends GetxController {
     },
   ].obs;
 
+  final expandedMoveId = RxnString();
+
+  void toggleExpanded(String id) {
+    if (expandedMoveId.value == id) {
+      expandedMoveId.value = null; // Collapse if already expanded
+    } else {
+      expandedMoveId.value = id; // Expand
+    }
+  }
+
+  void updateStatus(String id, String status) {
+    final index = moves.indexWhere((m) => m['id'] == id);
+    if (index != -1) {
+      moves[index]['status'] = status;
+      moves.refresh(); // Force UI update
+    }
+    // Collapse after status update? Or keep expanded?
+    // Usually keep expanded or collapse. Let's keep it for now or collapse if 'Delivered'.
+    if (status == 'Delivered') {
+      expandedMoveId.value = null;
+    }
+  }
+
   @override
   void onInit() {
     super.onInit();
