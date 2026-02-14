@@ -709,7 +709,7 @@ class HomeView extends GetView<HomeController> {
           _buildNavItemSvg('assets/icons/home.svg', 'Home', true),
           _buildNavItemSvg('assets/icons/paymenticon.svg', 'Payments', false),
           _buildNavItemSvg('assets/icons/calendar.svg', 'Schedule', false),
-          _buildNavItemSvg('assets/icons/more.svg', 'More', false),
+          _buildNavItemSvg('assets/icons/chatnavbar.svg', 'Chat', false),
         ],
       ),
     );

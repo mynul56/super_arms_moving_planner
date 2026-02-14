@@ -25,6 +25,7 @@ abstract class Routes {
   static const PROFILE = _Paths.PROFILE;
   static const EDIT_PROFILE = _Paths.EDIT_PROFILE;
   static const UPDATE_CARD_INFO = _Paths.UPDATE_CARD_INFO;
+  static const WAYBILL = _Paths.WAYBILL;
 }
 
 abstract class _Paths {
@@ -51,4 +52,5 @@ abstract class _Paths {
   static const PROFILE = '/profile';
   static const EDIT_PROFILE = '/edit-profile';
   static const UPDATE_CARD_INFO = '/update-card-info';
+  static const WAYBILL = '/waybill';
 }

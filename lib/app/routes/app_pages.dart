@@ -44,6 +44,10 @@ import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 
 import '../modules/profile/views/update_card_info_view.dart';
+import '../modules/details/bindings/details_binding.dart';
+import '../modules/details/views/details_view.dart';
+import '../modules/waybill/bindings/waybill_binding.dart';
+import '../modules/waybill/views/waybill_view.dart';
 
 part 'app_routes.dart';
 
@@ -162,6 +166,11 @@ class AppPages {
       name: _Paths.UPDATE_CARD_INFO,
       page: () => const UpdateCardInfoView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.WAYBILL,
+      page: () => const WaybillView(),
+      binding: WaybillBinding(),
     ),
   ];
 }
