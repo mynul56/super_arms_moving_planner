@@ -38,6 +38,8 @@ import '../modules/search_offers/bindings/search_offers_binding.dart';
 import '../modules/search_offers/views/search_offers_view.dart';
 import '../modules/details/bindings/details_binding.dart';
 import '../modules/details/views/details_view.dart';
+import '../modules/waybill/bindings/waybill_binding.dart';
+import '../modules/waybill/views/waybill_view.dart';
 
 part 'app_routes.dart';
 
@@ -141,6 +143,11 @@ class AppPages {
       name: _Paths.DETAILS,
       page: () => const DetailsView(),
       binding: DetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.WAYBILL,
+      page: () => const WaybillView(),
+      binding: WaybillBinding(),
     ),
   ];
 }

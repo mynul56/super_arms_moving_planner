@@ -39,6 +39,8 @@ dependencies:
   flutter_svg: ^2.2.3
   image_picker: ^1.1.2
   file_picker: ^8.1.6
+  pdf: ^3.11.3
+  printing: ^5.14.2
 
 dev_dependencies:
   flutter_test:
