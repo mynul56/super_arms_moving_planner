@@ -44,6 +44,9 @@ import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 
 import '../modules/profile/views/update_card_info_view.dart';
+import '../modules/profile/views/edit_document_view.dart';
+import '../modules/profile/views/manage_company_view.dart';
+import '../modules/profile/views/add_employee_view.dart';
 import '../modules/details/bindings/details_binding.dart';
 import '../modules/details/views/details_view.dart';
 import '../modules/waybill/bindings/waybill_binding.dart';
@@ -171,6 +174,21 @@ class AppPages {
       name: _Paths.WAYBILL,
       page: () => const WaybillView(),
       binding: WaybillBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_DOCUMENT,
+      page: () => const EditDocumentView(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.MANAGE_COMPANY,
+      page: () => const ManageCompanyView(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_EMPLOYEE,
+      page: () => const AddEmployeeView(),
+      binding: ProfileBinding(),
     ),
   ];
 }

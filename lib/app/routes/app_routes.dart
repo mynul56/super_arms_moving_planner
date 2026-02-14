@@ -26,6 +26,9 @@ abstract class Routes {
   static const EDIT_PROFILE = _Paths.EDIT_PROFILE;
   static const UPDATE_CARD_INFO = _Paths.UPDATE_CARD_INFO;
   static const WAYBILL = _Paths.WAYBILL;
+  static const EDIT_DOCUMENT = _Paths.EDIT_DOCUMENT;
+  static const MANAGE_COMPANY = _Paths.MANAGE_COMPANY;
+  static const ADD_EMPLOYEE = _Paths.ADD_EMPLOYEE;
 }
 
 abstract class _Paths {
@@ -53,4 +56,7 @@ abstract class _Paths {
   static const EDIT_PROFILE = '/edit-profile';
   static const UPDATE_CARD_INFO = '/update-card-info';
   static const WAYBILL = '/waybill';
+  static const EDIT_DOCUMENT = '/edit-document';
+  static const MANAGE_COMPANY = '/manage-company';
+  static const ADD_EMPLOYEE = '/add-employee';
 }

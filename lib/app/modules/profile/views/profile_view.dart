@@ -185,7 +185,7 @@ class ProfileView extends GetView<ProfileController> {
           _buildActionButton(
             title: 'Edit Document',
             icon: Icons.edit_outlined,
-            onTap: () {},
+            onTap: () => Get.toNamed(Routes.EDIT_DOCUMENT),
           ),
           const SizedBox(height: 16),
           _buildActionButton(

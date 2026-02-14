@@ -108,7 +108,8 @@ class MainDrawer extends StatelessWidget {
             icon: Icons.business_outlined,
             title: 'Manage Company',
             onTap: () {
-              Get.back();
+              Get.back(); // Close drawer
+              Get.toNamed(Routes.MANAGE_COMPANY);
             },
           ),
           _buildMenuItem(
