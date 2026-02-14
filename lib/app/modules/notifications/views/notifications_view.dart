@@ -137,6 +137,11 @@ class NotificationsView extends GetView<NotificationsController> {
   }
 
   Widget _buildNotificationItem(Map<String, dynamic> notification) {
+    final isBlue = notification['isBlue'] == true;
+    final primaryColor = isBlue
+        ? const Color(0xFF3ABEFF)
+        : const Color(0xFFEFB94C);
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -144,12 +149,12 @@ class NotificationsView extends GetView<NotificationsController> {
           width: 44,
           height: 44,
           decoration: BoxDecoration(
-            color: const Color(0xFFEFB94C).withOpacity(0.1),
+            color: primaryColor.withOpacity(0.1),
             borderRadius: BorderRadius.circular(200),
           ),
-          child: const Icon(
+          child: Icon(
             Icons.notifications_none_outlined,
-            color: Color(0xFFEFB94C),
+            color: primaryColor,
             size: 24,
           ),
         ),
@@ -158,7 +163,7 @@ class NotificationsView extends GetView<NotificationsController> {
           child: Text(
             notification['title'],
             style: GoogleFonts.poppins(
-              fontSize: 14, // Slightly adjusted from 16 to fit better
+              fontSize: 16,
               fontWeight: FontWeight.w400,
               color: const Color(0xFF212529),
               height: 1.5,
@@ -183,7 +188,8 @@ class NotificationsView extends GetView<NotificationsController> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+        height: 56,
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
           color: const Color(0xFFEFB94C),
           borderRadius: BorderRadius.circular(16),
@@ -197,16 +203,40 @@ class NotificationsView extends GetView<NotificationsController> {
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
                 color: Colors.white,
+                height: 1.5,
               ),
             ),
             Obx(
-              () => Switch(
-                value: controller.areNotificationsEnabled.value,
-                onChanged: controller.toggleNotifications,
-                activeColor: const Color(0xFFEFB94C),
-                activeTrackColor: Colors.white,
-                inactiveThumbColor: Colors.grey,
-                inactiveTrackColor: Colors.white,
+              () => GestureDetector(
+                onTap: () => controller.toggleNotifications(
+                  !controller.areNotificationsEnabled.value,
+                ),
+                child: Container(
+                  width: 50,
+                  height: 30,
+                  padding: const EdgeInsets.all(3),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(32),
+                  ),
+                  child: AnimatedAlign(
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                    alignment: controller.areNotificationsEnabled.value
+                        ? Alignment.centerRight
+                        : Alignment.centerLeft,
+                    child: Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: controller.areNotificationsEnabled.value
+                            ? const Color(0xFFEFB94C)
+                            : Colors.grey,
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ),
           ],
