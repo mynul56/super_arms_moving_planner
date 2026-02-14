@@ -5,6 +5,10 @@ class HomeController extends GetxController {
   final userName = 'John Doe'.obs;
   final userType = 'Personal'.obs; // Personal, Business, Military
 
+  // Balance
+  final balance = 25000.0.obs;
+  final isBalanceVisible = false.obs;
+
   // Statistics
   final totalMoves = 12.obs;
   final activeMoves = 2.obs;
@@ -95,5 +99,9 @@ class HomeController extends GetxController {
       'Viewing move $moveId',
       snackPosition: SnackPosition.BOTTOM,
     );
+  }
+
+  void toggleBalance() {
+    isBalanceVisible.value = !isBalanceVisible.value;
   }
 }

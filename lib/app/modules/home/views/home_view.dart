@@ -79,41 +79,48 @@ class HomeView extends GetView<HomeController> {
   }
 
   Widget _buildBalanceChip() {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(30),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 24,
-            height: 24,
-            decoration: const BoxDecoration(
-              color: Color(0xFFEFB94C),
-              shape: BoxShape.circle,
-            ),
-            child: Center(
-              child: Text(
-                '€',
-                style: GoogleFonts.poppins(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
+    return GestureDetector(
+      onTap: () => controller.toggleBalance(),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(30),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 24,
+              height: 24,
+              decoration: const BoxDecoration(
+                color: Color(0xFFEFB94C),
+                shape: BoxShape.circle,
+              ),
+              child: Center(
+                child: Text(
+                  '€',
+                  style: GoogleFonts.poppins(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
-          ),
-          const SizedBox(width: 6),
-          Text(
-            'Tap for balance',
-            style: GoogleFonts.poppins(
-              fontSize: 12,
-              color: const Color(0xFF495057),
+            const SizedBox(width: 6),
+            Obx(
+              () => Text(
+                controller.isBalanceVisible.value
+                    ? '€${controller.balance.value.toStringAsFixed(0)}'
+                    : 'Tap for balance',
+                style: GoogleFonts.poppins(
+                  fontSize: 12,
+                  color: const Color(0xFF495057),
+                ),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -618,12 +625,7 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  Widget _buildStatCard(
-    dynamic icon,
-    String value,
-    String label,
-    Color color,
-  ) {
+  Widget _buildStatCard(dynamic icon, String value, String label, Color color) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
       decoration: BoxDecoration(
