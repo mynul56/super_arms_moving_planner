@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
+import 'package:super_arms_moving_planner/app/routes/app_pages.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/moving_planner_details_controller.dart';
@@ -17,35 +18,450 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
           children: [
             _buildHeader(),
             Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Center(
-                      child: Text(
-                        'Details',
-                        style: GoogleFonts.poppins(
-                          fontSize: 26,
-                          fontWeight: FontWeight.w600,
-                          color: const Color(0xFF212529),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-                    _buildClientInfo(),
-                    const SizedBox(height: 24),
-                    _buildOrderInfoCard(),
-                    const SizedBox(height: 24),
-                    _buildSelectedItemsSection(),
-                    const SizedBox(height: 24),
-                    _buildSpecialRequirementsCard(),
-                    const SizedBox(height: 30),
-                  ],
+              child: Obx(() {
+                if (controller.selectedMainTab.value == 0) {
+                  return _buildDetailsContent();
+                } else if (controller.selectedMainTab.value == 1) {
+                  return _buildInventoryContent();
+                } else if (controller.selectedMainTab.value == 2) {
+                  return _buildMapContent();
+                } else if (controller.selectedMainTab.value == 3) {
+                  return _buildDescriptionContent();
+                } else {
+                  return const Center(child: Text("Coming Soon"));
+                }
+              }),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDetailsContent() {
+    return SingleChildScrollView(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Center(
+            child: Text(
+              'Details',
+              style: GoogleFonts.poppins(
+                fontSize: 26,
+                fontWeight: FontWeight.w600,
+                color: const Color(0xFF212529),
+              ),
+            ),
+          ),
+          const SizedBox(height: 24),
+          _buildTabBar(),
+          const SizedBox(height: 24),
+          _buildClientProfile(),
+          const SizedBox(height: 24),
+          _buildOrderInfoCard(),
+          const SizedBox(height: 24),
+          _buildSpecialRequirementsCard(),
+          const SizedBox(height: 30),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildInventoryContent() {
+    return SingleChildScrollView(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        children: [
+          Center(
+            child: Text(
+              'Details',
+              style: GoogleFonts.poppins(
+                fontSize: 26,
+                fontWeight: FontWeight.w600,
+                color: const Color(0xFF212529),
+              ),
+            ),
+          ),
+          const SizedBox(height: 24),
+          _buildTabBar(),
+          const SizedBox(height: 24),
+          _buildSelectedItemsSection(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildMapContent() {
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Column(
+          children: [
+            Center(
+              child: Text(
+                'Details',
+                style: GoogleFonts.poppins(
+                  fontSize: 26,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xFF212529),
                 ),
               ),
             ),
+            const SizedBox(height: 24),
+            _buildTabBar(),
+            const SizedBox(height: 24),
+            Container(
+              decoration: BoxDecoration(
+                color: const Color(0xFFEFB94C).withOpacity(0.1),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                children: [
+                  Container(
+                    height: 243,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      image: const DecorationImage(
+                        image: AssetImage('assets/images/map.png'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          top: 40,
+                          right: 20,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 20,
+                              vertical: 10,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(30),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  blurRadius: 20,
+                                  offset: const Offset(0, 4),
+                                ),
+                              ],
+                            ),
+                            child: Text(
+                              '5.2Km',
+                              style: GoogleFonts.poppins(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: const Color(0xFF1B1D21),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 20,
+                          right: 20,
+                          child: Container(
+                            width: 44,
+                            height: 44,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(22),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  blurRadius: 10,
+                                  offset: const Offset(0, 4),
+                                ),
+                              ],
+                            ),
+                            child: const Icon(
+                              Icons.my_location,
+                              color: Color(0xFF212529),
+                              size: 24,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        children: [
+                          const Icon(
+                            Icons.location_on_outlined,
+                            color: Color(0xFF495057),
+                            size: 24,
+                          ),
+                          Container(
+                            height: 20,
+                            width: 1,
+                            margin: const EdgeInsets.symmetric(vertical: 4),
+                            child: LayoutBuilder(
+                              builder: (context, constraints) {
+                                return Flex(
+                                  direction: Axis.vertical,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: List.generate(3, (_) {
+                                    return SizedBox(
+                                      width: 1,
+                                      height: 3,
+                                      child: DecoratedBox(
+                                        decoration: BoxDecoration(
+                                          color: const Color(
+                                            0xFF495057,
+                                          ).withOpacity(0.3),
+                                        ),
+                                      ),
+                                    );
+                                  }),
+                                );
+                              },
+                            ),
+                          ),
+                          Container(
+                            width: 16,
+                            height: 16,
+                            decoration: const BoxDecoration(
+                              color: Color(0xFF38B000),
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Icon(
+                              Icons.star,
+                              color: Colors.white,
+                              size: 10,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              height: 24,
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  '2045  Lodgeville Street, Eagan',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: const Color(0xFF212529),
+                                  ),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 24),
+                            SizedBox(
+                              height: 24,
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  '3329  Joyce Stree, PA, USA',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: const Color(0xFF212529),
+                                  ),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDescriptionContent() {
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Column(
+          children: [
+            Center(
+              child: Text(
+                'Details',
+                style: GoogleFonts.poppins(
+                  fontSize: 26,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xFF212529),
+                ),
+              ),
+            ),
+            const SizedBox(height: 24),
+            _buildTabBar(),
+            const SizedBox(height: 24),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 30),
+              decoration: BoxDecoration(
+                color: const Color(0xFFEFB94C).withOpacity(0.1),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Row(
+                children: [
+                  const Icon(
+                    Icons.check_circle,
+                    color: Color(0xFF38B000),
+                    size: 24,
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      'Consignment Note',
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: const Color(0xFF212529),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      GestureDetector(
+                        onTap: () => Get.toNamed(Routes.WAYBILL),
+                        child: const Icon(
+                          Icons.visibility_outlined,
+                          color: Color(0xFF495057),
+                          size: 24,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      GestureDetector(
+                        onTap: () => controller.downloadWaybill(),
+                        child: const Icon(
+                          Icons.download_rounded,
+                          color: Color(0xFF212529),
+                          size: 24,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      GestureDetector(
+                        onTap: () => _showConsignmentEditDialog(),
+                        child: const Icon(
+                          Icons.edit_outlined,
+                          color: Color(0xFF212529),
+                          size: 24,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _showConsignmentEditDialog() {
+    final textController = TextEditingController(
+      text: controller.consignmentNote.value,
+    );
+    Get.dialog(
+      Dialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        child: Container(
+          width: 335,
+          height: 276,
+          padding: const EdgeInsets.all(24),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0xFF8E8E8E).withOpacity(0.33),
+                blurRadius: 18.8,
+                spreadRadius: -1,
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'Consignment Note',
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                  color: const Color(0xFF212529),
+                ),
+              ),
+              const SizedBox(height: 24),
+              Expanded(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 18,
+                    vertical: 14,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: const Color(0xFF848484).withOpacity(0.6),
+                    ),
+                  ),
+                  child: TextField(
+                    controller: textController,
+                    maxLines: null,
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: const Color(0xFF212529),
+                    ),
+                    decoration: const InputDecoration.collapsed(
+                      hintText: 'Enter note...',
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+              GestureDetector(
+                onTap: () {
+                  controller.updateConsignmentNote(textController.text);
+                  Get.back();
+                },
+                child: Container(
+                  width: double.infinity,
+                  height: 44,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFEFB94C),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(
+                    'Save',
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -124,136 +540,129 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
     );
   }
 
-  Widget _buildClientInfo() {
-    return Column(
-      children: [
-        // Tab Bar Placeholder (Info, Box, Map, Document) - visual only for now as per design
-        Container(
-          padding: const EdgeInsets.all(4),
+  Widget _buildTabBar() {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+      decoration: BoxDecoration(
+        color: const Color(0xFFEFB94C).withOpacity(0.1),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          _buildTabItem(Icons.info_outline, 0),
+          _buildTabItem(Icons.inventory_2_outlined, 1),
+          _buildTabItem(Icons.map_outlined, 2),
+          _buildTabItem(Icons.description_outlined, 3),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTabItem(IconData icon, int index) {
+    return Obx(() {
+      final isSelected = controller.selectedMainTab.value == index;
+      return GestureDetector(
+        onTap: () => controller.selectMainTab(index),
+        child: Container(
+          width: 62,
+          height: 40,
           decoration: BoxDecoration(
-            color: const Color(0xFFEFB94C).withOpacity(0.1),
+            color: isSelected ? const Color(0xFFEFB94C) : Colors.transparent,
             borderRadius: BorderRadius.circular(16),
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _buildTabIcon(Icons.info_outline, true),
-              _buildTabIcon(Icons.inventory_2_outlined, false),
-              _buildTabIcon(Icons.map_outlined, false),
-              _buildTabIcon(Icons.description_outlined, false),
-            ],
+          child: Icon(
+            icon,
+            color: isSelected
+                ? const Color(0xFFF8F9FA)
+                : const Color(0xFF495057),
+            size: 20,
           ),
         ),
-        const SizedBox(height: 24),
+      );
+    });
+  }
+
+  Widget _buildClientProfile() {
+    return Column(
+      children: [
         Container(
           width: 100,
           height: 100,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.grey[300],
-            image: const DecorationImage(
-              image: AssetImage(
-                'assets/images/user.jpg',
-              ), // Ensure asset exists or use placeholder
+            color: Color(0xFFD9D9D9),
+            image: DecorationImage(
+              image: NetworkImage('https://i.pravatar.cc/300'), // Placeholder
               fit: BoxFit.cover,
             ),
           ),
         ),
         const SizedBox(height: 16),
-        GestureDetector(
-          onTap: controller.onChatWithClient,
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            decoration: BoxDecoration(
-              color: const Color(0xFFEFB94C),
-              borderRadius: BorderRadius.circular(20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 44,
+              height: 44,
+              decoration: BoxDecoration(
+                color: const Color(0xFFEFB94C),
+                borderRadius: BorderRadius.circular(200),
+              ),
+              child: const Icon(
+                Icons.chat_bubble,
+                color: Colors.white,
+                size: 20,
+              ),
             ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Icon(
-                  Icons.chat_bubble_outline,
-                  color: Colors.white,
-                  size: 18,
-                ),
-                const SizedBox(width: 8),
-                Text(
-                  'Chat with Client',
-                  style: GoogleFonts.poppins(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: const Color(
-                      0xFF212529,
-                    ), // Dark text on yellow button per design
-                  ),
-                ),
-              ],
+            const SizedBox(width: 11),
+            Text(
+              'Chat with Client',
+              style: GoogleFonts.poppins(
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                color: const Color(0xFF212529),
+              ),
             ),
-          ),
+          ],
         ),
-        const SizedBox(height: 12),
-        Obx(
-          () => Text(
-            'Client Name: ${controller.clientName.value}',
-            style: GoogleFonts.poppins(
-              fontSize: 16,
-              fontWeight: FontWeight.w700,
-              color: const Color(0xFF212529),
-            ),
+        const SizedBox(height: 16),
+        Text(
+          'Client Name: Al Muntakim',
+          style: GoogleFonts.poppins(
+            fontSize: 16,
+            fontWeight: FontWeight.w700,
+            color: const Color(0xFF212529),
           ),
         ),
         const SizedBox(height: 8),
-        Obx(
-          () => Text(
-            'Pickup Address: ${controller.pickupAddress.value}',
-            textAlign: TextAlign.center,
-            style: GoogleFonts.poppins(
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-              color: const Color(0xFF495057),
-            ),
+        Text(
+          'Pickup Address: 270/2 Paris, France',
+          style: GoogleFonts.poppins(
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+            color: const Color(0xFF495057),
           ),
         ),
-        const SizedBox(height: 4),
-        Obx(
-          () => Text(
-            'Delivery Address: ${controller.deliveryAddress.value}',
-            textAlign: TextAlign.center,
-            style: GoogleFonts.poppins(
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-              color: const Color(0xFF495057),
-            ),
+        const SizedBox(height: 8),
+        Text(
+          'Delivery Address: 23/2 Paris, France',
+          style: GoogleFonts.poppins(
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+            color: const Color(0xFF495057),
           ),
         ),
-        const SizedBox(height: 4),
-        Obx(
-          () => Text(
-            controller.distance.value,
-            textAlign: TextAlign.center,
-            style: GoogleFonts.poppins(
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-              color: const Color(0xFF495057),
-            ),
+        const SizedBox(height: 8),
+        Text(
+          '512KM Distance',
+          style: GoogleFonts.poppins(
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+            color: const Color(0xFF495057),
           ),
         ),
       ],
-    );
-  }
-
-  Widget _buildTabIcon(IconData icon, bool isSelected) {
-    return Container(
-      width: 60,
-      height: 40,
-      decoration: BoxDecoration(
-        color: isSelected ? const Color(0xFFEFB94C) : Colors.transparent,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Icon(
-        icon,
-        color: isSelected ? Colors.white : const Color(0xFF495057),
-      ),
     );
   }
 

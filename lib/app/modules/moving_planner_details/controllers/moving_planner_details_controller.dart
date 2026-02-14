@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:super_arms_moving_planner/app/utils/waybill_pdf_generator.dart';
 
 class MovingPlannerDetailsController extends GetxController {
   // Data Observables
@@ -15,6 +16,21 @@ class MovingPlannerDetailsController extends GetxController {
   final distance = '512KM Distance'.obs;
 
   final specialRequirements = 'Move very Carefully.'.obs;
+
+  final selectedMainTab = 0.obs;
+  final consignmentNote = 'Move Carefully'.obs;
+
+  void selectMainTab(int index) {
+    selectedMainTab.value = index;
+  }
+
+  void updateConsignmentNote(String note) {
+    consignmentNote.value = note;
+  }
+
+  Future<void> downloadWaybill() async {
+    await WaybillPdfGenerator.generatePdf();
+  }
 
   @override
   void onInit() {
