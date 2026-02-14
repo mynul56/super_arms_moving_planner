@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../../routes/app_pages.dart';
 import '../controllers/available_offers_controller.dart';
 
 class AvailableOffersView extends GetView<AvailableOffersController> {
@@ -63,14 +64,21 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
               height: 1.4,
             ),
           ),
-          Container(
-            width: 44,
-            height: 44,
-            decoration: BoxDecoration(
-              color: const Color(0xFFEFB94C).withOpacity(0.1),
-              borderRadius: BorderRadius.circular(200),
+          GestureDetector(
+            onTap: () => Get.toNamed(Routes.SEARCH_OFFERS),
+            child: Container(
+              width: 44,
+              height: 44,
+              decoration: BoxDecoration(
+                color: const Color(0xFFEFB94C).withOpacity(0.1),
+                borderRadius: BorderRadius.circular(200),
+              ),
+              child: const Icon(
+                Icons.search,
+                color: Color(0xFFEFB94C),
+                size: 24,
+              ),
             ),
-            child: const Icon(Icons.search, color: Color(0xFFEFB94C), size: 24),
           ),
         ],
       ),

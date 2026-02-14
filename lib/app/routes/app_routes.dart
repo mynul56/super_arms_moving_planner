@@ -20,6 +20,7 @@ abstract class Routes {
   static const LIVE_TRACKING = _Paths.LIVE_TRACKING;
   static const PAYMENT = _Paths.PAYMENT;
   static const PAYMENT_DETAILS = _Paths.PAYMENT_DETAILS;
+  static const SEARCH_OFFERS = _Paths.SEARCH_OFFERS;
 }
 
 abstract class _Paths {
@@ -41,4 +42,5 @@ abstract class _Paths {
   static const LIVE_TRACKING = '/live-tracking';
   static const PAYMENT = '/payment';
   static const PAYMENT_DETAILS = '/payment-details';
+  static const SEARCH_OFFERS = '/search-offers';
 }
