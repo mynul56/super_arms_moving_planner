@@ -31,6 +31,7 @@ abstract class Routes {
   static const ADD_EMPLOYEE = _Paths.ADD_EMPLOYEE;
   static const MOVING_PLANNER_DETAILS = _Paths.MOVING_PLANNER_DETAILS;
   static const CONCIERGE_DETAILS = _Paths.CONCIERGE_DETAILS;
+  static const MOVE_WITHOUT_TRUCK_DETAILS = _Paths.MOVE_WITHOUT_TRUCK_DETAILS;
 }
 
 abstract class _Paths {
@@ -63,4 +64,5 @@ abstract class _Paths {
   static const ADD_EMPLOYEE = '/add-employee';
   static const MOVING_PLANNER_DETAILS = '/moving-planner-details';
   static const CONCIERGE_DETAILS = '/concierge-details';
+  static const MOVE_WITHOUT_TRUCK_DETAILS = '/move-without-truck-details';
 }

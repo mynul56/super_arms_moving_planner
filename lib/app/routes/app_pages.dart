@@ -53,6 +53,8 @@ import '../modules/moving_planner_details/bindings/moving_planner_details_bindin
 import '../modules/moving_planner_details/views/moving_planner_details_view.dart';
 import '../modules/concoerge_details/bindings/concoerge_details_binding.dart';
 import '../modules/concoerge_details/views/concoerge_details_view.dart';
+import '../modules/move_without_truck_details/bindings/move_without_truck_details_binding.dart';
+import '../modules/move_without_truck_details/views/move_without_truck_details_view.dart';
 
 part 'app_routes.dart';
 
@@ -201,6 +203,11 @@ class AppPages {
       name: _Paths.CONCIERGE_DETAILS,
       page: () => const ConciergeDetailsView(),
       binding: ConciergeDetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.MOVE_WITHOUT_TRUCK_DETAILS,
+      page: () => const MoveWithoutTruckDetailsView(),
+      binding: MoveWithoutTruckDetailsBinding(),
     ),
   ];
 }
