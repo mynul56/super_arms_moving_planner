@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../controllers/home_controller.dart';
+import 'main_drawer.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -11,6 +12,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FA),
+      drawer: const MainDrawer(),
       bottomNavigationBar: _buildBottomNavBar(),
       appBar: AppBar(
         backgroundColor: const Color(0xFFEFB94C),
@@ -71,10 +73,15 @@ class HomeView extends GetView<HomeController> {
   }
 
   Widget _buildMenuButton() {
-    return Container(
-      width: 40,
-      height: 40,
-      child: SvgPicture.asset('assets/icons/menu.svg'),
+    return Builder(
+      builder: (context) => GestureDetector(
+        onTap: () => Scaffold.of(context).openDrawer(),
+        child: Container(
+          width: 40,
+          height: 40,
+          child: SvgPicture.asset('assets/icons/menu.svg'),
+        ),
+      ),
     );
   }
 
