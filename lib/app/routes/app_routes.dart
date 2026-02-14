@@ -17,6 +17,9 @@ abstract class Routes {
   static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
   static const RESET_PASSWORD = _Paths.RESET_PASSWORD;
   static const AVAILABLE_OFFERS = _Paths.AVAILABLE_OFFERS;
+  static const LIVE_TRACKING = _Paths.LIVE_TRACKING;
+  static const PAYMENT = _Paths.PAYMENT;
+  static const PAYMENT_DETAILS = _Paths.PAYMENT_DETAILS;
 }
 
 abstract class _Paths {
@@ -35,4 +38,7 @@ abstract class _Paths {
   static const FORGOT_PASSWORD = '/forgot-password';
   static const RESET_PASSWORD = '/reset-password';
   static const AVAILABLE_OFFERS = '/available-offers';
+  static const LIVE_TRACKING = '/live-tracking';
+  static const PAYMENT = '/payment';
+  static const PAYMENT_DETAILS = '/payment-details';
 }

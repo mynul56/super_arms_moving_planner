@@ -4,30 +4,36 @@ import '../modules/auth/congratulations/bindings/congratulations_binding.dart';
 import '../modules/auth/congratulations/views/congratulations_view.dart';
 import '../modules/auth/document_upload/bindings/document_upload_binding.dart';
 import '../modules/auth/document_upload/views/document_upload_view.dart';
+import '../modules/auth/forgotpassword/bindings/forgotpassword_binding.dart';
+import '../modules/auth/forgotpassword/views/forgotpassword_view.dart';
 import '../modules/auth/otp_verification/bindings/otp_verification_binding.dart';
 import '../modules/auth/otp_verification/views/otp_verification_view.dart';
 import '../modules/auth/register/bindings/register_binding.dart';
 import '../modules/auth/register/views/register_view.dart';
 import '../modules/auth/register_company/bindings/register_company_binding.dart';
 import '../modules/auth/register_company/views/register_company_view.dart';
+import '../modules/auth/resetpassword/bindings/resetpassword_binding.dart';
+import '../modules/auth/resetpassword/views/resetpassword_view.dart';
 import '../modules/auth/sign_up/bindings/sign_up_binding.dart';
 import '../modules/auth/sign_up/views/sign_up_view.dart';
 import '../modules/auth/signin/bindings/signin_binding.dart';
 import '../modules/auth/signin/views/signin_view.dart';
 import '../modules/auth/submission_complete/bindings/submission_complete_binding.dart';
 import '../modules/auth/submission_complete/views/submission_complete_view.dart';
-import '../modules/home/bindings/home_binding.dart';
-import '../modules/home/views/home_view.dart';
-import '../modules/onboarding/bindings/onboarding_binding.dart';
-import '../modules/onboarding/views/onboarding_view.dart';
-import '../modules/splash/bindings/splash_binding.dart';
-import '../modules/splash/views/splash_view.dart';
-import '../modules/auth/forgotpassword/bindings/forgotpassword_binding.dart';
-import '../modules/auth/forgotpassword/views/forgotpassword_view.dart';
-import '../modules/auth/resetpassword/bindings/resetpassword_binding.dart';
-import '../modules/auth/resetpassword/views/resetpassword_view.dart';
 import '../modules/available_offers/bindings/available_offers_binding.dart';
 import '../modules/available_offers/views/available_offers_view.dart';
+import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/views/home_view.dart';
+import '../modules/live_tracking/bindings/live_tracking_binding.dart';
+import '../modules/live_tracking/views/live_tracking_view.dart';
+import '../modules/onboarding/bindings/onboarding_binding.dart';
+import '../modules/onboarding/views/onboarding_view.dart';
+import '../modules/payment/bindings/payment_binding.dart';
+import '../modules/payment/bindings/payment_details_binding.dart';
+import '../modules/payment/views/payment_details_view.dart';
+import '../modules/payment/views/payment_view.dart';
+import '../modules/splash/bindings/splash_binding.dart';
+import '../modules/splash/views/splash_view.dart';
 
 part 'app_routes.dart';
 
@@ -106,6 +112,21 @@ class AppPages {
       name: _Paths.AVAILABLE_OFFERS,
       page: () => const AvailableOffersView(),
       binding: AvailableOffersBinding(),
+    ),
+    GetPage(
+      name: _Paths.LIVE_TRACKING,
+      page: () => const LiveTrackingView(),
+      binding: LiveTrackingBinding(),
+    ),
+    GetPage(
+      name: _Paths.PAYMENT,
+      page: () => const PaymentView(),
+      binding: PaymentBinding(),
+    ),
+    GetPage(
+      name: _Paths.PAYMENT_DETAILS,
+      page: () => const PaymentDetailsView(),
+      binding: PaymentDetailsBinding(),
     ),
   ];
 }
