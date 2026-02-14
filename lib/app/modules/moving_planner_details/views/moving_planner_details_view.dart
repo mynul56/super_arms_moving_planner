@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:get/get.dart';
-import 'package:super_arms_moving_planner/app/routes/app_pages.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:super_arms_moving_planner/app/routes/app_pages.dart';
 
 import '../controllers/moving_planner_details_controller.dart';
 
 class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
-  const MovingPlannerDetailsView({Key? key}) : super(key: key);
+  const MovingPlannerDetailsView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,11 +46,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
           Center(
             child: Text(
               'Details',
-              style: GoogleFonts.poppins(
-                fontSize: 26,
-                fontWeight: FontWeight.w600,
-                color: const Color(0xFF212529),
-              ),
+              style: GoogleFonts.poppins(fontSize: 26, fontWeight: FontWeight.w600, color: const Color(0xFF212529)),
             ),
           ),
           const SizedBox(height: 24),
@@ -60,6 +55,8 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
           _buildClientProfile(),
           const SizedBox(height: 24),
           _buildOrderInfoCard(),
+          const SizedBox(height: 24),
+          _buildSelectedItemsSection(),
           const SizedBox(height: 24),
           _buildSpecialRequirementsCard(),
           const SizedBox(height: 30),
@@ -76,11 +73,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
           Center(
             child: Text(
               'Details',
-              style: GoogleFonts.poppins(
-                fontSize: 26,
-                fontWeight: FontWeight.w600,
-                color: const Color(0xFF212529),
-              ),
+              style: GoogleFonts.poppins(fontSize: 26, fontWeight: FontWeight.w600, color: const Color(0xFF212529)),
             ),
           ),
           const SizedBox(height: 24),
@@ -101,11 +94,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
             Center(
               child: Text(
                 'Details',
-                style: GoogleFonts.poppins(
-                  fontSize: 26,
-                  fontWeight: FontWeight.w600,
-                  color: const Color(0xFF212529),
-                ),
+                style: GoogleFonts.poppins(fontSize: 26, fontWeight: FontWeight.w600, color: const Color(0xFF212529)),
               ),
             ),
             const SizedBox(height: 24),
@@ -124,10 +113,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      image: const DecorationImage(
-                        image: AssetImage('assets/images/map.png'),
-                        fit: BoxFit.cover,
-                      ),
+                      image: const DecorationImage(image: AssetImage('assets/images/map.png'), fit: BoxFit.cover),
                     ),
                     child: Stack(
                       children: [
@@ -135,19 +121,12 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                           top: 40,
                           right: 20,
                           child: Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 10,
-                            ),
+                            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(30),
                               boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.1),
-                                  blurRadius: 20,
-                                  offset: const Offset(0, 4),
-                                ),
+                                BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 20, offset: const Offset(0, 4)),
                               ],
                             ),
                             child: Text(
@@ -170,18 +149,10 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(22),
                               boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.1),
-                                  blurRadius: 10,
-                                  offset: const Offset(0, 4),
-                                ),
+                                BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 10, offset: const Offset(0, 4)),
                               ],
                             ),
-                            child: const Icon(
-                              Icons.my_location,
-                              color: Color(0xFF212529),
-                              size: 24,
-                            ),
+                            child: const Icon(Icons.my_location, color: Color(0xFF212529), size: 24),
                           ),
                         ),
                       ],
@@ -193,11 +164,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                     children: [
                       Column(
                         children: [
-                          const Icon(
-                            Icons.location_on_outlined,
-                            color: Color(0xFF495057),
-                            size: 24,
-                          ),
+                          const Icon(Icons.location_on_outlined, color: Color(0xFF495057), size: 24),
                           Container(
                             height: 20,
                             width: 1,
@@ -206,18 +173,13 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                               builder: (context, constraints) {
                                 return Flex(
                                   direction: Axis.vertical,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: List.generate(3, (_) {
                                     return SizedBox(
                                       width: 1,
                                       height: 3,
                                       child: DecoratedBox(
-                                        decoration: BoxDecoration(
-                                          color: const Color(
-                                            0xFF495057,
-                                          ).withOpacity(0.3),
-                                        ),
+                                        decoration: BoxDecoration(color: const Color(0xFF495057).withOpacity(0.3)),
                                       ),
                                     );
                                   }),
@@ -228,15 +190,8 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                           Container(
                             width: 16,
                             height: 16,
-                            decoration: const BoxDecoration(
-                              color: Color(0xFF38B000),
-                              shape: BoxShape.circle,
-                            ),
-                            child: const Icon(
-                              Icons.star,
-                              color: Colors.white,
-                              size: 10,
-                            ),
+                            decoration: const BoxDecoration(color: Color(0xFF38B000), shape: BoxShape.circle),
+                            child: const Icon(Icons.star, color: Colors.white, size: 10),
                           ),
                         ],
                       ),
@@ -301,11 +256,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
             Center(
               child: Text(
                 'Details',
-                style: GoogleFonts.poppins(
-                  fontSize: 26,
-                  fontWeight: FontWeight.w600,
-                  color: const Color(0xFF212529),
-                ),
+                style: GoogleFonts.poppins(fontSize: 26, fontWeight: FontWeight.w600, color: const Color(0xFF212529)),
               ),
             ),
             const SizedBox(height: 24),
@@ -319,49 +270,29 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
               ),
               child: Row(
                 children: [
-                  const Icon(
-                    Icons.check_circle,
-                    color: Color(0xFF38B000),
-                    size: 24,
-                  ),
+                  const Icon(Icons.check_circle, color: Color(0xFF38B000), size: 24),
                   const SizedBox(width: 12),
                   Expanded(
                     child: Text(
                       'Consignment Note',
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                        color: const Color(0xFF212529),
-                      ),
+                      style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w400, color: const Color(0xFF212529)),
                     ),
                   ),
                   Row(
                     children: [
                       GestureDetector(
                         onTap: () => Get.toNamed(Routes.WAYBILL),
-                        child: const Icon(
-                          Icons.visibility_outlined,
-                          color: Color(0xFF495057),
-                          size: 24,
-                        ),
+                        child: const Icon(Icons.visibility_outlined, color: Color(0xFF495057), size: 24),
                       ),
                       const SizedBox(width: 12),
                       GestureDetector(
                         onTap: () => controller.downloadWaybill(),
-                        child: const Icon(
-                          Icons.download_rounded,
-                          color: Color(0xFF212529),
-                          size: 24,
-                        ),
+                        child: const Icon(Icons.download_rounded, color: Color(0xFF212529), size: 24),
                       ),
                       const SizedBox(width: 12),
                       GestureDetector(
                         onTap: () => _showConsignmentEditDialog(),
-                        child: const Icon(
-                          Icons.edit_outlined,
-                          color: Color(0xFF212529),
-                          size: 24,
-                        ),
+                        child: const Icon(Icons.edit_outlined, color: Color(0xFF212529), size: 24),
                       ),
                     ],
                   ),
@@ -375,9 +306,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
   }
 
   void _showConsignmentEditDialog() {
-    final textController = TextEditingController(
-      text: controller.consignmentNote.value,
-    );
+    final textController = TextEditingController(text: controller.consignmentNote.value);
     Get.dialog(
       Dialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -390,49 +319,28 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(16),
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0xFF8E8E8E).withOpacity(0.33),
-                blurRadius: 18.8,
-                spreadRadius: -1,
-              ),
-            ],
+            boxShadow: [BoxShadow(color: const Color(0xFF8E8E8E).withOpacity(0.33), blurRadius: 18.8, spreadRadius: -1)],
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 'Consignment Note',
-                style: GoogleFonts.poppins(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  color: const Color(0xFF212529),
-                ),
+                style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w700, color: const Color(0xFF212529)),
               ),
               const SizedBox(height: 24),
               Expanded(
                 child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 18,
-                    vertical: 14,
-                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: const Color(0xFF848484).withOpacity(0.6),
-                    ),
+                    border: Border.all(color: const Color(0xFF848484).withOpacity(0.6)),
                   ),
                   child: TextField(
                     controller: textController,
                     maxLines: null,
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      color: const Color(0xFF212529),
-                    ),
-                    decoration: const InputDecoration.collapsed(
-                      hintText: 'Enter note...',
-                    ),
+                    style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w400, color: const Color(0xFF212529)),
+                    decoration: const InputDecoration.collapsed(hintText: 'Enter note...'),
                   ),
                 ),
               ),
@@ -446,17 +354,10 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                   width: double.infinity,
                   height: 44,
                   alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFEFB94C),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
+                  decoration: BoxDecoration(color: const Color(0xFFEFB94C), borderRadius: BorderRadius.circular(8)),
                   child: Text(
                     'Save',
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
-                    ),
+                    style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
                   ),
                 ),
               ),
@@ -480,26 +381,15 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
               child: Container(
                 width: 44,
                 height: 44,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFEFB94C).withOpacity(0.1),
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(
-                  Icons.arrow_back_ios_new,
-                  size: 20,
-                  color: Color(0xFFEFB94C),
-                ),
+                decoration: BoxDecoration(color: const Color(0xFFEFB94C).withOpacity(0.1), shape: BoxShape.circle),
+                child: const Icon(Icons.arrow_back_ios_new, size: 20, color: Color(0xFFEFB94C)),
               ),
             ),
           ),
           Center(
             child: Text(
               'SUPER ARMS',
-              style: GoogleFonts.poppins(
-                fontSize: 26,
-                fontWeight: FontWeight.w600,
-                color: const Color(0xFFEFB94C),
-              ),
+              style: GoogleFonts.poppins(fontSize: 26, fontWeight: FontWeight.w600, color: const Color(0xFFEFB94C)),
             ),
           ),
           Align(
@@ -507,28 +397,18 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
             child: Container(
               width: 44,
               height: 44,
-              decoration: BoxDecoration(
-                color: const Color(0xFFEFB94C).withOpacity(0.1),
-                shape: BoxShape.circle,
-              ),
+              decoration: BoxDecoration(color: const Color(0xFFEFB94C).withOpacity(0.1), shape: BoxShape.circle),
               child: Stack(
                 alignment: Alignment.center,
                 children: [
-                  const Icon(
-                    Icons.notifications_none_outlined,
-                    color: Color(0xFFEFB94C),
-                    size: 24,
-                  ),
+                  const Icon(Icons.notifications_none_outlined, color: Color(0xFFEFB94C), size: 24),
                   Positioned(
                     top: 10,
                     right: 12,
                     child: Container(
                       width: 8,
                       height: 8,
-                      decoration: const BoxDecoration(
-                        color: Color(0xFFFF5959),
-                        shape: BoxShape.circle,
-                      ),
+                      decoration: const BoxDecoration(color: Color(0xFFFF5959), shape: BoxShape.circle),
                     ),
                   ),
                 ],
@@ -543,10 +423,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
   Widget _buildTabBar() {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-      decoration: BoxDecoration(
-        color: const Color(0xFFEFB94C).withOpacity(0.1),
-        borderRadius: BorderRadius.circular(16),
-      ),
+      decoration: BoxDecoration(color: const Color(0xFFEFB94C).withOpacity(0.1), borderRadius: BorderRadius.circular(16)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -571,13 +448,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
             color: isSelected ? const Color(0xFFEFB94C) : Colors.transparent,
             borderRadius: BorderRadius.circular(16),
           ),
-          child: Icon(
-            icon,
-            color: isSelected
-                ? const Color(0xFFF8F9FA)
-                : const Color(0xFF495057),
-            size: 20,
-          ),
+          child: Icon(icon, color: isSelected ? const Color(0xFFF8F9FA) : const Color(0xFF495057), size: 20),
         ),
       );
     });
@@ -605,62 +476,35 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
             Container(
               width: 44,
               height: 44,
-              decoration: BoxDecoration(
-                color: const Color(0xFFEFB94C),
-                borderRadius: BorderRadius.circular(200),
-              ),
-              child: const Icon(
-                Icons.chat_bubble,
-                color: Colors.white,
-                size: 20,
-              ),
+              decoration: BoxDecoration(color: const Color(0xFFEFB94C), borderRadius: BorderRadius.circular(200)),
+              child: const Icon(Icons.chat_bubble, color: Colors.white, size: 20),
             ),
             const SizedBox(width: 11),
             Text(
               'Chat with Client',
-              style: GoogleFonts.poppins(
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
-                color: const Color(0xFF212529),
-              ),
+              style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w700, color: const Color(0xFF212529)),
             ),
           ],
         ),
         const SizedBox(height: 16),
         Text(
           'Client Name: Al Muntakim',
-          style: GoogleFonts.poppins(
-            fontSize: 16,
-            fontWeight: FontWeight.w700,
-            color: const Color(0xFF212529),
-          ),
+          style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w700, color: const Color(0xFF212529)),
         ),
         const SizedBox(height: 8),
         Text(
           'Pickup Address: 270/2 Paris, France',
-          style: GoogleFonts.poppins(
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
-            color: const Color(0xFF495057),
-          ),
+          style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w400, color: const Color(0xFF495057)),
         ),
         const SizedBox(height: 8),
         Text(
           'Delivery Address: 23/2 Paris, France',
-          style: GoogleFonts.poppins(
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
-            color: const Color(0xFF495057),
-          ),
+          style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w400, color: const Color(0xFF495057)),
         ),
         const SizedBox(height: 8),
         Text(
           '512KM Distance',
-          style: GoogleFonts.poppins(
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
-            color: const Color(0xFF495057),
-          ),
+          style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w400, color: const Color(0xFF495057)),
         ),
       ],
     );
@@ -669,25 +513,15 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
   Widget _buildOrderInfoCard() {
     return Container(
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: const Color(0xFFEFB94C).withOpacity(0.1),
-        borderRadius: BorderRadius.circular(16),
-      ),
+      decoration: BoxDecoration(color: const Color(0xFFEFB94C).withOpacity(0.1), borderRadius: BorderRadius.circular(16)),
       child: Column(
         children: [
           Row(
             children: [
               Container(
                 padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF7E6DB),
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                child: Image.asset(
-                  'assets/images/box.png',
-                  width: 24,
-                  height: 24,
-                ),
+                decoration: BoxDecoration(color: const Color(0xFFF7E6DB), borderRadius: BorderRadius.circular(30)),
+                child: Image.asset('assets/images/box.png', width: 24, height: 24),
               ),
               const SizedBox(width: 12),
               Column(
@@ -696,11 +530,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                   Obx(
                     () => Text(
                       'Order ID: ${controller.orderId.value}',
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: const Color(0xFF212529),
-                      ),
+                      style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w700, color: const Color(0xFF212529)),
                     ),
                   ),
                   const SizedBox(height: 4),
@@ -733,12 +563,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
           Row(
             children: [
               Expanded(
-                child: _buildInfoGridItem(
-                  Icons.calendar_today_outlined,
-                  'Date',
-                  controller.moveDate.value,
-                  Colors.blue,
-                ),
+                child: _buildInfoGridItem(Icons.calendar_today_outlined, 'Date', controller.moveDate.value, Colors.blue),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -764,12 +589,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
               ),
               const SizedBox(width: 12),
               Expanded(
-                child: _buildInfoGridItem(
-                  Icons.description_outlined,
-                  'Pending',
-                  'Status',
-                  const Color(0xFF212529),
-                ),
+                child: _buildInfoGridItem(Icons.description_outlined, 'Pending', 'Status', const Color(0xFF212529)),
               ), // Icon needs to be more specific if possible
             ],
           ),
@@ -778,26 +598,15 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
     );
   }
 
-  Widget _buildInfoGridItem(
-    IconData icon,
-    String title,
-    String subtitle,
-    Color iconColor,
-  ) {
+  Widget _buildInfoGridItem(IconData icon, String title, String subtitle, Color iconColor) {
     return Container(
       padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-      ),
+      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
       child: Row(
         children: [
           Container(
             padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              color: iconColor.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(12),
-            ),
+            decoration: BoxDecoration(color: iconColor.withOpacity(0.1), borderRadius: BorderRadius.circular(12)),
             child: Icon(icon, color: iconColor, size: 20),
           ),
           const SizedBox(width: 12),
@@ -806,19 +615,11 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
             children: [
               Text(
                 title,
-                style: GoogleFonts.poppins(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                  color: const Color(0xFF212529),
-                ),
+                style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w500, color: const Color(0xFF212529)),
               ),
               Text(
                 subtitle,
-                style: GoogleFonts.poppins(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w400,
-                  color: const Color(0xFF495057),
-                ),
+                style: GoogleFonts.poppins(fontSize: 12, fontWeight: FontWeight.w400, color: const Color(0xFF495057)),
               ),
             ],
           ),
@@ -833,49 +634,25 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
       children: [
         Text(
           'Selected Items',
-          style: GoogleFonts.poppins(
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-            color: const Color(0xFF212529),
-          ),
+          style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.w600, color: const Color(0xFF212529)),
         ),
         const SizedBox(height: 16),
         Row(
           children: [
-            Expanded(
-              child: _buildSelectedItemCard(
-                'Mail Forwarding',
-                'assets/icons/mail.svg',
-                isSvg: true,
-              ),
-            ),
+            Expanded(child: _buildSelectedItemCard('Mail Forwarding', assetPath: 'assets/icons/mail.svg', isSvg: true)),
             const SizedBox(width: 16),
             Expanded(
-              child: _buildSelectedItemCard(
-                'Move Out move\nIn Inspection',
-                'assets/icons/move.svg',
-                isSvg: true,
-              ),
+              child: _buildSelectedItemCard('Move Out move\nIn Inspection', assetPath: 'assets/icons/move.svg', isSvg: true),
             ),
           ],
         ),
         const SizedBox(height: 16),
         Row(
           children: [
-            Expanded(
-              child: _buildSelectedItemCard(
-                'Well Being\nSupport',
-                'assets/icons/well.svg',
-                isSvg: true,
-              ),
-            ),
+            Expanded(child: _buildSelectedItemCard('Well Being\nSupport', assetPath: 'assets/icons/well.svg', isSvg: true)),
             const SizedBox(width: 16),
             Expanded(
-              child: _buildSelectedItemCard(
-                'Personal\nAssistance',
-                'assets/icons/personal.svg',
-                isSvg: true,
-              ),
+              child: _buildSelectedItemCard('Personal\nAssistance', assetPath: 'assets/icons/personal.svg', isSvg: true),
             ),
           ],
         ),
@@ -890,19 +667,11 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
             children: [
               Text(
                 'Total Items:',
-                style: GoogleFonts.poppins(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                  color: const Color(0xFF495057),
-                ),
+                style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w400, color: const Color(0xFF495057)),
               ),
               Text(
                 '04 items',
-                style: GoogleFonts.poppins(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  color: const Color(0xFFEFB94C),
-                ),
+                style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w700, color: const Color(0xFFEFB94C)),
               ),
             ],
           ),
@@ -911,17 +680,10 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
     );
   }
 
-  Widget _buildSelectedItemCard(
-    String title,
-    String assetPath, {
-    bool isSvg = false,
-  }) {
+  Widget _buildSelectedItemCard(String title, {String? assetPath, IconData? icon, bool isSvg = false}) {
     return Container(
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: const Color(0xFFEFB94C).withOpacity(0.1),
-        borderRadius: BorderRadius.circular(16),
-      ),
+      decoration: BoxDecoration(color: const Color(0xFFEFB94C).withOpacity(0.1), borderRadius: BorderRadius.circular(16)),
       child: Stack(
         alignment: Alignment.topRight,
         children: [
@@ -933,23 +695,18 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                 Container(
                   width: 40,
                   height: 40,
-                  child: isSvg
-                      ? SvgPicture.asset(assetPath, width: 40, height: 40)
-                      : Image.asset(
-                          assetPath,
-                          errorBuilder: (_, __, ___) =>
-                              const Icon(Icons.image, color: Colors.orange),
-                        ),
+                  alignment: Alignment.center,
+                  child: icon != null
+                      ? Icon(icon, size: 32, color: const Color(0xFFEFB94C))
+                      : isSvg
+                      ? SvgPicture.asset(assetPath!, width: 40, height: 40)
+                      : Image.asset(assetPath!, errorBuilder: (_, __, ___) => const Icon(Icons.image, color: Colors.orange)),
                 ),
                 const SizedBox(height: 8),
                 Text(
                   title,
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.poppins(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: const Color(0xFF212529),
-                  ),
+                  style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w400, color: const Color(0xFF212529)),
                 ),
               ],
             ),
@@ -973,25 +730,14 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
         children: [
           Text(
             'Special Requirements',
-            style: GoogleFonts.poppins(
-              fontSize: 16,
-              fontWeight: FontWeight.w700,
-              color: const Color(0xFF212529),
-            ),
+            style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w700, color: const Color(0xFF212529)),
           ),
-          const Divider(
-            thickness: 1,
-            color: Color(0xFFE0E0E0),
-          ), // Added lighter divider
+          const Divider(thickness: 1, color: Color(0xFFE0E0E0)), // Added lighter divider
           const SizedBox(height: 8),
           Obx(
             () => Text(
               controller.specialRequirements.value,
-              style: GoogleFonts.poppins(
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-                color: const Color(0xFFEFB94C),
-              ),
+              style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w400, color: const Color(0xFFEFB94C)),
             ),
           ),
         ],
