@@ -21,6 +21,7 @@ abstract class Routes {
   static const PAYMENT = _Paths.PAYMENT;
   static const PAYMENT_DETAILS = _Paths.PAYMENT_DETAILS;
   static const SEARCH_OFFERS = _Paths.SEARCH_OFFERS;
+  static const DETAILS = _Paths.DETAILS;
 }
 
 abstract class _Paths {
@@ -43,4 +44,5 @@ abstract class _Paths {
   static const PAYMENT = '/payment';
   static const PAYMENT_DETAILS = '/payment-details';
   static const SEARCH_OFFERS = '/search-offers';
+  static const DETAILS = '/details';
 }
