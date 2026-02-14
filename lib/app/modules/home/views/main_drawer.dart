@@ -86,8 +86,8 @@ class MainDrawer extends StatelessWidget {
 
             title: 'Profile',
             onTap: () {
-              // Navigate to Profile
               Get.back(); // Close drawer
+              Get.toNamed(Routes.PROFILE);
             },
           ),
           _buildMenuItem(

@@ -22,6 +22,10 @@ import '../modules/auth/submission_complete/bindings/submission_complete_binding
 import '../modules/auth/submission_complete/views/submission_complete_view.dart';
 import '../modules/available_offers/bindings/available_offers_binding.dart';
 import '../modules/available_offers/views/available_offers_view.dart';
+import '../modules/details/bindings/details_binding.dart';
+import '../modules/details/views/details_view.dart';
+
+import '../modules/profile/views/edit_profile_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/live_tracking/bindings/live_tracking_binding.dart';
@@ -32,12 +36,14 @@ import '../modules/payment/bindings/payment_binding.dart';
 import '../modules/payment/bindings/payment_details_binding.dart';
 import '../modules/payment/views/payment_details_view.dart';
 import '../modules/payment/views/payment_view.dart';
-import '../modules/splash/bindings/splash_binding.dart';
-import '../modules/splash/views/splash_view.dart';
+import '../modules/profile/bindings/profile_binding.dart';
+import '../modules/profile/views/profile_view.dart';
 import '../modules/search_offers/bindings/search_offers_binding.dart';
 import '../modules/search_offers/views/search_offers_view.dart';
-import '../modules/details/bindings/details_binding.dart';
-import '../modules/details/views/details_view.dart';
+import '../modules/splash/bindings/splash_binding.dart';
+import '../modules/splash/views/splash_view.dart';
+
+import '../modules/profile/views/update_card_info_view.dart';
 
 part 'app_routes.dart';
 
@@ -141,6 +147,21 @@ class AppPages {
       name: _Paths.DETAILS,
       page: () => const DetailsView(),
       binding: DetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE,
+      page: () => const ProfileView(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_PROFILE,
+      page: () => const EditProfileView(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.UPDATE_CARD_INFO,
+      page: () => const UpdateCardInfoView(),
+      binding: ProfileBinding(),
     ),
   ];
 }
