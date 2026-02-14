@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:super_arms_moving_planner/app/routes/app_pages.dart';
-import '../controllers/concoerge_details_controller.dart';
+import '../controllers/concierge_details_controller.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ConciergeDetailsView extends GetView<ConciergeDetailsController> {

@@ -51,8 +51,8 @@ import '../modules/waybill/bindings/waybill_binding.dart';
 import '../modules/waybill/views/waybill_view.dart';
 import '../modules/moving_planner_details/bindings/moving_planner_details_binding.dart';
 import '../modules/moving_planner_details/views/moving_planner_details_view.dart';
-import '../modules/concoerge_details/bindings/concoerge_details_binding.dart';
-import '../modules/concoerge_details/views/concoerge_details_view.dart';
+import '../modules/concierge_details/bindings/concierge_details_binding.dart';
+import '../modules/concierge_details/views/concierge_details_view.dart';
 import '../modules/move_without_truck_details/bindings/move_without_truck_details_binding.dart';
 import '../modules/move_without_truck_details/views/move_without_truck_details_view.dart';
 

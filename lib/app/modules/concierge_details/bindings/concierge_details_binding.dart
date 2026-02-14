@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../controllers/concoerge_details_controller.dart';
+import '../controllers/concierge_details_controller.dart';
 
 class ConciergeDetailsBinding extends Bindings {
   @override

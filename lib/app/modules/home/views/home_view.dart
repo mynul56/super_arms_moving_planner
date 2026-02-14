@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../../routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 import 'main_drawer.dart';
 
@@ -251,6 +252,7 @@ class HomeView extends GetView<HomeController> {
             _buildServiceItemSvg(
               'assets/icons/location-tracking.svg',
               'Live\nTracking',
+              onTap: () => Get.toNamed(Routes.LIVE_TRACKING),
             ),
             _buildServiceItemSvg('assets/icons/routes.svg', 'Routes'),
             _buildServiceItemSvg('assets/icons/clients.svg', 'Clients'),
@@ -261,33 +263,40 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  Widget _buildServiceItemSvg(String svgPath, String label) {
-    return Column(
-      children: [
-        Container(
-          width: 68,
-          height: 68,
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            color: const Color(0xFFEFB94C).withOpacity(0.1),
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: SvgPicture.asset(svgPath),
-        ),
-        const SizedBox(height: 8),
-        SizedBox(
-          width: 68,
-          child: Text(
-            label,
-            style: GoogleFonts.poppins(
-              fontSize: 14,
-              color: const Color(0xFF212529),
-              height: 1.5,
+  Widget _buildServiceItemSvg(
+    String svgPath,
+    String label, {
+    VoidCallback? onTap,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Column(
+        children: [
+          Container(
+            width: 68,
+            height: 68,
+            padding: const EdgeInsets.all(14),
+            decoration: BoxDecoration(
+              color: const Color(0xFFEFB94C).withOpacity(0.1),
+              borderRadius: BorderRadius.circular(8),
             ),
-            textAlign: TextAlign.center,
+            child: SvgPicture.asset(svgPath),
           ),
-        ),
-      ],
+          const SizedBox(height: 8),
+          SizedBox(
+            width: 68,
+            child: Text(
+              label,
+              style: GoogleFonts.poppins(
+                fontSize: 14,
+                color: const Color(0xFF212529),
+                height: 1.5,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ],
+      ),
     );
   }
 
