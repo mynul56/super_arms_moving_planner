@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,6 +22,16 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Center(
+                      child: Text(
+                        'Details',
+                        style: GoogleFonts.poppins(
+                          fontSize: 26,
+                          fontWeight: FontWeight.w600,
+                          color: const Color(0xFF212529),
+                        ),
+                      ),
+                    ),
                     const SizedBox(height: 20),
                     _buildClientInfo(),
                     const SizedBox(height: 24),
@@ -65,26 +76,15 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
               ),
             ),
           ),
-          Column(
-            children: [
-              Text(
-                'SUPER ARMS',
-                style: GoogleFonts.poppins(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
-                  color: const Color(0xFFEFB94C),
-                ),
+          Center(
+            child: Text(
+              'SUPER ARMS',
+              style: GoogleFonts.poppins(
+                fontSize: 26,
+                fontWeight: FontWeight.w600,
+                color: const Color(0xFFEFB94C),
               ),
-              const SizedBox(height: 8),
-              Text(
-                'Details',
-                style: GoogleFonts.poppins(
-                  fontSize: 26,
-                  fontWeight: FontWeight.w600,
-                  color: const Color(0xFF212529),
-                ),
-              ),
-            ],
+            ),
           ),
           Align(
             alignment: Alignment.centerRight,
@@ -110,7 +110,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                       width: 8,
                       height: 8,
                       decoration: const BoxDecoration(
-                        color: Colors.red,
+                        color: Color(0xFFFF5959),
                         shape: BoxShape.circle,
                       ),
                     ),
@@ -305,14 +305,13 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                           color: const Color(0xFF212529),
                         ),
                       ),
-                      Obx(
-                        () => Text(
-                          controller.serviceType.value,
-                          style: GoogleFonts.poppins(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: const Color(0xFFEFB94C),
-                          ),
+                      Text(
+                        // controller.serviceType.value might need to be "Moving Planner"
+                        'Moving Planner', // Hardcoded as per design text, or use controller if it matches
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          color: const Color(0xFFEFB94C),
                         ),
                       ),
                     ],
@@ -437,14 +436,15 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
             Expanded(
               child: _buildSelectedItemCard(
                 'Mail Forwarding',
-                'assets/icons/love.png',
+                'assets/icons/mail.svg',
+                isSvg: true,
               ),
-            ), // Need correct assets
+            ),
             const SizedBox(width: 16),
             Expanded(
               child: _buildSelectedItemCard(
                 'Move Out move\nIn Inspection',
-                'assets/icons/cameraicon.svg',
+                'assets/icons/move.svg',
                 isSvg: true,
               ),
             ),
@@ -456,14 +456,16 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
             Expanded(
               child: _buildSelectedItemCard(
                 'Well Being\nSupport',
-                'assets/icons/personal.png',
+                'assets/icons/well.svg',
+                isSvg: true,
               ),
             ),
             const SizedBox(width: 16),
             Expanded(
               child: _buildSelectedItemCard(
                 'Personal\nAssistance',
-                'assets/icons/man.png',
+                'assets/icons/personal.svg',
+                isSvg: true,
               ),
             ),
           ],
@@ -472,7 +474,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
         Container(
           padding: const EdgeInsets.only(top: 16),
           decoration: const BoxDecoration(
-            border: Border(top: BorderSide(color: Colors.grey, width: 0.5)),
+            border: Border(top: BorderSide(color: Colors.black, width: 0.5)),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -505,8 +507,6 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
     String assetPath, {
     bool isSvg = false,
   }) {
-    // Note: Implementing without assets being verified might show placeholders
-    // Based on directory list, we have: love.png, personal.png, man.png. cameraicon.svg.
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -524,13 +524,8 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                 Container(
                   width: 40,
                   height: 40,
-                  // simplified asset loading for prototype
                   child: isSvg
-                      ? const Icon(
-                          Icons.camera_alt,
-                          color: Colors.orange,
-                          size: 30,
-                        )
+                      ? SvgPicture.asset(assetPath, width: 40, height: 40)
                       : Image.asset(
                           assetPath,
                           errorBuilder: (_, __, ___) =>
@@ -575,6 +570,10 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
               color: const Color(0xFF212529),
             ),
           ),
+          const Divider(
+            thickness: 1,
+            color: Color(0xFFE0E0E0),
+          ), // Added lighter divider
           const SizedBox(height: 8),
           Obx(
             () => Text(
@@ -582,7 +581,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
               style: GoogleFonts.poppins(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
-                color: const Color(0xFFEFB94C), // Orange text as per design
+                color: const Color(0xFFEFB94C),
               ),
             ),
           ),

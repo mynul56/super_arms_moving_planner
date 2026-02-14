@@ -43,6 +43,16 @@ class DetailsView extends GetView<DetailsController> {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
+            Center(
+              child: Text(
+                'Details',
+                style: GoogleFonts.poppins(
+                  fontSize: 26,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xFF212529),
+                ),
+              ),
+            ),
             const SizedBox(height: 24),
             _buildTabBar(),
             const SizedBox(height: 24),
@@ -72,6 +82,16 @@ class DetailsView extends GetView<DetailsController> {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
+            Center(
+              child: Text(
+                'Details',
+                style: GoogleFonts.poppins(
+                  fontSize: 26,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xFF212529),
+                ),
+              ),
+            ),
             const SizedBox(height: 24),
             _buildTabBar(),
             const SizedBox(height: 24),
@@ -85,48 +105,52 @@ class DetailsView extends GetView<DetailsController> {
   Widget _buildHeader() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Stack(
+        alignment: Alignment.center,
         children: [
-          GestureDetector(
-            onTap: () => Get.back(),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: GestureDetector(
+              onTap: () => Get.back(),
+              child: Container(
+                width: 44,
+                height: 44,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFEFB94C).withOpacity(0.1),
+                  shape: BoxShape.circle,
+                ),
+                child: const Icon(
+                  Icons.arrow_back_ios_new,
+                  size: 20,
+                  color: Color(0xFFEFB94C),
+                ),
+              ),
+            ),
+          ),
+          Center(
+            child: Text(
+              'SUPER ARMS',
+              style: GoogleFonts.poppins(
+                fontSize: 26,
+                fontWeight: FontWeight.w600,
+                color: const Color(0xFFEFB94C),
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.centerRight,
             child: Container(
               width: 44,
               height: 44,
               decoration: BoxDecoration(
                 color: const Color(0xFFEFB94C).withOpacity(0.1),
-                borderRadius: BorderRadius.circular(200),
-              ),
-              child: const Icon(
-                Icons.arrow_back_ios_new,
-                color: Color(0xFFEFB94C),
-                size: 20,
-              ),
-            ),
-          ),
-          Text(
-            'Details',
-            style: GoogleFonts.poppins(
-              fontSize: 26,
-              fontWeight: FontWeight.w600,
-              color: const Color(0xFF212529),
-              height: 1.4,
-            ),
-          ),
-          GestureDetector(
-            onTap: () {},
-            child: Container(
-              width: 44,
-              height: 44,
-              decoration: BoxDecoration(
-                color: const Color(0xFFEFB94C).withOpacity(0.1),
-                borderRadius: BorderRadius.circular(200),
+                shape: BoxShape.circle,
               ),
               child: Stack(
                 alignment: Alignment.center,
                 children: [
                   const Icon(
-                    Icons.notifications_outlined,
+                    Icons.notifications_none_outlined,
                     color: Color(0xFFEFB94C),
                     size: 24,
                   ),
@@ -947,6 +971,16 @@ class DetailsView extends GetView<DetailsController> {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
+            Center(
+              child: Text(
+                'Details',
+                style: GoogleFonts.poppins(
+                  fontSize: 26,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xFF212529),
+                ),
+              ),
+            ),
             const SizedBox(height: 24),
             _buildTabBar(),
             const SizedBox(height: 24),
@@ -1137,6 +1171,16 @@ class DetailsView extends GetView<DetailsController> {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
+            Center(
+              child: Text(
+                'Details',
+                style: GoogleFonts.poppins(
+                  fontSize: 26,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xFF212529),
+                ),
+              ),
+            ),
             const SizedBox(height: 24),
             _buildTabBar(),
             const SizedBox(height: 24),
