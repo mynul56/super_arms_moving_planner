@@ -26,13 +26,10 @@ abstract class Routes {
   static const EDIT_PROFILE = _Paths.EDIT_PROFILE;
   static const UPDATE_CARD_INFO = _Paths.UPDATE_CARD_INFO;
   static const WAYBILL = _Paths.WAYBILL;
-<<<<<<< HEAD
   static const EDIT_DOCUMENT = _Paths.EDIT_DOCUMENT;
   static const MANAGE_COMPANY = _Paths.MANAGE_COMPANY;
   static const ADD_EMPLOYEE = _Paths.ADD_EMPLOYEE;
-=======
   static const MOVING_PLANNER_DETAILS = _Paths.MOVING_PLANNER_DETAILS;
->>>>>>> 6557710405a4e1d96e0986562ed514d9eb4614a0
 }
 
 abstract class _Paths {
@@ -60,11 +57,8 @@ abstract class _Paths {
   static const EDIT_PROFILE = '/edit-profile';
   static const UPDATE_CARD_INFO = '/update-card-info';
   static const WAYBILL = '/waybill';
-<<<<<<< HEAD
   static const EDIT_DOCUMENT = '/edit-document';
   static const MANAGE_COMPANY = '/manage-company';
   static const ADD_EMPLOYEE = '/add-employee';
-=======
   static const MOVING_PLANNER_DETAILS = '/moving-planner-details';
->>>>>>> 6557710405a4e1d96e0986562ed514d9eb4614a0
 }
