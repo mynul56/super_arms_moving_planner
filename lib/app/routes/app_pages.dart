@@ -28,6 +28,8 @@ import '../modules/auth/resetpassword/bindings/resetpassword_binding.dart';
 import '../modules/auth/resetpassword/views/resetpassword_view.dart';
 import '../modules/available_offers/bindings/available_offers_binding.dart';
 import '../modules/available_offers/views/available_offers_view.dart';
+import '../modules/search_offers/bindings/search_offers_binding.dart';
+import '../modules/search_offers/views/search_offers_view.dart';
 
 part 'app_routes.dart';
 
@@ -106,6 +108,11 @@ class AppPages {
       name: _Paths.AVAILABLE_OFFERS,
       page: () => const AvailableOffersView(),
       binding: AvailableOffersBinding(),
+    ),
+    GetPage(
+      name: _Paths.SEARCH_OFFERS,
+      page: () => const SearchOffersView(),
+      binding: SearchOffersBinding(),
     ),
   ];
 }

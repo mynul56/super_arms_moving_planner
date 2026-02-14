@@ -81,13 +81,17 @@ class HomeView extends GetView<HomeController> {
   Widget _buildBalanceChip() {
     return GestureDetector(
       onTap: () => controller.toggleBalance(),
-      child: Container(
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+        constraints: const BoxConstraints(minWidth: 140),
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(30),
         ),
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Container(
               width: 24,

@@ -17,6 +17,7 @@ abstract class Routes {
   static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
   static const RESET_PASSWORD = _Paths.RESET_PASSWORD;
   static const AVAILABLE_OFFERS = _Paths.AVAILABLE_OFFERS;
+  static const SEARCH_OFFERS = _Paths.SEARCH_OFFERS;
 }
 
 abstract class _Paths {
@@ -35,4 +36,5 @@ abstract class _Paths {
   static const FORGOT_PASSWORD = '/forgot-password';
   static const RESET_PASSWORD = '/reset-password';
   static const AVAILABLE_OFFERS = '/available-offers';
+  static const SEARCH_OFFERS = '/search-offers';
 }
