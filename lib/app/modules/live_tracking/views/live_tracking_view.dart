@@ -314,6 +314,7 @@ class LiveTrackingView extends GetView<LiveTrackingController> {
           color: const Color(0xFF38B000),
           textColor: Colors.white,
           isFilled: true,
+          icon: Icons.check_circle,
           onTap: () =>
               controller.updateStatus(move['id'], 'On The Way To Pickup'),
         ),
@@ -323,6 +324,7 @@ class LiveTrackingView extends GetView<LiveTrackingController> {
           color: const Color(0xFFEFB94C),
           textColor: const Color(0xFFEFB94C),
           isFilled: false,
+          icon: Icons.circle_outlined,
           onTap: () =>
               controller.updateStatus(move['id'], 'On The Way To Delivery'),
         ),
@@ -332,6 +334,7 @@ class LiveTrackingView extends GetView<LiveTrackingController> {
           color: const Color(0xFFEFB94C),
           textColor: const Color(0xFFEFB94C),
           isFilled: false,
+          icon: Icons.circle_outlined,
           onTap: () {
             _showDeliveredDialog(move);
           },
@@ -345,6 +348,7 @@ class LiveTrackingView extends GetView<LiveTrackingController> {
     required Color color,
     required Color textColor,
     required bool isFilled,
+    required IconData icon,
     required VoidCallback onTap,
   }) {
     return GestureDetector(
@@ -361,10 +365,8 @@ class LiveTrackingView extends GetView<LiveTrackingController> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              if (isFilled) ...[
-                const Icon(Icons.check_circle, color: Colors.white, size: 20),
-                const SizedBox(width: 8),
-              ],
+              Icon(icon, color: isFilled ? Colors.white : color, size: 24),
+              const SizedBox(width: 10),
               Text(
                 title,
                 style: GoogleFonts.poppins(
