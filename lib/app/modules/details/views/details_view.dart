@@ -290,15 +290,15 @@ class DetailsView extends GetView<DetailsController> {
             children: [
               Container(
                 width: 52,
-                height: 52,
+                padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
                   color: const Color(0xFFF7E6DB),
                   borderRadius: BorderRadius.circular(30),
                 ),
-                child: const Icon(
-                  Icons.local_shipping, // Using generic icon
-                  color: Color(0xFFEFB94C),
-                  size: 24,
+                child: Image.asset(
+                  'assets/images/box.png',
+                  width: 24,
+                  height: 24,
                 ),
               ),
               const SizedBox(width: 14),
