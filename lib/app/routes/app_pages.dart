@@ -70,15 +70,6 @@ import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 import '../modules/waybill/bindings/waybill_binding.dart';
 import '../modules/waybill/views/waybill_view.dart';
-import '../modules/clients/bindings/clients_binding.dart';
-import '../modules/clients/views/clients_view.dart';
-import '../modules/client_profile/bindings/client_profile_binding.dart';
-import '../modules/client_profile/views/client_profile_view.dart';
-import '../modules/notifications/bindings/notifications_binding.dart';
-import '../modules/notifications/views/notifications_view.dart';
-import '../modules/installment/bindings/installment_binding.dart';
-import '../modules/installment/views/installment_view.dart';
-import '../modules/installment/views/order_details_view.dart';
 import '../modules/update_status/bindings/update_status_binding.dart';
 import '../modules/update_status/views/update_status_view.dart';
 
