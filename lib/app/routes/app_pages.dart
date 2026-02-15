@@ -67,6 +67,9 @@ import '../modules/client_profile/bindings/client_profile_binding.dart';
 import '../modules/client_profile/views/client_profile_view.dart';
 import '../modules/notifications/bindings/notifications_binding.dart';
 import '../modules/notifications/views/notifications_view.dart';
+import '../modules/installment/bindings/installment_binding.dart';
+import '../modules/installment/views/installment_view.dart';
+import '../modules/installment/views/order_details_view.dart';
 
 part 'app_routes.dart';
 
@@ -250,6 +253,16 @@ class AppPages {
       name: _Paths.NOTIFICATIONS,
       page: () => const NotificationsView(),
       binding: NotificationsBinding(),
+    ),
+    GetPage(
+      name: _Paths.INSTALLMENTS,
+      page: () => const InstallmentView(),
+      binding: InstallmentBinding(),
+    ),
+    GetPage(
+      name: _Paths.ORDER_DETAILS,
+      page: () => const OrderDetailsView(),
+      binding: InstallmentBinding(),
     ),
   ];
 }

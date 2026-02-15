@@ -94,7 +94,8 @@ class MainDrawer extends StatelessWidget {
             icon: Icons.wallet_outlined,
             title: 'Installments',
             onTap: () {
-              Get.back();
+              Get.back(); // Close drawer
+              Get.toNamed(Routes.INSTALLMENTS);
             },
           ),
           _buildMenuItem(
