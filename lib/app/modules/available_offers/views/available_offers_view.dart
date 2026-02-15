@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import '../../../routes/app_pages.dart';
 import '../controllers/available_offers_controller.dart';
 
@@ -18,12 +19,7 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
-                  children: [
-                    const SizedBox(height: 16),
-                    _buildFilterTabs(),
-                    const SizedBox(height: 32),
-                    _buildOffersList(),
-                  ],
+                  children: [const SizedBox(height: 16), _buildFilterTabs(), const SizedBox(height: 32), _buildOffersList()],
                 ),
               ),
             ),
@@ -48,15 +44,11 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
                 color: const Color(0xFFEFB94C).withOpacity(0.1),
                 borderRadius: BorderRadius.circular(200),
               ),
-              child: const Icon(
-                Icons.arrow_back_ios_new,
-                color: Color(0xFFEFB94C),
-                size: 20,
-              ),
+              child: const Icon(Icons.arrow_back_ios_new, color: Color(0xFFEFB94C), size: 20),
             ),
           ),
           Text(
-            'AVAILABE OFFERS',
+            'AVAILABLE OFFERS',
             style: GoogleFonts.poppins(
               fontSize: 26,
               fontWeight: FontWeight.w600,
@@ -73,11 +65,7 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
                 color: const Color(0xFFEFB94C).withOpacity(0.1),
                 borderRadius: BorderRadius.circular(200),
               ),
-              child: const Icon(
-                Icons.search,
-                color: Color(0xFFEFB94C),
-                size: 24,
-              ),
+              child: const Icon(Icons.search, color: Color(0xFFEFB94C), size: 24),
             ),
           ),
         ],
@@ -100,14 +88,9 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
             return GestureDetector(
               onTap: () => controller.selectTab(tab),
               child: Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                  vertical: 6,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
                 decoration: BoxDecoration(
-                  color: isSelected
-                      ? const Color(0xFFEFB94C)
-                      : const Color(0xFFEFB94C).withOpacity(0.1),
+                  color: isSelected ? const Color(0xFFEFB94C) : const Color(0xFFEFB94C).withOpacity(0.1),
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Text(
@@ -136,9 +119,7 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
       // Filter offers based on selected tab
       final filteredOffers = currentTab == 'All'
           ? allOffers
-          : allOffers
-                .where((offer) => offer['serviceType'] == currentTab)
-                .toList();
+          : allOffers.where((offer) => offer['serviceType'] == currentTab).toList();
 
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -159,10 +140,7 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
   Widget _buildOfferCard(Map<String, dynamic> offer) {
     return Container(
       padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: const Color(0xFFEFB94C).withOpacity(0.1),
-        borderRadius: BorderRadius.circular(16),
-      ),
+      decoration: BoxDecoration(color: const Color(0xFFEFB94C).withOpacity(0.1), borderRadius: BorderRadius.circular(16)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -182,10 +160,7 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
         Container(
           width: 52,
           padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            color: const Color(0xFFF7E6DB),
-            borderRadius: BorderRadius.circular(30),
-          ),
+          decoration: BoxDecoration(color: const Color(0xFFF7E6DB), borderRadius: BorderRadius.circular(30)),
           child: Image.asset('assets/images/box.png', width: 24, height: 24),
         ),
         const SizedBox(width: 8),
@@ -227,29 +202,11 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
               ),
               Row(
                 children: [
-                  Text(
-                    offer['from'],
-                    style: GoogleFonts.poppins(
-                      fontSize: 14,
-                      color: const Color(0xFF495057),
-                      height: 1.5,
-                    ),
-                  ),
+                  Text(offer['from'], style: GoogleFonts.poppins(fontSize: 14, color: const Color(0xFF495057), height: 1.5)),
                   const SizedBox(width: 8),
-                  const Icon(
-                    Icons.arrow_forward,
-                    size: 16,
-                    color: Color(0xFF495057),
-                  ),
+                  const Icon(Icons.arrow_forward, size: 16, color: Color(0xFF495057)),
                   const SizedBox(width: 8),
-                  Text(
-                    offer['to'],
-                    style: GoogleFonts.poppins(
-                      fontSize: 14,
-                      color: const Color(0xFF495057),
-                      height: 1.5,
-                    ),
-                  ),
+                  Text(offer['to'], style: GoogleFonts.poppins(fontSize: 14, color: const Color(0xFF495057), height: 1.5)),
                 ],
               ),
             ],
@@ -264,36 +221,15 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
       children: [
         Row(
           children: [
-            Expanded(
-              child: _buildDetailItem(
-                Icons.calendar_today,
-                'Date',
-                offer['date'],
-                const Color(0xFF0077FF),
-              ),
-            ),
+            Expanded(child: _buildDetailItem(Icons.calendar_today, 'Date', offer['date'], const Color(0xFF0077FF))),
             const SizedBox(width: 8),
-            Expanded(
-              child: _buildDetailItem(
-                Icons.access_time,
-                'Time',
-                offer['time'],
-                const Color(0xFFEFB94C),
-              ),
-            ),
+            Expanded(child: _buildDetailItem(Icons.access_time, 'Time', offer['time'], const Color(0xFFEFB94C))),
           ],
         ),
         const SizedBox(height: 8),
         Row(
           children: [
-            Expanded(
-              child: _buildDetailItem(
-                Icons.route,
-                'Distance',
-                offer['distance'],
-                const Color(0xFF1D04FE),
-              ),
-            ),
+            Expanded(child: _buildDetailItem(Icons.route, 'Distance', offer['distance'], const Color(0xFF1D04FE))),
             const SizedBox(width: 8),
             Expanded(
               child: _buildDetailItem(
@@ -309,27 +245,16 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
     );
   }
 
-  Widget _buildDetailItem(
-    IconData icon,
-    String title,
-    String subtitle,
-    Color color,
-  ) {
+  Widget _buildDetailItem(IconData icon, String title, String subtitle, Color color) {
     return Container(
       padding: const EdgeInsets.all(6),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-      ),
+      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
       child: Row(
         children: [
           Container(
             width: 40,
             height: 40,
-            decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(25),
-            ),
+            decoration: BoxDecoration(color: color.withOpacity(0.1), borderRadius: BorderRadius.circular(25)),
             child: Icon(icon, color: color, size: 20),
           ),
           const SizedBox(width: 8),
@@ -349,11 +274,7 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
                 ),
                 Text(
                   subtitle,
-                  style: GoogleFonts.poppins(
-                    fontSize: 12,
-                    color: const Color(0xFF495057),
-                    height: 1.5,
-                  ),
+                  style: GoogleFonts.poppins(fontSize: 12, color: const Color(0xFF495057), height: 1.5),
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
@@ -396,19 +317,11 @@ class AvailableOffersView extends GetView<AvailableOffersController> {
             onTap: () => controller.onChat(offer),
             child: Container(
               height: 48,
-              decoration: BoxDecoration(
-                color: const Color(0xFFEFB94C),
-                borderRadius: BorderRadius.circular(16),
-              ),
+              decoration: BoxDecoration(color: const Color(0xFFEFB94C), borderRadius: BorderRadius.circular(16)),
               child: Center(
                 child: Text(
                   'Chat',
-                  style: GoogleFonts.poppins(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.white,
-                    height: 1.5,
-                  ),
+                  style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w700, color: Colors.white, height: 1.5),
                 ),
               ),
             ),
