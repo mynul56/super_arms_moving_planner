@@ -40,6 +40,7 @@ abstract class Routes {
   static const NOTIFICATIONS = _Paths.NOTIFICATIONS;
   static const INSTALLMENTS = _Paths.INSTALLMENTS;
   static const ORDER_DETAILS = _Paths.ORDER_DETAILS;
+  static const INVENTORY = _Paths.INVENTORY;
 }
 
 abstract class _Paths {
@@ -81,4 +82,5 @@ abstract class _Paths {
   static const NOTIFICATIONS = '/notifications';
   static const INSTALLMENTS = '/installments';
   static const ORDER_DETAILS = '/order-details';
+  static const INVENTORY = '/inventory';
 }
