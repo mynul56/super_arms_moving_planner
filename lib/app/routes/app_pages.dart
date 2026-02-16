@@ -74,6 +74,8 @@ import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 import '../modules/waybill/bindings/waybill_binding.dart';
 import '../modules/waybill/views/waybill_view.dart';
+import '../modules/update_status/bindings/update_status_binding.dart';
+import '../modules/update_status/views/update_status_view.dart';
 
 part 'app_routes.dart';
 
@@ -282,6 +284,11 @@ class AppPages {
       name: _Paths.SELECT_MOVER,
       page: () => const SelectMoverView(),
       binding: SelectMoverBinding(),
+    ),
+    GetPage(
+      name: _Paths.UPDATE_STATUS,
+      page: () => const UpdateStatusView(),
+      binding: UpdateStatusBinding(),
     ),
   ];
 }

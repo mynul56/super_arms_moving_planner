@@ -43,6 +43,7 @@ abstract class Routes {
   static const INVENTORY = _Paths.INVENTORY;
   static const MANAGE_MOVE = _Paths.MANAGE_MOVE;
   static const SELECT_MOVER = _Paths.SELECT_MOVER;
+  static const UPDATE_STATUS = _Paths.UPDATE_STATUS;
 }
 
 abstract class _Paths {
@@ -87,4 +88,5 @@ abstract class _Paths {
   static const INVENTORY = '/inventory';
   static const MANAGE_MOVE = '/manage-move';
   static const SELECT_MOVER = '/select-mover';
+  static const UPDATE_STATUS = '/update-status';
 }
