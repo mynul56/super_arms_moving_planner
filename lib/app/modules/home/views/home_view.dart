@@ -14,7 +14,6 @@ class HomeView extends GetView<HomeController> {
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FA),
       drawer: const MainDrawer(),
-      bottomNavigationBar: _buildBottomNavBar(),
       appBar: AppBar(
         backgroundColor: const Color(0xFFEFB94C),
         automaticallyImplyLeading: false,
@@ -709,62 +708,6 @@ class HomeView extends GetView<HomeController> {
                   ),
                 ),
               ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildBottomNavBar() {
-    return Container(
-      height: 80,
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        border: Border(top: BorderSide(color: Color(0xFFC7C7C7), width: 0.6)),
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(10),
-          topRight: Radius.circular(10),
-        ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          _buildNavItemSvg('assets/icons/home.svg', 'Home', true),
-          _buildNavItemSvg('assets/icons/paymenticon.svg', 'Payments', false),
-          _buildNavItemSvg('assets/icons/calendar.svg', 'Schedule', false),
-          _buildNavItemSvg('assets/icons/chatnavbar.svg', 'Chat', false),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildNavItemSvg(String svgPath, String label, bool isActive) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          SizedBox(
-            width: 24,
-            height: 24,
-            child: SvgPicture.asset(
-              svgPath,
-              colorFilter: ColorFilter.mode(
-                isActive ? const Color(0xFFEFB94C) : const Color(0xFF787878),
-                BlendMode.srcIn,
-              ),
-            ),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            label,
-            style: GoogleFonts.poppins(
-              fontSize: 14,
-              color: isActive
-                  ? const Color(0xFFEFB94C)
-                  : const Color(0xFF787878),
-              height: 1.5,
             ),
           ),
         ],

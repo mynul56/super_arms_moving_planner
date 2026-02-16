@@ -22,6 +22,8 @@ import '../modules/auth/submission_complete/bindings/submission_complete_binding
 import '../modules/auth/submission_complete/views/submission_complete_view.dart';
 import '../modules/available_offers/bindings/available_offers_binding.dart';
 import '../modules/available_offers/views/available_offers_view.dart';
+import '../modules/chat/bindings/chat_binding.dart';
+import '../modules/chat/views/chat_view.dart';
 import '../modules/client_profile/bindings/client_profile_binding.dart';
 import '../modules/client_profile/views/client_profile_view.dart';
 import '../modules/clients/bindings/clients_binding.dart';
@@ -34,6 +36,10 @@ import '../modules/details/bindings/details_binding.dart';
 import '../modules/details/views/details_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/main_navigation/bindings/main_navigation_binding.dart';
+import '../modules/main_navigation/views/main_navigation_view.dart';
+import '../modules/schedule/bindings/schedule_binding.dart';
+import '../modules/schedule/views/schedule_view.dart';
 import '../modules/installment/bindings/installment_binding.dart';
 import '../modules/installment/views/installment_view.dart';
 import '../modules/installment/views/order_details_view.dart';
@@ -42,8 +48,8 @@ import '../modules/inventory/views/inventory_view.dart';
 import '../modules/live_tracking/bindings/live_tracking_binding.dart';
 import '../modules/live_tracking/views/live_tracking_view.dart';
 import '../modules/manage_move/bindings/manage_move_binding.dart';
-import '../modules/manage_move/views/manage_move_view.dart';
 import '../modules/manage_move/bindings/select_mover_binding.dart';
+import '../modules/manage_move/views/manage_move_view.dart';
 import '../modules/manage_move/views/select_mover_view.dart';
 import '../modules/move_without_truck_details/bindings/move_without_truck_details_binding.dart';
 import '../modules/move_without_truck_details/views/move_without_truck_details_view.dart';
@@ -72,10 +78,10 @@ import '../modules/search_offers/bindings/search_offers_binding.dart';
 import '../modules/search_offers/views/search_offers_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
-import '../modules/waybill/bindings/waybill_binding.dart';
-import '../modules/waybill/views/waybill_view.dart';
 import '../modules/update_status/bindings/update_status_binding.dart';
 import '../modules/update_status/views/update_status_view.dart';
+import '../modules/waybill/bindings/waybill_binding.dart';
+import '../modules/waybill/views/waybill_view.dart';
 
 part 'app_routes.dart';
 
@@ -99,6 +105,16 @@ class AppPages {
       name: _Paths.HOME,
       page: () => const HomeView(),
       binding: HomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.MAIN_NAVIGATION,
+      page: () => const MainNavigationView(),
+      binding: MainNavigationBinding(),
+    ),
+    GetPage(
+      name: _Paths.SCHEDULE,
+      page: () => const ScheduleView(),
+      binding: ScheduleBinding(),
     ),
     GetPage(
       name: _Paths.SIGN_UP,
@@ -289,6 +305,11 @@ class AppPages {
       name: _Paths.UPDATE_STATUS,
       page: () => const UpdateStatusView(),
       binding: UpdateStatusBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHAT,
+      page: () => const ChatView(),
+      binding: ChatBinding(),
     ),
   ];
 }

@@ -201,7 +201,7 @@ class CongratulationsView extends GetView<CongratulationsController> {
 
                   // Welcome box button
                   GestureDetector(
-                    onTap: () => Get.offAllNamed(Routes.HOME),
+                    onTap: () => Get.offAllNamed(Routes.MAIN_NAVIGATION),
                     child: Container(
                       margin: const EdgeInsets.symmetric(horizontal: 64),
                       padding: const EdgeInsets.all(24),

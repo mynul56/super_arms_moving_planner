@@ -160,7 +160,7 @@ class SigninView extends GetView<SigninController> {
 
                     // Log In Button
                     GestureDetector(
-                      onTap: () => Get.toNamed(Routes.HOME),
+                      onTap: () => Get.toNamed(Routes.MAIN_NAVIGATION),
                       child: Container(
                         width: double.infinity,
                         height: 56,

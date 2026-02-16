@@ -6,6 +6,7 @@ abstract class Routes {
   static const SPLASH = _Paths.SPLASH;
   static const ONBOARDING = _Paths.ONBOARDING;
   static const HOME = _Paths.HOME;
+  static const MAIN_NAVIGATION = _Paths.MAIN_NAVIGATION;
   static const SIGN_UP = _Paths.SIGN_UP;
   static const SIGNIN = _Paths.SIGNIN;
   static const OTP_VERIFICATION = _Paths.OTP_VERIFICATION;
@@ -44,6 +45,8 @@ abstract class Routes {
   static const MANAGE_MOVE = _Paths.MANAGE_MOVE;
   static const SELECT_MOVER = _Paths.SELECT_MOVER;
   static const UPDATE_STATUS = _Paths.UPDATE_STATUS;
+  static const CHAT = _Paths.CHAT;
+  static const SCHEDULE = _Paths.SCHEDULE;
 }
 
 abstract class _Paths {
@@ -51,6 +54,7 @@ abstract class _Paths {
   static const SPLASH = '/splash';
   static const ONBOARDING = '/onboarding';
   static const HOME = '/home';
+  static const MAIN_NAVIGATION = '/main-navigation';
   static const SIGN_UP = '/sign-up';
   static const SIGNIN = '/signin';
   static const OTP_VERIFICATION = '/otp-verification';
@@ -89,4 +93,6 @@ abstract class _Paths {
   static const MANAGE_MOVE = '/manage-move';
   static const SELECT_MOVER = '/select-mover';
   static const UPDATE_STATUS = '/update-status';
+  static const CHAT = '/chat';
+  static const SCHEDULE = '/schedule';
 }
