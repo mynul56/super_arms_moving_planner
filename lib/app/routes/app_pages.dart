@@ -41,6 +41,10 @@ import '../modules/inventory/bindings/inventory_binding.dart';
 import '../modules/inventory/views/inventory_view.dart';
 import '../modules/live_tracking/bindings/live_tracking_binding.dart';
 import '../modules/live_tracking/views/live_tracking_view.dart';
+import '../modules/manage_move/bindings/manage_move_binding.dart';
+import '../modules/manage_move/views/manage_move_view.dart';
+import '../modules/manage_move/bindings/select_mover_binding.dart';
+import '../modules/manage_move/views/select_mover_view.dart';
 import '../modules/move_without_truck_details/bindings/move_without_truck_details_binding.dart';
 import '../modules/move_without_truck_details/views/move_without_truck_details_view.dart';
 import '../modules/moving_planner_details/bindings/moving_planner_details_binding.dart';
@@ -268,6 +272,16 @@ class AppPages {
       name: _Paths.INVENTORY,
       page: () => const InventoryView(),
       binding: InventoryBinding(),
+    ),
+    GetPage(
+      name: _Paths.MANAGE_MOVE,
+      page: () => const ManageMoveView(),
+      binding: ManageMoveBinding(),
+    ),
+    GetPage(
+      name: _Paths.SELECT_MOVER,
+      page: () => const SelectMoverView(),
+      binding: SelectMoverBinding(),
     ),
   ];
 }

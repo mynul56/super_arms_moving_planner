@@ -119,6 +119,7 @@ class MainDrawer extends StatelessWidget {
             title: 'Manage Move',
             onTap: () {
               Get.back();
+              Get.toNamed(Routes.MANAGE_MOVE);
             },
           ),
           _buildMenuItem(
