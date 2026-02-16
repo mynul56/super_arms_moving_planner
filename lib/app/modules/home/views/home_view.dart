@@ -452,7 +452,7 @@ class HomeView extends GetView<HomeController> {
           const SizedBox(height: 12),
           _buildMissionDetails(move),
           const SizedBox(height: 12),
-          _buildContinueButton(),
+          _buildContinueButton(move),
         ],
       ),
     );
@@ -570,22 +570,28 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  Widget _buildContinueButton() {
-    return Container(
-      width: double.infinity,
-      height: 48,
-      decoration: BoxDecoration(
-        color: const Color(0xFFEFB94C),
-        borderRadius: BorderRadius.circular(16),
+  Widget _buildContinueButton(Map<String, dynamic> move) {
+    return GestureDetector(
+      onTap: () => Get.toNamed(
+        Routes.DETAILS,
+        arguments: {'orderId': '${move['id']}24769746ZX'},
       ),
-      child: Center(
-        child: Text(
-          'View Details',
-          style: GoogleFonts.poppins(
-            fontSize: 16,
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-            height: 1.5,
+      child: Container(
+        width: double.infinity,
+        height: 48,
+        decoration: BoxDecoration(
+          color: const Color(0xFFEFB94C),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Center(
+          child: Text(
+            'View Details',
+            style: GoogleFonts.poppins(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+              height: 1.5,
+            ),
           ),
         ),
       ),

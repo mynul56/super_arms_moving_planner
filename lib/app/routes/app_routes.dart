@@ -47,6 +47,7 @@ abstract class Routes {
   static const UPDATE_STATUS = _Paths.UPDATE_STATUS;
   static const CHAT = _Paths.CHAT;
   static const SCHEDULE = _Paths.SCHEDULE;
+  static const CHANGE_PASSWORD = _Paths.CHANGE_PASSWORD;
 }
 
 abstract class _Paths {
@@ -95,4 +96,5 @@ abstract class _Paths {
   static const UPDATE_STATUS = '/update-status';
   static const CHAT = '/chat';
   static const SCHEDULE = '/schedule';
+  static const CHANGE_PASSWORD = '/change-password';
 }

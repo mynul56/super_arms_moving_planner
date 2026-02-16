@@ -191,7 +191,7 @@ class ProfileView extends GetView<ProfileController> {
           _buildActionButton(
             title: 'Change password',
             icon: Icons.more_horiz,
-            onTap: () {},
+            onTap: () => Get.toNamed(Routes.CHANGE_PASSWORD),
           ),
           const SizedBox(height: 16),
           _buildActionButton(

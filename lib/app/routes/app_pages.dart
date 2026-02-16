@@ -70,6 +70,7 @@ import '../modules/profile/views/edit_profile_view.dart';
 import '../modules/profile/views/manage_company_view.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/profile/views/update_card_info_view.dart';
+import '../modules/profile/views/change_password_view.dart';
 import '../modules/route/bindings/route_binding.dart';
 import '../modules/route/views/route_view.dart';
 import '../modules/route_offers/bindings/route_offers_binding.dart';
@@ -310,6 +311,10 @@ class AppPages {
       name: _Paths.CHAT,
       page: () => const ChatView(),
       binding: ChatBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHANGE_PASSWORD,
+      page: () => const ChangePasswordView(),
     ),
   ];
 }
