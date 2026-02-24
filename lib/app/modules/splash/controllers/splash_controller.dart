@@ -14,8 +14,8 @@ class SplashController extends GetxController {
     print('SplashController ready, starting 3s timer');
     // Navigate to Onboarding after 3 seconds
     Future.delayed(const Duration(seconds: 3), () {
-      print('Splash timer finished, navigating to Onboarding');
-      Get.offAllNamed(Routes.ONBOARDING);
+      print('Splash timer finished, navigating to Language screen');
+      Get.offAllNamed(Routes.LANGUAGE);
     });
   }
 

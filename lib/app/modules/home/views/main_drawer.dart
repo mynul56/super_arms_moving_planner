@@ -123,6 +123,14 @@ class MainDrawer extends StatelessWidget {
             },
           ),
           _buildMenuItem(
+            icon: Icons.language,
+            title: 'Language',
+            onTap: () {
+              Get.back();
+              Get.toNamed(Routes.LANGUAGE, arguments: {'from': 'drawer'});
+            },
+          ),
+          _buildMenuItem(
             icon: Icons.logout,
             title: 'Logout',
             onTap: () {
