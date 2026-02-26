@@ -5,6 +5,17 @@ import '../../../routes/app_pages.dart';
 class LanguageController extends GetxController {
   final selectedLanguage = 'English'.obs;
 
+  @override
+  void onInit() {
+    super.onInit();
+    final currentLocale = Get.locale;
+    if (currentLocale != null && currentLocale.languageCode == 'fr') {
+      selectedLanguage.value = 'Français';
+    } else {
+      selectedLanguage.value = 'English';
+    }
+  }
+
   void changeLanguage(String language) {
     selectedLanguage.value = language;
     if (language == 'English') {
