@@ -28,7 +28,7 @@ class LanguageController extends GetxController {
   void onContinue() {
     // Navigate to the next screen based on the flow.
     if (Get.arguments != null && Get.arguments['from'] == 'drawer') {
-      Get.offAllNamed(Routes.HOME);
+      Get.offAllNamed(Routes.MAIN_NAVIGATION);
     } else {
       Get.offAllNamed(Routes.ONBOARDING);
     }
