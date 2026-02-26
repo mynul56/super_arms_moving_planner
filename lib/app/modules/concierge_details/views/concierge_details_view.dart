@@ -860,7 +860,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
                               child: Align(
                                 alignment: Alignment.centerLeft,
                                 child: Text(
-                                  '2045  Lodgeville Street, Eagan',
+                                  '2045  Lodgeville Street, Eagan'.tr,
                                   style: GoogleFonts.poppins(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w400,
@@ -877,7 +877,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
                               child: Align(
                                 alignment: Alignment.centerLeft,
                                 child: Text(
-                                  '3329  Joyce Stree, PA, USA',
+                                  '3329  Joyce Stree, PA, USA'.tr,
                                   style: GoogleFonts.poppins(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w400,
@@ -910,7 +910,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
           children: [
             Center(
               child: Text(
-                'Details',
+                'Details'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 26,
                   fontWeight: FontWeight.w600,
@@ -937,7 +937,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
                   const SizedBox(width: 12),
                   Expanded(
                     child: Text(
-                      'Consignment Note',
+                      'Consignment Note'.tr,
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
@@ -1013,7 +1013,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Consignment Note',
+                'Consignment Note'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
@@ -1041,8 +1041,8 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
                       fontWeight: FontWeight.w400,
                       color: const Color(0xFF212529),
                     ),
-                    decoration: const InputDecoration.collapsed(
-                      hintText: 'Enter note...',
+                    decoration: InputDecoration.collapsed(
+                      hintText: 'Enter note...'.tr,
                     ),
                   ),
                 ),
@@ -1062,7 +1062,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
-                    'Save',
+                    'Save'.tr,
                     style: GoogleFonts.poppins(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,

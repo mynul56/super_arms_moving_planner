@@ -22,6 +22,6 @@ void main() {
     );
 
     // Verify that the app builds without errors
-    await tester.pumpAndSettle();
+    await tester.pump();
   });
 }

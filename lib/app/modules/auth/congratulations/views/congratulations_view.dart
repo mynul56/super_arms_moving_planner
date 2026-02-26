@@ -169,7 +169,7 @@ class CongratulationsView extends GetView<CongratulationsController> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 40),
                     child: Text(
-                      'Congratulations',
+                      'Congratulations'.tr,
                       textAlign: TextAlign.center,
                       style: GoogleFonts.poppins(
                         color: const Color(0xFF1B1D21),
@@ -186,7 +186,7 @@ class CongratulationsView extends GetView<CongratulationsController> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text(
-                      'Move Complete',
+                      'Move Complete'.tr,
                       textAlign: TextAlign.center,
                       style: GoogleFonts.poppins(
                         color: Colors.black.withOpacity(0.5),
@@ -210,7 +210,7 @@ class CongratulationsView extends GetView<CongratulationsController> {
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Text(
-                        'Back to Home',
+                        'Back to Home'.tr,
                         textAlign: TextAlign.center,
                         style: GoogleFonts.poppins(
                           color: const Color(0xFFEFB94C),

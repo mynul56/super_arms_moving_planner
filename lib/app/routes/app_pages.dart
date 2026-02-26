@@ -1,3 +1,4 @@
+// ignore_for_file: constant_identifier_names
 import 'package:get/get.dart';
 
 import '../modules/auth/congratulations/bindings/congratulations_binding.dart';
@@ -94,63 +95,235 @@ class AppPages {
   static const INITIAL = Routes.SPLASH;
 
   static final routes = [
-    GetPage(name: _Paths.SPLASH, page: () => const SplashView(), binding: SplashBinding()),
-    GetPage(name: _Paths.ONBOARDING, page: () => const OnboardingView(), binding: OnboardingBinding()),
-    GetPage(name: _Paths.HOME, page: () => const HomeView(), binding: HomeBinding()),
-    GetPage(name: _Paths.MAIN_NAVIGATION, page: () => const MainNavigationView(), binding: MainNavigationBinding()),
-    GetPage(name: _Paths.SCHEDULE, page: () => const ScheduleView(), binding: ScheduleBinding()),
-    GetPage(name: _Paths.SIGN_UP, page: () => const SignUpView(), binding: SignUpBinding()),
-    GetPage(name: _Paths.SIGNIN, page: () => const SigninView(), binding: SigninBinding()),
-    GetPage(name: _Paths.OTP_VERIFICATION, page: () => const OtpVerificationView(), binding: OtpVerificationBinding()),
-    GetPage(name: _Paths.REGISTER, page: () => const RegisterView(), binding: RegisterBinding()),
-    GetPage(name: _Paths.REGISTER_COMPANY, page: () => const RegisterCompanyView(), binding: RegisterCompanyBinding()),
-    GetPage(name: _Paths.DOCUMENT_UPLOAD, page: () => const DocumentUploadView(), binding: DocumentUploadBinding()),
+    GetPage(
+      name: _Paths.SPLASH,
+      page: () => const SplashView(),
+      binding: SplashBinding(),
+    ),
+    GetPage(
+      name: _Paths.ONBOARDING,
+      page: () => const OnboardingView(),
+      binding: OnboardingBinding(),
+    ),
+    GetPage(
+      name: _Paths.HOME,
+      page: () => const HomeView(),
+      binding: HomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.MAIN_NAVIGATION,
+      page: () => const MainNavigationView(),
+      binding: MainNavigationBinding(),
+    ),
+    GetPage(
+      name: _Paths.SCHEDULE,
+      page: () => const ScheduleView(),
+      binding: ScheduleBinding(),
+    ),
+    GetPage(
+      name: _Paths.SIGN_UP,
+      page: () => const SignUpView(),
+      binding: SignUpBinding(),
+    ),
+    GetPage(
+      name: _Paths.SIGNIN,
+      page: () => const SigninView(),
+      binding: SigninBinding(),
+    ),
+    GetPage(
+      name: _Paths.OTP_VERIFICATION,
+      page: () => const OtpVerificationView(),
+      binding: OtpVerificationBinding(),
+    ),
+    GetPage(
+      name: _Paths.REGISTER,
+      page: () => const RegisterView(),
+      binding: RegisterBinding(),
+    ),
+    GetPage(
+      name: _Paths.REGISTER_COMPANY,
+      page: () => const RegisterCompanyView(),
+      binding: RegisterCompanyBinding(),
+    ),
+    GetPage(
+      name: _Paths.DOCUMENT_UPLOAD,
+      page: () => const DocumentUploadView(),
+      binding: DocumentUploadBinding(),
+    ),
     GetPage(
       name: _Paths.SUBMISSION_COMPLETE,
       page: () => const SubmissionCompleteView(),
       binding: SubmissionCompleteBinding(),
     ),
-    GetPage(name: _Paths.CONGRATULATIONS, page: () => const CongratulationsView(), binding: CongratulationsBinding()),
-    GetPage(name: _Paths.FORGOT_PASSWORD, page: () => const ForgotpasswordView(), binding: ForgotpasswordBinding()),
-    GetPage(name: _Paths.RESET_PASSWORD, page: () => const ResetpasswordView(), binding: ResetpasswordBinding()),
-    GetPage(name: _Paths.AVAILABLE_OFFERS, page: () => const AvailableOffersView(), binding: AvailableOffersBinding()),
-    GetPage(name: _Paths.LIVE_TRACKING, page: () => const LiveTrackingView(), binding: LiveTrackingBinding()),
-    GetPage(name: _Paths.PAYMENT, page: () => const PaymentView(), binding: PaymentBinding()),
-    GetPage(name: _Paths.PAYMENT_DETAILS, page: () => const PaymentDetailsView(), binding: PaymentDetailsBinding()),
-    GetPage(name: _Paths.SEARCH_OFFERS, page: () => const SearchOffersView(), binding: SearchOffersBinding()),
-    GetPage(name: _Paths.DETAILS, page: () => const DetailsView(), binding: DetailsBinding()),
-    GetPage(name: _Paths.PROFILE, page: () => const ProfileView(), binding: ProfileBinding()),
-    GetPage(name: _Paths.EDIT_PROFILE, page: () => const EditProfileView(), binding: ProfileBinding()),
-    GetPage(name: _Paths.UPDATE_CARD_INFO, page: () => const UpdateCardInfoView(), binding: ProfileBinding()),
-    GetPage(name: _Paths.WAYBILL, page: () => const WaybillView(), binding: WaybillBinding()),
-    GetPage(name: _Paths.EDIT_DOCUMENT, page: () => const EditDocumentView(), binding: ProfileBinding()),
-    GetPage(name: _Paths.MANAGE_COMPANY, page: () => const ManageCompanyView(), binding: ProfileBinding()),
-    GetPage(name: _Paths.ADD_EMPLOYEE, page: () => const AddEmployeeView(), binding: ProfileBinding()),
+    GetPage(
+      name: _Paths.CONGRATULATIONS,
+      page: () => const CongratulationsView(),
+      binding: CongratulationsBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORGOT_PASSWORD,
+      page: () => const ForgotpasswordView(),
+      binding: ForgotpasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.RESET_PASSWORD,
+      page: () => const ResetpasswordView(),
+      binding: ResetpasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.AVAILABLE_OFFERS,
+      page: () => const AvailableOffersView(),
+      binding: AvailableOffersBinding(),
+    ),
+    GetPage(
+      name: _Paths.LIVE_TRACKING,
+      page: () => const LiveTrackingView(),
+      binding: LiveTrackingBinding(),
+    ),
+    GetPage(
+      name: _Paths.PAYMENT,
+      page: () => const PaymentView(),
+      binding: PaymentBinding(),
+    ),
+    GetPage(
+      name: _Paths.PAYMENT_DETAILS,
+      page: () => const PaymentDetailsView(),
+      binding: PaymentDetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.SEARCH_OFFERS,
+      page: () => const SearchOffersView(),
+      binding: SearchOffersBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAILS,
+      page: () => const DetailsView(),
+      binding: DetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE,
+      page: () => const ProfileView(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_PROFILE,
+      page: () => const EditProfileView(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.UPDATE_CARD_INFO,
+      page: () => const UpdateCardInfoView(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.WAYBILL,
+      page: () => const WaybillView(),
+      binding: WaybillBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_DOCUMENT,
+      page: () => const EditDocumentView(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.MANAGE_COMPANY,
+      page: () => const ManageCompanyView(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_EMPLOYEE,
+      page: () => const AddEmployeeView(),
+      binding: ProfileBinding(),
+    ),
     GetPage(
       name: _Paths.MOVING_PLANNER_DETAILS,
       page: () => const MovingPlannerDetailsView(),
       binding: MovingPlannerDetailsBinding(),
     ),
-    GetPage(name: _Paths.CONCIERGE_DETAILS, page: () => const ConciergeDetailsView(), binding: ConciergeDetailsBinding()),
+    GetPage(
+      name: _Paths.CONCIERGE_DETAILS,
+      page: () => const ConciergeDetailsView(),
+      binding: ConciergeDetailsBinding(),
+    ),
     GetPage(
       name: _Paths.MOVE_WITHOUT_TRUCK_DETAILS,
       page: () => const MoveWithoutTruckDetailsView(),
       binding: MoveWithoutTruckDetailsBinding(),
     ),
-    GetPage(name: _Paths.DELIVERY_PROOF, page: () => const DeliveryProofView(), binding: DeliveryProofBinding()),
-    GetPage(name: _Paths.ROUTE, page: () => const RouteView(), binding: RouteBinding()),
-    GetPage(name: _Paths.ROUTE_OFFERS, page: () => const RouteOffersView(), binding: RouteOffersBinding()),
-    GetPage(name: _Paths.CLIENTS, page: () => const ClientsView(), binding: ClientsBinding()),
-    GetPage(name: _Paths.CLIENT_PROFILE, page: () => const ClientProfileView(), binding: ClientProfileBinding()),
-    GetPage(name: _Paths.NOTIFICATIONS, page: () => const NotificationsView(), binding: NotificationsBinding()),
-    GetPage(name: _Paths.INSTALLMENTS, page: () => const InstallmentView(), binding: InstallmentBinding()),
-    GetPage(name: _Paths.ORDER_DETAILS, page: () => const OrderDetailsView(), binding: InstallmentBinding()),
-    GetPage(name: _Paths.INVENTORY, page: () => const InventoryView(), binding: InventoryBinding()),
-    GetPage(name: _Paths.MANAGE_MOVE, page: () => const ManageMoveView(), binding: ManageMoveBinding()),
-    GetPage(name: _Paths.SELECT_MOVER, page: () => const SelectMoverView(), binding: SelectMoverBinding()),
-    GetPage(name: _Paths.UPDATE_STATUS, page: () => const UpdateStatusView(), binding: UpdateStatusBinding()),
-    GetPage(name: _Paths.CHAT, page: () => const ChatView(), binding: ChatBinding()),
-    GetPage(name: _Paths.CHANGE_PASSWORD, page: () => const ChangePasswordView(), binding: ProfileBinding()),
-    GetPage(name: _Paths.LANGUAGE, page: () => const LanguageView(), binding: LanguageBinding()),
+    GetPage(
+      name: _Paths.DELIVERY_PROOF,
+      page: () => const DeliveryProofView(),
+      binding: DeliveryProofBinding(),
+    ),
+    GetPage(
+      name: _Paths.ROUTE,
+      page: () => const RouteView(),
+      binding: RouteBinding(),
+    ),
+    GetPage(
+      name: _Paths.ROUTE_OFFERS,
+      page: () => const RouteOffersView(),
+      binding: RouteOffersBinding(),
+    ),
+    GetPage(
+      name: _Paths.CLIENTS,
+      page: () => const ClientsView(),
+      binding: ClientsBinding(),
+    ),
+    GetPage(
+      name: _Paths.CLIENT_PROFILE,
+      page: () => const ClientProfileView(),
+      binding: ClientProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.NOTIFICATIONS,
+      page: () => const NotificationsView(),
+      binding: NotificationsBinding(),
+    ),
+    GetPage(
+      name: _Paths.INSTALLMENTS,
+      page: () => const InstallmentView(),
+      binding: InstallmentBinding(),
+    ),
+    GetPage(
+      name: _Paths.ORDER_DETAILS,
+      page: () => const OrderDetailsView(),
+      binding: InstallmentBinding(),
+    ),
+    GetPage(
+      name: _Paths.INVENTORY,
+      page: () => const InventoryView(),
+      binding: InventoryBinding(),
+    ),
+    GetPage(
+      name: _Paths.MANAGE_MOVE,
+      page: () => const ManageMoveView(),
+      binding: ManageMoveBinding(),
+    ),
+    GetPage(
+      name: _Paths.SELECT_MOVER,
+      page: () => const SelectMoverView(),
+      binding: SelectMoverBinding(),
+    ),
+    GetPage(
+      name: _Paths.UPDATE_STATUS,
+      page: () => const UpdateStatusView(),
+      binding: UpdateStatusBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHAT,
+      page: () => const ChatView(),
+      binding: ChatBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHANGE_PASSWORD,
+      page: () => const ChangePasswordView(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.LANGUAGE,
+      page: () => const LanguageView(),
+      binding: LanguageBinding(),
+    ),
   ];
 }

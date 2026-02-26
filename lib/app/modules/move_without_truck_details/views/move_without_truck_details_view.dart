@@ -975,7 +975,7 @@ class MoveWithoutTruckDetailsView
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Pickup Point',
+                              'Pickup Point'.tr,
                               style: GoogleFonts.poppins(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
