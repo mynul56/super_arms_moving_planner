@@ -20,7 +20,7 @@ class LanguageView extends GetView<LanguageController> {
               const SizedBox(height: 48),
               // Title
               Text(
-                'Choose Your Preferred\nLanguage',
+                'Choose Your Preferred\nLanguage'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 28,
                   fontWeight: FontWeight.w600,
@@ -31,7 +31,8 @@ class LanguageView extends GetView<LanguageController> {
               const SizedBox(height: 16),
               // Subtitle
               Text(
-                'Select a language to customize your\nexperience and navigation.',
+                'Select a language to customize your\nexperience and navigation.'
+                    .tr,
                 style: GoogleFonts.poppins(
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
@@ -44,8 +45,8 @@ class LanguageView extends GetView<LanguageController> {
               // Language options
               Obx(
                 () => _buildLanguageOption(
-                  'English',
-                  'United States',
+                  'English'.tr,
+                  'United States'.tr,
                   '🇬🇧', // Based on the UI matching UK flag for English
                   controller.selectedLanguage.value == 'English',
                   () => controller.changeLanguage('English'),
@@ -54,8 +55,8 @@ class LanguageView extends GetView<LanguageController> {
               const SizedBox(height: 16),
               Obx(
                 () => _buildLanguageOption(
-                  'Français',
-                  'France',
+                  'Français'.tr,
+                  'France'.tr,
                   '🇫🇷',
                   controller.selectedLanguage.value == 'Français',
                   () => controller.changeLanguage('Français'),
@@ -76,7 +77,7 @@ class LanguageView extends GetView<LanguageController> {
                   ),
                   child: Center(
                     child: Text(
-                      'Continue',
+                      'Continue'.tr,
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,

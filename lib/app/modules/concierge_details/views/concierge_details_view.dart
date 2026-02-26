@@ -26,7 +26,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
                 } else if (controller.selectedMainTab.value == 3) {
                   return _buildDescriptionContent();
                 } else {
-                  return const Center(child: Text("Coming Soon"));
+                  return Center(child: Text("Coming Soon".tr));
                 }
               }),
             ),
@@ -44,7 +44,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
           children: [
             Center(
               child: Text(
-                'Details',
+                'Details'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 26,
                   fontWeight: FontWeight.w600,
@@ -62,7 +62,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Selected Items',
+                'Selected Items'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
@@ -121,7 +121,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
               ),
               const SizedBox(width: 12),
               Text(
-                'Regular Cleaning',
+                'Regular Cleaning'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
@@ -139,7 +139,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
               borderRadius: BorderRadius.circular(8),
             ),
             child: Text(
-              'I want them to forward my mails to the new location',
+              'I want them to forward my mails to the new location'.tr,
               style: GoogleFonts.poppins(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
@@ -160,7 +160,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
           children: [
             Center(
               child: Text(
-                'Details',
+                'Details'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 26,
                   fontWeight: FontWeight.w600,
@@ -328,7 +328,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
             ),
             const SizedBox(width: 11),
             Text(
-              'Chat with Client',
+              'Chat with Client'.tr,
               style: GoogleFonts.poppins(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
@@ -339,7 +339,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
         ),
         const SizedBox(height: 16),
         Text(
-          'Client Name: Al Muntakim',
+          'Client Name:'.tr + ' Al Muntakim',
           style: GoogleFonts.poppins(
             fontSize: 16,
             fontWeight: FontWeight.w700,
@@ -348,7 +348,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
         ),
         const SizedBox(height: 8),
         Text(
-          'Pickup Address: 270/2 Paris, France',
+          'Pickup Address:'.tr + ' 270/2 Paris, France',
           style: GoogleFonts.poppins(
             fontSize: 14,
             fontWeight: FontWeight.w400,
@@ -357,7 +357,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
         ),
         const SizedBox(height: 8),
         Text(
-          'Delivery Address: 23/2 Paris, France',
+          'Delivery Address:'.tr + ' 23/2 Paris, France',
           style: GoogleFonts.poppins(
             fontSize: 14,
             fontWeight: FontWeight.w400,
@@ -366,7 +366,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
         ),
         const SizedBox(height: 8),
         Text(
-          '512KM Distance',
+          '512KM ' + 'Distance'.tr,
           style: GoogleFonts.poppins(
             fontSize: 14,
             fontWeight: FontWeight.w400,
@@ -407,7 +407,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Order ID: 124769746ZX',
+                      'Order ID:'.tr + ' 124769746ZX',
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
@@ -419,7 +419,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
                     Row(
                       children: [
                         Text(
-                          'Service Type: ',
+                          'Service Type: '.tr,
                           style: GoogleFonts.poppins(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
@@ -427,7 +427,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
                           ),
                         ),
                         Text(
-                          'Concierge',
+                          'Concierge'.tr,
                           style: GoogleFonts.poppins(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
@@ -448,7 +448,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
               Expanded(
                 child: _buildInfoItem(
                   Icons.calendar_today,
-                  'Date',
+                  'Date'.tr,
                   'Aug 28, Sat',
                   const Color(0xFF0077FF),
                 ),
@@ -457,7 +457,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
               Expanded(
                 child: _buildInfoItem(
                   Icons.access_time,
-                  'Time',
+                  'Time'.tr,
                   '9 Am',
                   const Color(0xFFEFB94C),
                 ),
@@ -471,7 +471,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
                 child: _buildInfoItem(
                   Icons.work_outline,
                   '03',
-                  'Standard box',
+                  'Standard box'.tr,
                   const Color(0xFF1D04FE),
                 ),
               ),
@@ -480,7 +480,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
                 child: _buildInfoItem(
                   Icons.pending_actions,
                   'Pending',
-                  'Status',
+                  'Status'.tr,
                   const Color(0xFFEFB94C),
                 ),
               ),
@@ -562,7 +562,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
             child: Row(
               children: [
                 Text(
-                  'Special Requirements',
+                  'Special Requirements'.tr,
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
@@ -575,7 +575,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
           Padding(
             padding: const EdgeInsets.all(12),
             child: Text(
-              'Move very Carefully.',
+              'Move very Carefully.'.tr,
               style: GoogleFonts.poppins(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
@@ -608,7 +608,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
             child: Row(
               children: [
                 Text(
-                  'Selected Furnitures',
+                  'Selected Furnitures'.tr,
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
@@ -640,7 +640,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Total Items:',
+                  'Total Items:'.tr,
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
@@ -648,7 +648,7 @@ class ConciergeDetailsView extends GetView<ConciergeDetailsController> {
                   ),
                 ),
                 Text(
-                  '06 items',
+                  '06 items'.tr,
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,

@@ -56,7 +56,7 @@ class SigninView extends GetView<SigninController> {
                   children: [
                     // Title Section
                     Text(
-                      'Welcome Back',
+                      'Welcome Back'.tr,
                       style: GoogleFonts.poppins(
                         color: const Color(0xFF212529),
                         fontSize: 32,
@@ -66,7 +66,7 @@ class SigninView extends GetView<SigninController> {
                     ),
                     const SizedBox(height: 12),
                     Text(
-                      'Good To Have You Back, You’ve Been Missed',
+                      'Good To Have You Back, You’ve Been Missed'.tr,
                       style: GoogleFonts.poppins(
                         color: const Color(0xFF495057),
                         fontSize: 16,
@@ -77,7 +77,7 @@ class SigninView extends GetView<SigninController> {
 
                     // Email Field
                     _buildInputField(
-                      label: 'Email Address',
+                      label: 'Email Address'.tr,
                       hint: 'null@gmail.com',
                       controller: controller.emailController,
                       keyboardType: TextInputType.emailAddress,
@@ -87,7 +87,7 @@ class SigninView extends GetView<SigninController> {
                     // Password Field
                     Obx(
                       () => _buildInputField(
-                        label: 'Password',
+                        label: 'Password'.tr,
                         hint: '********',
                         controller: controller.passwordController,
                         isPassword: true,
@@ -131,7 +131,7 @@ class SigninView extends GetView<SigninController> {
                               ),
                               const SizedBox(width: 8),
                               Text(
-                                'Remember Me',
+                                'Remember Me'.tr,
                                 style: GoogleFonts.poppins(
                                   color: const Color(0xFF495057),
                                   fontSize: 12,
@@ -146,7 +146,7 @@ class SigninView extends GetView<SigninController> {
                             Get.toNamed(Routes.FORGOT_PASSWORD);
                           },
                           child: Text(
-                            'Forgot Password?',
+                            'Forgot Password?'.tr,
                             style: GoogleFonts.poppins(
                               color: const Color(0xFFEFB84B),
                               fontSize: 12,
@@ -177,7 +177,7 @@ class SigninView extends GetView<SigninController> {
                         ),
                         child: Center(
                           child: Text(
-                            'Log In',
+                            'Log In'.tr,
                             style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 17,
@@ -192,7 +192,7 @@ class SigninView extends GetView<SigninController> {
                     // OR Divider
                     Center(
                       child: Text(
-                        'OR',
+                        'OR'.tr,
                         style: GoogleFonts.poppins(
                           color: const Color(0xFF495057),
                           fontSize: 16,
@@ -222,7 +222,7 @@ class SigninView extends GetView<SigninController> {
                             ),
                             const SizedBox(width: 12),
                             Text(
-                              'Continue With Google',
+                              'Continue With Google'.tr,
                               style: GoogleFonts.poppins(
                                 color: const Color(0xFF212529),
                                 fontSize: 14,
@@ -243,7 +243,7 @@ class SigninView extends GetView<SigninController> {
                           TextSpan(
                             children: [
                               TextSpan(
-                                text: 'Don’t Have An Account? ',
+                                text: 'Don’t Have An Account? '.tr,
                                 style: GoogleFonts.poppins(
                                   color: const Color(0xFF495057),
                                   fontSize: 14,
@@ -251,7 +251,7 @@ class SigninView extends GetView<SigninController> {
                                 ),
                               ),
                               TextSpan(
-                                text: 'Sign Up',
+                                text: 'Sign Up'.tr,
                                 style: GoogleFonts.poppins(
                                   color: const Color(0xFFEFB84B),
                                   fontSize: 14,

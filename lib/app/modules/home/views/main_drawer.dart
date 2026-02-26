@@ -84,7 +84,7 @@ class MainDrawer extends StatelessWidget {
           _buildMenuItem(
             icon: Icons.person_outline_rounded,
 
-            title: 'Profile',
+            title: 'Profile'.tr,
             onTap: () {
               Get.back(); // Close drawer
               Get.toNamed(Routes.PROFILE);
@@ -92,7 +92,7 @@ class MainDrawer extends StatelessWidget {
           ),
           _buildMenuItem(
             icon: Icons.wallet_outlined,
-            title: 'Installments',
+            title: 'Installments'.tr,
             onTap: () {
               Get.back(); // Close drawer
               Get.toNamed(Routes.INSTALLMENTS);
@@ -100,7 +100,7 @@ class MainDrawer extends StatelessWidget {
           ),
           _buildMenuItem(
             icon: Icons.inventory_2_outlined,
-            title: 'Inventory',
+            title: 'Inventory'.tr,
             onTap: () {
               Get.back(); // Close drawer
               Get.toNamed(Routes.INVENTORY);
@@ -108,7 +108,7 @@ class MainDrawer extends StatelessWidget {
           ),
           _buildMenuItem(
             icon: Icons.business_outlined,
-            title: 'Manage Company',
+            title: 'Manage Company'.tr,
             onTap: () {
               Get.back(); // Close drawer
               Get.toNamed(Routes.MANAGE_COMPANY);
@@ -116,7 +116,7 @@ class MainDrawer extends StatelessWidget {
           ),
           _buildMenuItem(
             icon: Icons.local_shipping_outlined,
-            title: 'Manage Move',
+            title: 'Manage Move'.tr,
             onTap: () {
               Get.back();
               Get.toNamed(Routes.MANAGE_MOVE);
@@ -124,7 +124,7 @@ class MainDrawer extends StatelessWidget {
           ),
           _buildMenuItem(
             icon: Icons.language,
-            title: 'Language',
+            title: 'Language'.tr,
             onTap: () {
               Get.back();
               Get.toNamed(Routes.LANGUAGE, arguments: {'from': 'drawer'});
@@ -132,7 +132,7 @@ class MainDrawer extends StatelessWidget {
           ),
           _buildMenuItem(
             icon: Icons.logout,
-            title: 'Logout',
+            title: 'Logout'.tr,
             onTap: () {
               Get.offAllNamed(Routes.SIGNIN);
             },

@@ -19,7 +19,7 @@ class ProfileView extends GetView<ProfileController> {
               _buildHeader(),
               const SizedBox(height: 24),
               Text(
-                'Profile',
+                'Profile'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 26,
                   fontWeight: FontWeight.w600,
@@ -160,7 +160,7 @@ class ProfileView extends GetView<ProfileController> {
         ),
         const SizedBox(height: 4),
         Text(
-          'Member Since: April 2025',
+          'Member Since: April 2025'.tr,
           style: GoogleFonts.poppins(
             fontSize: 14,
             fontWeight: FontWeight.w400,
@@ -177,25 +177,25 @@ class ProfileView extends GetView<ProfileController> {
       child: Column(
         children: [
           _buildActionButton(
-            title: 'Edit profile',
+            title: 'Edit profile'.tr,
             icon: Icons.edit_outlined,
             onTap: () => Get.toNamed(Routes.EDIT_PROFILE),
           ),
           const SizedBox(height: 16),
           _buildActionButton(
-            title: 'Edit Document',
+            title: 'Edit Document'.tr,
             icon: Icons.edit_outlined,
             onTap: () => Get.toNamed(Routes.EDIT_DOCUMENT),
           ),
           const SizedBox(height: 16),
           _buildActionButton(
-            title: 'Change password',
+            title: 'Change password'.tr,
             icon: Icons.more_horiz,
             onTap: () => Get.toNamed(Routes.CHANGE_PASSWORD),
           ),
           const SizedBox(height: 16),
           _buildActionButton(
-            title: 'Edit Payment Information',
+            title: 'Edit Payment Information'.tr,
             icon: Icons.credit_card,
             onTap: () => Get.toNamed(Routes.UPDATE_CARD_INFO),
           ),
@@ -256,13 +256,13 @@ class ProfileView extends GetView<ProfileController> {
       child: Column(
         children: [
           _buildGroupItem(
-            title: 'Log Out',
+            title: 'Log Out'.tr,
             icon: Icons.logout,
             showBorder: true,
             onTap: () {
               _showConfirmationDialog(
-                title: 'Are You Sure?',
-                actionText: 'Log Out',
+                title: 'Are You Sure?'.tr,
+                actionText: 'Log Out'.tr,
                 actionColor: const Color(0xFFE33629),
                 onAction: () {
                   Get.offAllNamed(Routes.SIGNIN);
@@ -271,13 +271,13 @@ class ProfileView extends GetView<ProfileController> {
             },
           ),
           _buildGroupItem(
-            title: 'Delete Account',
+            title: 'Delete Account'.tr,
             icon: Icons.delete_outline,
             showBorder: false,
             onTap: () {
               _showConfirmationDialog(
-                title: 'Are You Sure?',
-                actionText: 'Delete Account',
+                title: 'Are You Sure?'.tr,
+                actionText: 'Delete Account'.tr,
                 actionColor: const Color(0xFFE33629),
                 onAction: () {
                   Get.offAllNamed(Routes.SIGNIN);
@@ -427,7 +427,8 @@ class ProfileView extends GetView<ProfileController> {
                           ),
                         ),
                         child: Text(
-                          'cancel', // Reverted to lowercase as per original request if needed, but keeping consistent
+                          'cancel'
+                              .tr, // Reverted to lowercase as per original request if needed, but keeping consistent
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 14, // Slightly smaller font to fit

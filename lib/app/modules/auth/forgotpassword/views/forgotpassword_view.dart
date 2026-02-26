@@ -44,7 +44,7 @@ class ForgotpasswordView extends GetView<ForgotpasswordController> {
 
               // Title
               Text(
-                'Forget Password',
+                'Forget Password'.tr,
                 style: GoogleFonts.poppins(
                   color: const Color(0xFF212529),
                   fontSize: 32,
@@ -56,7 +56,7 @@ class ForgotpasswordView extends GetView<ForgotpasswordController> {
 
               // Subtitle
               Text(
-                'Enter Your Email Address To Reset\nPassword.',
+                'Enter Your Email Address To Reset\nPassword.'.tr,
                 style: GoogleFonts.poppins(
                   color: const Color(0xFF495057),
                   fontSize: 16,
@@ -68,7 +68,7 @@ class ForgotpasswordView extends GetView<ForgotpasswordController> {
 
               // Email Field
               Text(
-                'Email Address',
+                'Email Address'.tr,
                 style: GoogleFonts.poppins(
                   color: const Color(0xFF212529),
                   fontSize: 16,
@@ -129,7 +129,7 @@ class ForgotpasswordView extends GetView<ForgotpasswordController> {
                   ),
                   child: Center(
                     child: Text(
-                      'Reset Password',
+                      'Reset Password'.tr,
                       style: GoogleFonts.poppins(
                         color: Colors.white,
                         fontSize: 18,

@@ -26,7 +26,7 @@ class ClientsView extends GetView<ClientsController> {
                         vertical: 16,
                       ),
                       child: Text(
-                        'Clients History',
+                        'Clients History'.tr,
                         style: GoogleFonts.poppins(
                           fontSize: 16,
                           fontWeight: FontWeight.w700,
@@ -71,7 +71,7 @@ class ClientsView extends GetView<ClientsController> {
             ),
           ),
           Text(
-            'CLIENTS',
+            'CLIENTS'.tr,
             style: GoogleFonts.poppins(
               fontSize: 26,
               fontWeight: FontWeight.w600,
@@ -120,7 +120,7 @@ class ClientsView extends GetView<ClientsController> {
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Text(
-                  tab,
+                  tab.tr,
                   style: GoogleFonts.poppins(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
@@ -188,7 +188,7 @@ class ClientsView extends GetView<ClientsController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Name: ${client['name']}',
+                      'Name:'.tr + ' ${client['name']}',
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
@@ -198,7 +198,7 @@ class ClientsView extends GetView<ClientsController> {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      'Address: ${client['address']}',
+                      'Address:'.tr + ' ${client['address']}',
                       style: GoogleFonts.poppins(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
@@ -208,7 +208,7 @@ class ClientsView extends GetView<ClientsController> {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      client['serviceType'],
+                      (client['serviceType'] as String).tr,
                       style: GoogleFonts.poppins(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
@@ -232,7 +232,7 @@ class ClientsView extends GetView<ClientsController> {
               ),
               child: Center(
                 child: Text(
-                  'View Profile',
+                  'View Profile'.tr,
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,

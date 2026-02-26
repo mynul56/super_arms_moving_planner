@@ -292,8 +292,8 @@ class OnboardingView extends GetView<OnboardingController> {
                           child: Text(
                             controller.currentIndex.value ==
                                     controller.pages.length - 1
-                                ? 'Get Started'
-                                : 'Next',
+                                ? 'Get Started'.tr
+                                : 'Next'.tr,
                             textAlign: TextAlign.center,
                             style: GoogleFonts.poppins(
                               color: Colors.white,
@@ -334,7 +334,7 @@ class OnboardingView extends GetView<OnboardingController> {
                         ),
                       ),
                       child: Text(
-                        'Skip',
+                        'Skip'.tr,
                         textAlign: TextAlign.center,
                         style: GoogleFonts.inter(
                           color: Colors.white,

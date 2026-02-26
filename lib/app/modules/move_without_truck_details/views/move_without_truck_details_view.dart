@@ -27,7 +27,7 @@ class MoveWithoutTruckDetailsView
                 } else if (controller.selectedMainTab.value == 3) {
                   return _buildDescriptionContent();
                 } else {
-                  return const Center(child: Text("Coming Soon"));
+                  return Center(child: Text("Coming Soon".tr));
                 }
               }),
             ),
@@ -45,7 +45,7 @@ class MoveWithoutTruckDetailsView
           children: [
             Center(
               child: Text(
-                'Details',
+                'Details'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 26,
                   fontWeight: FontWeight.w600,
@@ -82,7 +82,7 @@ class MoveWithoutTruckDetailsView
           children: [
             Center(
               child: Text(
-                'Details',
+                'Details'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 26,
                   fontWeight: FontWeight.w600,
@@ -250,7 +250,7 @@ class MoveWithoutTruckDetailsView
             ),
             const SizedBox(width: 11),
             Text(
-              'Chat with Client',
+              'Chat with Client'.tr,
               style: GoogleFonts.poppins(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
@@ -261,7 +261,7 @@ class MoveWithoutTruckDetailsView
         ),
         const SizedBox(height: 16),
         Text(
-          'Client Name: Al Muntakim',
+          'Client Name:'.tr + ' Al Muntakim',
           style: GoogleFonts.poppins(
             fontSize: 16,
             fontWeight: FontWeight.w700,
@@ -270,7 +270,7 @@ class MoveWithoutTruckDetailsView
         ),
         const SizedBox(height: 8),
         Text(
-          'Pickup Address: 270/2 Paris, France',
+          'Pickup Address:'.tr + ' 270/2 Paris, France',
           style: GoogleFonts.poppins(
             fontSize: 14,
             fontWeight: FontWeight.w400,
@@ -279,7 +279,7 @@ class MoveWithoutTruckDetailsView
         ),
         const SizedBox(height: 8),
         Text(
-          'Delivery Address: 23/2 Paris, France',
+          'Delivery Address:'.tr + ' 23/2 Paris, France',
           style: GoogleFonts.poppins(
             fontSize: 14,
             fontWeight: FontWeight.w400,
@@ -288,7 +288,7 @@ class MoveWithoutTruckDetailsView
         ),
         const SizedBox(height: 8),
         Text(
-          '512KM Distance',
+          '512KM ' + 'Distance'.tr,
           style: GoogleFonts.poppins(
             fontSize: 14,
             fontWeight: FontWeight.w400,
@@ -329,7 +329,7 @@ class MoveWithoutTruckDetailsView
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Order ID: 124769746ZX',
+                      'Order ID:'.tr + ' 124769746ZX',
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
@@ -340,7 +340,7 @@ class MoveWithoutTruckDetailsView
                     Row(
                       children: [
                         Text(
-                          'Moving price: ',
+                          'Moving price: '.tr,
                           style: GoogleFonts.poppins(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
@@ -361,7 +361,7 @@ class MoveWithoutTruckDetailsView
                     Row(
                       children: [
                         Text(
-                          'Service type: ',
+                          'Service type: '.tr,
                           style: GoogleFonts.poppins(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
@@ -390,7 +390,7 @@ class MoveWithoutTruckDetailsView
               Expanded(
                 child: _buildInfoItem(
                   Icons.calendar_today,
-                  'Date',
+                  'Date'.tr,
                   'Aug 28, Sat',
                   const Color(0xFF0077FF),
                 ),
@@ -399,7 +399,7 @@ class MoveWithoutTruckDetailsView
               Expanded(
                 child: _buildInfoItem(
                   Icons.access_time,
-                  'Time',
+                  'Time'.tr,
                   '9 Am',
                   const Color(0xFFEFB94C),
                 ),
@@ -413,7 +413,7 @@ class MoveWithoutTruckDetailsView
                 child: _buildInfoItem(
                   Icons.work_outline,
                   '03',
-                  'Standard box',
+                  'Standard box'.tr,
                   const Color(0xFF1D04FE),
                 ),
               ),
@@ -422,7 +422,7 @@ class MoveWithoutTruckDetailsView
                 child: _buildInfoItem(
                   Icons.pending_actions,
                   'Pending',
-                  'Status',
+                  'Status'.tr,
                   const Color(0xFFEFB94C),
                 ),
               ),
@@ -490,7 +490,7 @@ class MoveWithoutTruckDetailsView
         Align(
           alignment: Alignment.center,
           child: Text(
-            'Parking Facility',
+            'Parking Facility'.tr,
             style: GoogleFonts.poppins(
               fontSize: 20,
               fontWeight: FontWeight.w600,
@@ -589,16 +589,19 @@ class MoveWithoutTruckDetailsView
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Column(
                   children: [
-                    _buildFeatureItem('Home Type:', 'Studio 20m²'),
-                    _buildFeatureItem('Floor:', '3rd'),
+                    _buildFeatureItem('Home Type:'.tr, 'Studio 20m²'),
+                    _buildFeatureItem('Floor:'.tr, '3rd'),
                     _buildFeatureItem(
-                      'Loading Truck parking:',
-                      'Parking space',
+                      'Loading Truck parking:'.tr,
+                      'Parking space'.tr,
                     ),
-                    _buildFeatureItem('Heavy Truck parking', 'I don’t know'),
-                    _buildFeatureItem('Distance of parking:', '30-40m'),
-                    _buildFeatureItem('Any stops:', 'Yes'),
-                    _buildFeatureItem('Celler storage room:', 'Yes'),
+                    _buildFeatureItem(
+                      'Heavy Truck parking'.tr,
+                      'I don’t know'.tr,
+                    ),
+                    _buildFeatureItem('Distance of parking:'.tr, '30-40m'),
+                    _buildFeatureItem('Any stops:'.tr, 'Yes'.tr),
+                    _buildFeatureItem('Celler storage room:'.tr, 'Yes'.tr),
                   ],
                 ),
               ),
@@ -668,7 +671,7 @@ class MoveWithoutTruckDetailsView
             child: Row(
               children: [
                 Text(
-                  'Additional Service',
+                  'Additional Service'.tr,
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
@@ -682,11 +685,11 @@ class MoveWithoutTruckDetailsView
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: Column(
               children: [
-                _buildFeatureItem('Provide Boxes:', 'Yes'),
-                _buildFeatureItem('Wardrope boxes:', 'Yes'),
-                _buildFeatureItem('Setup Furniture:', 'Yes'),
-                _buildFeatureItem('Fragile Item packing:', 'Yes'),
-                _buildFeatureItem('Non-Fragile Item packing:', 'Yes'),
+                _buildFeatureItem('Provide Boxes:'.tr, 'Yes'.tr),
+                _buildFeatureItem('Wardrope boxes:'.tr, 'Yes'.tr),
+                _buildFeatureItem('Setup Furniture:'.tr, 'Yes'.tr),
+                _buildFeatureItem('Fragile Item packing:'.tr, 'Yes'.tr),
+                _buildFeatureItem('Non-Fragile Item packing:'.tr, 'Yes'.tr),
               ],
             ),
           ),
@@ -715,7 +718,7 @@ class MoveWithoutTruckDetailsView
             child: Row(
               children: [
                 Text(
-                  'Vehicle option',
+                  'Vehicle option'.tr,
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
@@ -727,7 +730,7 @@ class MoveWithoutTruckDetailsView
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
-            child: _buildFeatureItem('No Vehicle Needed', '1 item'),
+            child: _buildFeatureItem('No Vehicle Needed'.tr, '1 item'.tr),
           ),
         ],
       ),
@@ -755,7 +758,7 @@ class MoveWithoutTruckDetailsView
             child: Row(
               children: [
                 Text(
-                  'Special Requirements',
+                  'Special Requirements'.tr,
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
@@ -768,7 +771,7 @@ class MoveWithoutTruckDetailsView
           Padding(
             padding: const EdgeInsets.all(12),
             child: Text(
-              'Move very Carefully.',
+              'Move very Carefully.'.tr,
               style: GoogleFonts.poppins(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
@@ -801,7 +804,7 @@ class MoveWithoutTruckDetailsView
             child: Row(
               children: [
                 Text(
-                  'Selected Furnitures',
+                  'Selected Furnitures'.tr,
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
@@ -815,12 +818,12 @@ class MoveWithoutTruckDetailsView
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: Column(
               children: [
-                _buildFurnitureItem('3-seater sofa:', '1 item'),
-                _buildFurnitureItem('Painting:', '1 item'),
-                _buildFurnitureItem('Chair:', '1 item'),
-                _buildFurnitureItem('Tea Table:', '1 item'),
-                _buildFurnitureItem('Vass:', '1 item'),
-                _buildFurnitureItem('Tree:', '1 item'),
+                _buildFeatureItem('3-seater sofa:'.tr, '1 item'.tr),
+                _buildFeatureItem('Painting:'.tr, '1 item'.tr),
+                _buildFeatureItem('Chair:'.tr, '1 item'.tr),
+                _buildFeatureItem('Tea Table:'.tr, '1 item'.tr),
+                _buildFeatureItem('Vass:'.tr, '1 item'.tr),
+                _buildFeatureItem('Tree:'.tr, '1 item'.tr),
               ],
             ),
           ),
@@ -833,7 +836,7 @@ class MoveWithoutTruckDetailsView
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Total Items:',
+                  'Total Items:'.tr,
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
@@ -841,50 +844,11 @@ class MoveWithoutTruckDetailsView
                   ),
                 ),
                 Text(
-                  '06 items',
+                  '06 items'.tr,
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
                     color: const Color(0xFFEFB94C),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildFurnitureItem(String label, String value) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-      child: Row(
-        children: [
-          const Icon(
-            Icons.check_circle_outline,
-            color: Color(0xFFEFB94C),
-            size: 20,
-          ),
-          const SizedBox(width: 8),
-          Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  label,
-                  style: GoogleFonts.poppins(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: const Color(0xFF212529),
-                  ),
-                ),
-                Text(
-                  value,
-                  style: GoogleFonts.poppins(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: const Color(0xFF495057),
                   ),
                 ),
               ],
@@ -903,7 +867,7 @@ class MoveWithoutTruckDetailsView
           children: [
             Center(
               child: Text(
-                'Details',
+                'Details'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 26,
                   fontWeight: FontWeight.w600,
@@ -1019,7 +983,7 @@ class MoveWithoutTruckDetailsView
                               ),
                             ),
                             Text(
-                              '270/2 Paris, France',
+                              '270/2 Paris, France'.tr,
                               style: GoogleFonts.poppins(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
@@ -1052,7 +1016,7 @@ class MoveWithoutTruckDetailsView
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Destination',
+                              'Destination'.tr,
                               style: GoogleFonts.poppins(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
@@ -1060,7 +1024,7 @@ class MoveWithoutTruckDetailsView
                               ),
                             ),
                             Text(
-                              '23/2 Paris, France',
+                              '23/2 Paris, France'.tr,
                               style: GoogleFonts.poppins(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
@@ -1089,7 +1053,7 @@ class MoveWithoutTruckDetailsView
           children: [
             Center(
               child: Text(
-                'Details',
+                'Details'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 26,
                   fontWeight: FontWeight.w600,
@@ -1116,7 +1080,7 @@ class MoveWithoutTruckDetailsView
                   const SizedBox(width: 12),
                   Expanded(
                     child: Text(
-                      'Consignment Note',
+                      'Consignment Note'.tr,
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
@@ -1165,7 +1129,7 @@ class MoveWithoutTruckDetailsView
 
   void _showConsignmentEditDialog() {
     Get.defaultDialog(
-      title: 'Edit Consignment Note',
+      title: 'Edit Consignment Note'.tr,
       titleStyle: GoogleFonts.poppins(
         fontSize: 18,
         fontWeight: FontWeight.w600,
@@ -1177,9 +1141,9 @@ class MoveWithoutTruckDetailsView
             TextFormField(
               initialValue: controller.consignmentNote.value,
               onChanged: (value) => controller.updateConsignmentNote(value),
-              decoration: const InputDecoration(
-                hintText: 'Enter note',
-                border: OutlineInputBorder(),
+              decoration: InputDecoration(
+                hintText: 'Enter note'.tr,
+                border: const OutlineInputBorder(),
               ),
               maxLines: 3,
             ),
@@ -1190,7 +1154,7 @@ class MoveWithoutTruckDetailsView
                 backgroundColor: const Color(0xFFEFB94C),
               ),
               child: Text(
-                'Save',
+                'Save'.tr,
                 style: GoogleFonts.poppins(color: Colors.white),
               ),
             ),

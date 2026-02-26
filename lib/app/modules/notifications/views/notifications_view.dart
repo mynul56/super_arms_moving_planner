@@ -74,7 +74,7 @@ class NotificationsView extends GetView<NotificationsController> {
             ],
           ),
           Text(
-            'NOTIFICATION',
+            'NOTIFICATION'.tr,
             style: GoogleFonts.poppins(
               fontSize: 26,
               fontWeight: FontWeight.w600,
@@ -200,7 +200,7 @@ class NotificationsView extends GetView<NotificationsController> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Receive notifications',
+                'Receive notifications'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,

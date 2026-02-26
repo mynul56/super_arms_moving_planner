@@ -75,7 +75,7 @@ class PaymentView extends GetView<PaymentController> {
             ),
           ),
           Text(
-            'Payments',
+            'Payments'.tr,
             style: GoogleFonts.poppins(
               color: const Color(0xFFEFB84B),
               fontSize: 26,
@@ -99,7 +99,7 @@ class PaymentView extends GetView<PaymentController> {
       child: Column(
         children: [
           Text(
-            'My wallet',
+            'My wallet'.tr,
             style: GoogleFonts.poppins(
               color: const Color(0xFF495057),
               fontSize: 16,
@@ -117,7 +117,7 @@ class PaymentView extends GetView<PaymentController> {
           ),
           const SizedBox(height: 10),
           Text(
-            'You can request payment for this Amount',
+            'You can request payment for this Amount'.tr,
             textAlign: TextAlign.center,
             style: GoogleFonts.poppins(
               color: const Color(0xFF495057),
@@ -135,7 +135,7 @@ class PaymentView extends GetView<PaymentController> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Balance Summary',
+          'Balance Summary'.tr,
           style: GoogleFonts.poppins(
             color: const Color(0xFF212529),
             fontSize: 20,
@@ -143,13 +143,13 @@ class PaymentView extends GetView<PaymentController> {
           ),
         ),
         const SizedBox(height: 16),
-        _buildSummaryRow('Total Amount', '€25000'),
+        _buildSummaryRow('Total Amount'.tr, '€25000'),
         const SizedBox(height: 16),
-        _buildSummaryRow('Company Commission', '€6250'),
+        _buildSummaryRow('Company Commission'.tr, '€6250'),
         const SizedBox(height: 16),
-        _buildSummaryRow('Total Payable Amount', '€18750'),
+        _buildSummaryRow('Total Payable Amount'.tr, '€18750'),
         const SizedBox(height: 16),
-        _buildSummaryRow('Clearable Consignment', '15'),
+        _buildSummaryRow('Clearable Consignment'.tr, '15'),
       ],
     );
   }
@@ -180,7 +180,7 @@ class PaymentView extends GetView<PaymentController> {
 
   Widget _buildPaymentHistoryHeader() {
     return Text(
-      'Payment History',
+      'Payment History'.tr,
       style: GoogleFonts.poppins(
         color: const Color(0xFF212529),
         fontSize: 20,
@@ -212,7 +212,7 @@ class PaymentView extends GetView<PaymentController> {
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Text(
-                  filter,
+                  filter.tr,
                   style: GoogleFonts.poppins(
                     color: isSelected ? Colors.white : const Color(0xFFEFB84B),
                     fontSize: 14,
@@ -235,7 +235,7 @@ class PaymentView extends GetView<PaymentController> {
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
-              'No transactions found',
+              'No transactions found'.tr,
               style: GoogleFonts.poppins(
                 color: const Color(0xFF495057),
                 fontSize: 14,
@@ -309,7 +309,7 @@ class PaymentView extends GetView<PaymentController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Trnx ID: $id', // Use provided ID
+                      'Trnx ID:'.tr + ' $id', // Use provided ID
                       style: GoogleFonts.poppins(
                         color: const Color(0xFF212529),
                         fontSize: 16,
@@ -321,7 +321,7 @@ class PaymentView extends GetView<PaymentController> {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: 'Status: ',
+                            text: 'Status: '.tr,
                             style: GoogleFonts.poppins(
                               color: const Color(0xFF495057),
                               fontSize: 14,
@@ -329,7 +329,7 @@ class PaymentView extends GetView<PaymentController> {
                             ),
                           ),
                           TextSpan(
-                            text: status,
+                            text: status.tr,
                             style: GoogleFonts.poppins(
                               color: statusColor,
                               fontSize: 14,
@@ -368,7 +368,7 @@ class PaymentView extends GetView<PaymentController> {
               ),
               child: Center(
                 child: Text(
-                  'View Details',
+                  'View Details'.tr,
                   style: GoogleFonts.poppins(
                     color: const Color(0xFFEFB84B),
                     fontSize: 16,
@@ -411,7 +411,7 @@ class PaymentView extends GetView<PaymentController> {
           ),
           child: Center(
             child: Text(
-              'Payment Request',
+              'Payment Request'.tr,
               style: GoogleFonts.poppins(
                 color: Colors.white,
                 fontSize: 16,

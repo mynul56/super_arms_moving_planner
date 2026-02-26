@@ -154,7 +154,7 @@ class HomeView extends GetView<HomeController> {
         children: [
           const SizedBox(height: 24),
           Text(
-            'Hello, ${controller.userName.value.split(' ')[0]}',
+            'Hello'.tr + ', ${controller.userName.value.split(' ')[0]}',
             style: GoogleFonts.poppins(
               fontSize: 32,
               fontWeight: FontWeight.w600,
@@ -163,7 +163,7 @@ class HomeView extends GetView<HomeController> {
             ),
           ),
           Text(
-            'Here Is Your Job For Today',
+            'Here Is Your Job For Today'.tr,
             style: GoogleFonts.poppins(
               fontSize: 16,
               color: const Color(0xFF495057),
@@ -188,7 +188,7 @@ class HomeView extends GetView<HomeController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Start your Day',
+                'Start your Day'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 32,
                   fontWeight: FontWeight.w600,
@@ -200,7 +200,7 @@ class HomeView extends GetView<HomeController> {
               Row(
                 children: [
                   Text(
-                    'View Offers',
+                    'View Offers'.tr,
                     style: GoogleFonts.poppins(
                       fontSize: 16,
                       fontWeight: FontWeight.w400,
@@ -238,7 +238,7 @@ class HomeView extends GetView<HomeController> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Services',
+          'Services'.tr,
           style: GoogleFonts.poppins(
             fontSize: 26,
             fontWeight: FontWeight.w600,
@@ -253,22 +253,22 @@ class HomeView extends GetView<HomeController> {
           children: [
             _buildServiceItemSvg(
               'assets/icons/location-tracking.svg',
-              'Live\nTracking',
+              'Live\nTracking'.tr,
               onTap: () => Get.toNamed(Routes.LIVE_TRACKING),
             ),
             _buildServiceItemSvg(
               'assets/icons/routes.svg',
-              'Routes',
+              'Routes'.tr,
               onTap: () => Get.toNamed(Routes.ROUTE),
             ),
             _buildServiceItemSvg(
               'assets/icons/clients.svg',
-              'Clients',
+              'Clients'.tr,
               onTap: () => Get.toNamed(Routes.CLIENTS),
             ),
             _buildServiceItemSvg(
               'assets/icons/payment.svg',
-              'Payment',
+              'Payment'.tr,
               onTap: () => Get.toNamed(Routes.PAYMENT),
             ),
           ],
@@ -322,7 +322,7 @@ class HomeView extends GetView<HomeController> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Current Missions',
+              'Current Missions'.tr,
               style: GoogleFonts.poppins(
                 fontSize: 26,
                 fontWeight: FontWeight.w600,
@@ -333,7 +333,7 @@ class HomeView extends GetView<HomeController> {
             GestureDetector(
               onTap: () => Get.toNamed('/available-offers'),
               child: Text(
-                'See All',
+                'See All'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 14,
                   color: const Color(0xFFEFB94C),
@@ -391,7 +391,7 @@ class HomeView extends GetView<HomeController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Order ID: ${move['id']}24769746ZX',
+                      'Order ID'.tr + ': ${move['id']}24769746ZX',
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
@@ -403,7 +403,7 @@ class HomeView extends GetView<HomeController> {
                     Row(
                       children: [
                         Text(
-                          'Moving price: ',
+                          'Moving price: '.tr,
                           style: GoogleFonts.poppins(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
@@ -425,7 +425,7 @@ class HomeView extends GetView<HomeController> {
                     Row(
                       children: [
                         Text(
-                          'Service type: ',
+                          'Service type: '.tr,
                           style: GoogleFonts.poppins(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
@@ -466,7 +466,7 @@ class HomeView extends GetView<HomeController> {
             Expanded(
               child: _buildDetailItem(
                 Icons.calendar_today,
-                'Date',
+                'Date'.tr,
                 move['date'],
                 const Color(0xFF0077FF),
               ),
@@ -475,7 +475,7 @@ class HomeView extends GetView<HomeController> {
             Expanded(
               child: _buildDetailItem(
                 Icons.access_time,
-                'Time',
+                'Time'.tr,
                 '9 Am',
                 const Color(0xFFEFB94C),
               ),
@@ -489,7 +489,7 @@ class HomeView extends GetView<HomeController> {
               child: _buildDetailItem(
                 'assets/icons/inventory.svg',
                 '${move['items']}',
-                'Standard box',
+                'Standard box'.tr,
                 const Color(0xFF1D04FE),
               ),
             ),
@@ -498,7 +498,7 @@ class HomeView extends GetView<HomeController> {
               child: _buildDetailItem(
                 'assets/icons/service_type.svg',
                 move['status'],
-                'Service Type',
+                'Service Type'.tr,
                 const Color(0xFF00DBEE),
               ),
             ),
@@ -585,7 +585,7 @@ class HomeView extends GetView<HomeController> {
         ),
         child: Center(
           child: Text(
-            'View Details',
+            'View Details'.tr,
             style: GoogleFonts.poppins(
               fontSize: 16,
               fontWeight: FontWeight.w700,
@@ -603,7 +603,7 @@ class HomeView extends GetView<HomeController> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Statistics',
+          'Statistics'.tr,
           style: GoogleFonts.poppins(
             fontSize: 26,
             fontWeight: FontWeight.w600,
@@ -621,7 +621,7 @@ class HomeView extends GetView<HomeController> {
                     child: _buildStatCard(
                       'assets/icons/mission.svg',
                       '${controller.activeMoves.value}',
-                      'Missions',
+                      'Missions'.tr,
                       const Color(0xFF0077FF),
                     ),
                   ),
@@ -630,7 +630,7 @@ class HomeView extends GetView<HomeController> {
                     child: _buildStatCard(
                       'assets/icons/routes.svg',
                       '506',
-                      'Km',
+                      'Km'.tr,
                       const Color(0xFFEFB94C),
                     ),
                   ),
@@ -642,8 +642,8 @@ class HomeView extends GetView<HomeController> {
                   Expanded(
                     child: _buildStatCard(
                       'assets/icons/trending_up.svg',
-                      'In 2 Days',
-                      'Upcoming',
+                      'In 2 Days'.tr,
+                      'Upcoming'.tr,
                       const Color(0xFF1D04FE),
                     ),
                   ),
@@ -652,7 +652,7 @@ class HomeView extends GetView<HomeController> {
                     child: _buildStatCard(
                       'assets/icons/star.svg',
                       '4.8',
-                      'Rating',
+                      'Rating'.tr,
                       const Color(0xFF04FE3A),
                     ),
                   ),

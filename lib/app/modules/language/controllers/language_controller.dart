@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../routes/app_pages.dart';
 
@@ -6,6 +7,11 @@ class LanguageController extends GetxController {
 
   void changeLanguage(String language) {
     selectedLanguage.value = language;
+    if (language == 'English') {
+      Get.updateLocale(const Locale('en', 'US'));
+    } else if (language == 'Français') {
+      Get.updateLocale(const Locale('fr', 'FR'));
+    }
   }
 
   void onContinue() {

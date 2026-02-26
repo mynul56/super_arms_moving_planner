@@ -22,7 +22,7 @@ class SignUpView extends GetView<SignUpController> {
 
               // Title Section
               Text(
-                'Welcome',
+                'Welcome'.tr,
                 style: GoogleFonts.poppins(
                   color: const Color(0xFF212529),
                   fontSize: 32,
@@ -32,7 +32,7 @@ class SignUpView extends GetView<SignUpController> {
               ),
               const SizedBox(height: 8),
               Text(
-                'Enter Your Email to Get Started',
+                'Enter Your Email to Get Started'.tr,
                 style: GoogleFonts.poppins(
                   color: const Color(0xFF495057),
                   fontSize: 16,
@@ -44,7 +44,7 @@ class SignUpView extends GetView<SignUpController> {
 
               // Email Field
               _buildInputField(
-                label: 'Email',
+                label: 'Email'.tr,
                 hint: 'null@gmail.com',
                 controller: controller.emailController,
                 keyboardType: TextInputType.emailAddress,
@@ -64,7 +64,7 @@ class SignUpView extends GetView<SignUpController> {
                   ),
                   child: Center(
                     child: Text(
-                      'Continue',
+                      'Continue'.tr,
                       style: GoogleFonts.poppins(
                         color: Colors.white,
                         fontSize: 16,
@@ -80,7 +80,7 @@ class SignUpView extends GetView<SignUpController> {
               // OR Divider
               Center(
                 child: Text(
-                  'OR',
+                  'OR'.tr,
                   style: GoogleFonts.poppins(
                     color: const Color(0xFF495057),
                     fontSize: 16,
@@ -98,7 +98,7 @@ class SignUpView extends GetView<SignUpController> {
                     TextSpan(
                       children: [
                         TextSpan(
-                          text: 'Already Have An Account? ',
+                          text: 'Already Have An Account? '.tr,
                           style: GoogleFonts.poppins(
                             color: const Color(0xFF495057),
                             fontSize: 14,
@@ -106,7 +106,7 @@ class SignUpView extends GetView<SignUpController> {
                           ),
                         ),
                         TextSpan(
-                          text: 'Sign In',
+                          text: 'Sign In'.tr,
                           style: GoogleFonts.poppins(
                             color: const Color(0xFFEFB94C),
                             fontSize: 14,

@@ -71,7 +71,7 @@ class PaymentDetailsView extends GetView {
           ),
           const SizedBox(width: 56), // Spacing from design
           Text(
-            'Payments',
+            'Payments'.tr,
             style: GoogleFonts.poppins(
               color: const Color(0xFFEFB84B),
               fontSize: 26,
@@ -88,7 +88,7 @@ class PaymentDetailsView extends GetView {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Invoice',
+          'Invoice'.tr,
           style: GoogleFonts.poppins(
             color: const Color(0xFF212529),
             fontSize: 20,
@@ -113,13 +113,13 @@ class PaymentDetailsView extends GetView {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              _buildDetailRow('Trnx:', 'XXXXXXXX'),
+              _buildDetailRow('Trnx:'.tr, 'XXXXXXXX'),
               const SizedBox(height: 8),
               RichText(
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: 'Status: ',
+                      text: 'Status: '.tr,
                       style: GoogleFonts.poppins(
                         color: const Color(0xFF212529),
                         fontSize: 16,
@@ -127,7 +127,7 @@ class PaymentDetailsView extends GetView {
                       ),
                     ),
                     TextSpan(
-                      text: status,
+                      text: status.tr,
                       style: GoogleFonts.poppins(
                         color: statusColor,
                         fontSize: 16,
@@ -138,11 +138,11 @@ class PaymentDetailsView extends GetView {
                 ),
               ),
               const SizedBox(height: 8),
-              _buildDetailRow('Bank Name:', 'IFIC Bank'),
+              _buildDetailRow('Bank Name:'.tr, 'IFIC Bank'),
               const SizedBox(height: 8),
-              _buildDetailRow('Account No:', '1101510253140'),
+              _buildDetailRow('Account No:'.tr, '1101510253140'),
               const SizedBox(height: 8),
-              _buildDetailRow('Date:', 'Aug 22, 2022'),
+              _buildDetailRow('Date:'.tr, 'Aug 22, 2022'),
             ],
           ),
         ),
@@ -155,7 +155,7 @@ class PaymentDetailsView extends GetView {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Payment Information',
+          'Payment Information'.tr,
           style: GoogleFonts.poppins(
             color: const Color(0xFF212529),
             fontSize: 20,
@@ -179,11 +179,11 @@ class PaymentDetailsView extends GetView {
           ),
           child: Column(
             children: [
-              _buildSummaryRow('Delivered Amount', '€25000'),
+              _buildSummaryRow('Delivered Amount'.tr, '€25000'),
               const SizedBox(height: 16),
-              _buildSummaryRow('Company Commission', '€6250'),
+              _buildSummaryRow('Company Commission'.tr, '€6250'),
               const SizedBox(height: 16),
-              _buildSummaryRow('Total Payed Amount', '€18750'),
+              _buildSummaryRow('Total Payed Amount'.tr, '€18750'),
             ],
           ),
         ),
@@ -196,7 +196,7 @@ class PaymentDetailsView extends GetView {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Recipient Info',
+          'Recipient Info'.tr,
           style: GoogleFonts.poppins(
             color: const Color(0xFF212529),
             fontSize: 20,
