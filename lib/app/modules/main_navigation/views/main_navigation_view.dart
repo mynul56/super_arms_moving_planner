@@ -7,6 +7,7 @@ import '../../home/views/home_view.dart';
 import '../../payment/views/payment_view.dart';
 import '../../schedule/views/schedule_view.dart';
 import '../../chat/views/chat_view.dart';
+import '../../home/views/main_drawer.dart';
 
 class MainNavigationView extends GetView<MainNavigationController> {
   const MainNavigationView({Key? key}) : super(key: key);
@@ -21,6 +22,8 @@ class MainNavigationView extends GetView<MainNavigationController> {
     ];
 
     return Scaffold(
+      key: controller.scaffoldKey,
+      drawer: const MainDrawer(),
       body: Obx(() => pages[controller.selectedIndex.value]),
       bottomNavigationBar: _buildBottomNavBar(),
     );
