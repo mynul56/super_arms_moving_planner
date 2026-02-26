@@ -101,8 +101,8 @@ class ChatConversationController extends GetxController {
   void handleUrgentRequest() {
     // TODO: Handle urgent assistance request
     Get.snackbar(
-      'Urgent Request',
-      'Handling urgent assistance request',
+      'Urgent Request'.tr,
+      'Handling urgent assistance request'.tr,
       snackPosition: SnackPosition.BOTTOM,
     );
   }

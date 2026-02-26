@@ -289,7 +289,7 @@ class ChatConversationView extends GetView<ChatConversationController> {
                   fontWeight: FontWeight.w400,
                 ),
                 decoration: InputDecoration(
-                  hintText: 'Type here',
+                  hintText: 'Type here'.tr,
                   hintStyle: GoogleFonts.poppins(
                     color: const Color(0xFF495057),
                     fontSize: 12,

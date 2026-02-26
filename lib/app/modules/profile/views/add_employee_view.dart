@@ -47,13 +47,13 @@ class AddEmployeeView extends GetView<ProfileController> {
               _buildTextField(
                 label: 'Employee Name',
                 controller: controller.employeeNameController,
-                hintText: 'Tuhin',
+                hintText: 'Tuhin'.tr,
               ),
               const SizedBox(height: 24),
               _buildTextField(
                 label: 'Employee Role',
                 controller: controller.employeeRoleController,
-                hintText: 'Tuhin',
+                hintText: 'Tuhin'.tr,
               ),
               const Spacer(),
               _buildAddButton(),

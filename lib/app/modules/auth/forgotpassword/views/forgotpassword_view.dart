@@ -84,7 +84,7 @@ class ForgotpasswordView extends GetView<ForgotpasswordController> {
                   fontSize: 14,
                 ),
                 decoration: InputDecoration(
-                  hintText: 'null@gmail.com',
+                  hintText: 'null@gmail.com'.tr,
                   hintStyle: GoogleFonts.poppins(
                     color: const Color(0xFF495057).withOpacity(0.5),
                     fontSize: 14,

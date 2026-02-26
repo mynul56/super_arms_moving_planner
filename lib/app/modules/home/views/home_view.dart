@@ -123,7 +123,7 @@ class HomeView extends GetView<HomeController> {
               () => Text(
                 controller.isBalanceVisible.value
                     ? '€${controller.balance.value.toStringAsFixed(0)}'
-                    : 'Tap for balance',
+                    : 'Tap for balance'.tr,
                 style: GoogleFonts.poppins(
                   fontSize: 12,
                   color: const Color(0xFF495057),
@@ -434,7 +434,7 @@ class HomeView extends GetView<HomeController> {
                           ),
                         ),
                         Text(
-                          'Movers',
+                          'Movers'.tr,
                           style: GoogleFonts.poppins(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
@@ -476,7 +476,7 @@ class HomeView extends GetView<HomeController> {
               child: _buildDetailItem(
                 Icons.access_time,
                 'Time'.tr,
-                '9 Am',
+                '9 Am'.tr,
                 const Color(0xFFEFB94C),
               ),
             ),

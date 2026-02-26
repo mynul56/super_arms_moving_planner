@@ -17,11 +17,11 @@ class DeliveryProofController extends GetxController {
 
   void submitProof() {
     if (selectedImage.value == null) {
-      Get.snackbar('Error', 'Please provide an image proof');
+      Get.snackbar('Error'.tr, 'Please provide an image proof'.tr);
       return;
     }
     // Mock submission
     Get.offAllNamed(Routes.CONGRATULATIONS);
-    Get.snackbar('Success', 'Delivery proof submitted successfully');
+    Get.snackbar('Success'.tr, 'Delivery proof submitted successfully'.tr);
   }
 }

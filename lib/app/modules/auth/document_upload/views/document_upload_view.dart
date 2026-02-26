@@ -168,7 +168,7 @@ class DocumentUploadView extends GetView<DocumentUploadController> {
                         keyboardType: TextInputType.number,
                         style: GoogleFonts.poppins(color: Color(0xFF212529), fontSize: 15, fontWeight: FontWeight.w400),
                         decoration: InputDecoration(
-                          hintText: '30m²',
+                          hintText: '30m²'.tr,
                           hintStyle: GoogleFonts.poppins(
                             color: Color(0xFF6C757D).withOpacity(0.6),
                             fontSize: 15,

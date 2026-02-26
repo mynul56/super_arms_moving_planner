@@ -59,8 +59,8 @@ class HomeController extends GetxController {
   void navigateToNewMove() {
     // TODO: Navigate to new move creation screen
     Get.snackbar(
-      'Navigation',
-      'Navigate to New Move',
+      'Navigation'.tr,
+      'Navigate to New Move'.tr,
       snackPosition: SnackPosition.BOTTOM,
     );
   }
@@ -68,8 +68,8 @@ class HomeController extends GetxController {
   void navigateToInventory() {
     // TODO: Navigate to inventory screen
     Get.snackbar(
-      'Navigation',
-      'Navigate to Inventory',
+      'Navigation'.tr,
+      'Navigate to Inventory'.tr,
       snackPosition: SnackPosition.BOTTOM,
     );
   }
@@ -77,8 +77,8 @@ class HomeController extends GetxController {
   void navigateToSchedule() {
     // TODO: Navigate to schedule screen
     Get.snackbar(
-      'Navigation',
-      'Navigate to Schedule',
+      'Navigation'.tr,
+      'Navigate to Schedule'.tr,
       snackPosition: SnackPosition.BOTTOM,
     );
   }
@@ -86,8 +86,8 @@ class HomeController extends GetxController {
   void navigateToDocuments() {
     // TODO: Navigate to documents screen
     Get.snackbar(
-      'Navigation',
-      'Navigate to Documents',
+      'Navigation'.tr,
+      'Navigate to Documents'.tr,
       snackPosition: SnackPosition.BOTTOM,
     );
   }

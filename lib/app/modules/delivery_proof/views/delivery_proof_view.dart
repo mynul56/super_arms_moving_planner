@@ -194,7 +194,7 @@ class DeliveryProofView extends GetView<DeliveryProofController> {
             ),
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'No, everything Was Fine',
+                hintText: 'No, everything Was Fine'.tr,
                 hintStyle: GoogleFonts.poppins(
                   fontSize: 14,
                   color: const Color(0xFFEFB94C),

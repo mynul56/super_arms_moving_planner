@@ -212,7 +212,7 @@ class EditDocumentView extends GetView<ProfileController> {
             onChanged: controller.updateTruckSize,
             decoration: InputDecoration(
               border: InputBorder.none,
-              hintText: '30m³',
+              hintText: '30m³'.tr,
               hintStyle: GoogleFonts.poppins(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,

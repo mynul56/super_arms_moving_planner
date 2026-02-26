@@ -35,8 +35,8 @@ class ResetpasswordController extends GetxController {
     if (passwordController.text.isEmpty ||
         confirmPasswordController.text.isEmpty) {
       Get.snackbar(
-        'Error',
-        'Please fill all fields',
+        'Error'.tr,
+        'Please fill all fields'.tr,
         snackPosition: SnackPosition.BOTTOM,
       );
       return;
@@ -44,8 +44,8 @@ class ResetpasswordController extends GetxController {
 
     if (passwordController.text != confirmPasswordController.text) {
       Get.snackbar(
-        'Error',
-        'Passwords do not match',
+        'Error'.tr,
+        'Passwords do not match'.tr,
         snackPosition: SnackPosition.BOTTOM,
       );
       return;
@@ -55,8 +55,8 @@ class ResetpasswordController extends GetxController {
 
     // Mock success
     Get.snackbar(
-      'Success',
-      'Password reset successfully',
+      'Success'.tr,
+      'Password reset successfully'.tr,
       snackPosition: SnackPosition.BOTTOM,
     );
 

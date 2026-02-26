@@ -27,7 +27,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                 } else if (controller.selectedMainTab.value == 3) {
                   return _buildDescriptionContent();
                 } else {
-                  return const Center(child: Text("Coming Soon"));
+                  return const Center(child: Text("Coming Soon".tr));
                 }
               }),
             ),
@@ -340,7 +340,7 @@ class MovingPlannerDetailsView extends GetView<MovingPlannerDetailsController> {
                     controller: textController,
                     maxLines: null,
                     style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w400, color: const Color(0xFF212529)),
-                    decoration: const InputDecoration.collapsed(hintText: 'Enter note...'),
+                    decoration: const InputDecoration.collapsed(hintText: 'Enter note...'.tr),
                   ),
                 ),
               ),

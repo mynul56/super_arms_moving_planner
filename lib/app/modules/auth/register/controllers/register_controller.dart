@@ -61,35 +61,35 @@ class RegisterController extends GetxController {
     final confirmPassword = confirmPasswordController.text.trim();
 
     if (fullName.isEmpty) {
-      Get.snackbar('Error', 'Please enter your full name', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please enter your full name'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (phone.isEmpty) {
-      Get.snackbar('Error', 'Please enter your phone number', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please enter your phone number'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (address.isEmpty) {
-      Get.snackbar('Error', 'Please enter your address', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please enter your address'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (zipCode.isEmpty) {
-      Get.snackbar('Error', 'Please enter your zip code', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please enter your zip code'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (password.isEmpty) {
-      Get.snackbar('Error', 'Please enter a password', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please enter a password'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (password.length < 6) {
-      Get.snackbar('Error', 'Password must be at least 6 characters', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Password must be at least 6 characters'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (password != confirmPassword) {
-      Get.snackbar('Error', 'Passwords do not match', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Passwords do not match'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (!agreeToTerms.value) {
-      Get.snackbar('Error', 'Please agree to terms and conditions', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please agree to terms and conditions'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
 

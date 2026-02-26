@@ -174,7 +174,7 @@ class UpdateCardInfoView extends GetView<ProfileController> {
                   alignment: Alignment.centerLeft,
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'MM/YY',
+                      hintText: 'MM/YY'.tr,
                       hintStyle: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
@@ -210,7 +210,7 @@ class UpdateCardInfoView extends GetView<ProfileController> {
                   alignment: Alignment.centerLeft,
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'CVC',
+                      hintText: 'CVC'.tr,
                       hintStyle: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
@@ -261,7 +261,7 @@ class UpdateCardInfoView extends GetView<ProfileController> {
           alignment: Alignment.centerLeft,
           child: TextField(
             decoration: InputDecoration(
-              hintText: 'Enter Name',
+              hintText: 'Enter Name'.tr,
               hintStyle: GoogleFonts.poppins(
                 fontSize: 16,
                 fontWeight: FontWeight.w400,

@@ -88,14 +88,14 @@ class SelectMoverController extends GetxController {
       // TODO: Implement mover confirmation logic
       Get.back(result: selectedMoverId.value);
       Get.snackbar(
-        'Success',
-        'Mover confirmed successfully',
+        'Success'.tr,
+        'Mover confirmed successfully'.tr,
         snackPosition: SnackPosition.BOTTOM,
       );
     } else {
       Get.snackbar(
-        'Error',
-        'Please select a mover first',
+        'Error'.tr,
+        'Please select a mover first'.tr,
         snackPosition: SnackPosition.BOTTOM,
       );
     }

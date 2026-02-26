@@ -27,7 +27,7 @@ class DetailsView extends GetView<DetailsController> {
                 } else if (controller.selectedMainTab.value == 3) {
                   return _buildDescriptionContent();
                 } else {
-                  return const Center(child: Text("Coming Soon"));
+                  return const Center(child: Text("Coming Soon".tr));
                 }
               }),
             ),
@@ -1305,7 +1305,7 @@ class DetailsView extends GetView<DetailsController> {
                       color: const Color(0xFF212529),
                     ),
                     decoration: const InputDecoration.collapsed(
-                      hintText: 'Enter note...',
+                      hintText: 'Enter note...'.tr,
                     ),
                   ),
                 ),

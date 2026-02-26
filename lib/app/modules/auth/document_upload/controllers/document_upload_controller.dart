@@ -46,8 +46,8 @@ class DocumentUploadController extends GetxController {
 
         if (fileSizeInMB > 10) {
           Get.snackbar(
-            'Error',
-            'File size exceeds 10 MB limit. Please choose a smaller file.',
+            'Error'.tr,
+            'File size exceeds 10 MB limit. Please choose a smaller file.'.tr,
             snackPosition: SnackPosition.BOTTOM,
             backgroundColor: Colors.red.withOpacity(0.1),
             colorText: Colors.red,
@@ -94,8 +94,8 @@ class DocumentUploadController extends GetxController {
 
         if (fileSizeInMB > 10) {
           Get.snackbar(
-            'Error',
-            'File size exceeds 10 MB limit. Please choose a smaller file.',
+            'Error'.tr,
+            'File size exceeds 10 MB limit. Please choose a smaller file.'.tr,
             snackPosition: SnackPosition.BOTTOM,
             backgroundColor: Colors.red.withOpacity(0.1),
             colorText: Colors.red,
@@ -157,35 +157,35 @@ class DocumentUploadController extends GetxController {
   void submit() {
     // Validation
     if (idFilePath.value.isEmpty) {
-      Get.snackbar('Error', 'Please upload your ID', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please upload your ID'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (businessRegistrationFilePath.value.isEmpty) {
-      Get.snackbar('Error', 'Please upload business registration certificate', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please upload business registration certificate'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (licenseFilePath.value.isEmpty) {
-      Get.snackbar('Error', 'Please upload your license', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please upload your license'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (insuranceFilePath.value.isEmpty) {
-      Get.snackbar('Error', 'Please upload insurance document', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please upload insurance document'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (socialSecurityFilePath.value.isEmpty) {
-      Get.snackbar('Error', 'Please upload social security document', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please upload social security document'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (bankAccountFilePath.value.isEmpty) {
-      Get.snackbar('Error', 'Please upload bank account details', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please upload bank account details'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (truckPhotoFilePath.value.isEmpty) {
-      Get.snackbar('Error', 'Please upload truck photo', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please upload truck photo'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (truckSizeController.text.trim().isEmpty) {
-      Get.snackbar('Error', 'Please enter truck size', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please enter truck size'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
 

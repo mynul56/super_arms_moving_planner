@@ -64,27 +64,27 @@ class RegisterCompanyController extends GetxController {
   void register() {
     // Validation
     if (companyNameController.text.isEmpty) {
-      Get.snackbar('Error', 'Please enter company name', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please enter company name'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (phoneController.text.isEmpty) {
-      Get.snackbar('Error', 'Please enter phone number', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please enter phone number'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (addressController.text.isEmpty) {
-      Get.snackbar('Error', 'Please enter address', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please enter address'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (zipCodeController.text.isEmpty) {
-      Get.snackbar('Error', 'Please enter zip code', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please enter zip code'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (employeeCountController.text.isEmpty) {
-      Get.snackbar('Error', 'Please enter number of employees', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please enter number of employees'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
     if (!agreeToTerms.value) {
-      Get.snackbar('Error', 'Please agree to terms and conditions', snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Error'.tr, 'Please agree to terms and conditions'.tr, snackPosition: SnackPosition.BOTTOM);
       return;
     }
 

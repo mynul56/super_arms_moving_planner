@@ -156,7 +156,7 @@ class _ChangePasswordViewState extends State<ChangePasswordView> {
     setState(() => isLoading = true);
     await Future.delayed(const Duration(seconds: 2)); // Simulate API call
     setState(() => isLoading = false);
-    Get.snackbar('Success', 'Password changed successfully', snackPosition: SnackPosition.BOTTOM);
+    Get.snackbar('Success'.tr, 'Password changed successfully'.tr, snackPosition: SnackPosition.BOTTOM);
     Get.back();
   }
 }

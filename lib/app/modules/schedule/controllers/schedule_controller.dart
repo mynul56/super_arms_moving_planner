@@ -97,8 +97,8 @@ class ScheduleController extends GetxController {
   void viewAllOrders() {
     // TODO: Navigate to detailed orders list
     Get.snackbar(
-      'Navigation',
-      'View All Orders',
+      'Navigation'.tr,
+      'View All Orders'.tr,
       snackPosition: SnackPosition.BOTTOM,
     );
   }

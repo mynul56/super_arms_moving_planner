@@ -52,16 +52,16 @@ class ProfileController extends GetxController {
       employeeRoleController.clear();
       Get.back(); // Go back to Manage Company page
       Get.snackbar(
-        'Success',
-        'Employee added successfully',
+        'Success'.tr,
+        'Employee added successfully'.tr,
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: const Color(0xFFEFB84B),
         colorText: Colors.white,
       );
     } else {
       Get.snackbar(
-        'Error',
-        'Please fill all fields',
+        'Error'.tr,
+        'Please fill all fields'.tr,
         snackPosition: SnackPosition.BOTTOM,
       );
     }
@@ -117,8 +117,8 @@ class ProfileController extends GetxController {
     // Mock submission
     if (uploadedDocuments.isEmpty && truckSize.value.isEmpty) {
       Get.snackbar(
-        'Alert',
-        'Please fill in at least one field',
+        'Alert'.tr,
+        'Please fill in at least one field'.tr,
         snackPosition: SnackPosition.BOTTOM,
       );
       return;

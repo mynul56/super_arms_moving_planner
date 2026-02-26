@@ -146,8 +146,8 @@ class ManageMoveController extends GetxController {
   void viewAllMoves() {
     // TODO: Navigate to detailed moves list
     Get.snackbar(
-      'Navigation',
-      'View All Moves',
+      'Navigation'.tr,
+      'View All Moves'.tr,
       snackPosition: SnackPosition.BOTTOM,
     );
   }

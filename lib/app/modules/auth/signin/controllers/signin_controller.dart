@@ -28,24 +28,24 @@ class SigninController extends GetxController {
 
     if (email.isEmpty) {
       Get.snackbar(
-        'Error',
-        'Please enter your email address',
+        'Error'.tr,
+        'Please enter your email address'.tr,
         snackPosition: SnackPosition.BOTTOM,
       );
       return;
     }
     if (!GetUtils.isEmail(email)) {
       Get.snackbar(
-        'Error',
-        'Please enter a valid email address',
+        'Error'.tr,
+        'Please enter a valid email address'.tr,
         snackPosition: SnackPosition.BOTTOM,
       );
       return;
     }
     if (password.isEmpty) {
       Get.snackbar(
-        'Error',
-        'Please enter your password',
+        'Error'.tr,
+        'Please enter your password'.tr,
         snackPosition: SnackPosition.BOTTOM,
       );
       return;
@@ -53,8 +53,8 @@ class SigninController extends GetxController {
 
     // TODO: Implement sign in logic
     Get.snackbar(
-      'Success',
-      'Sign in successful',
+      'Success'.tr,
+      'Sign in successful'.tr,
       snackPosition: SnackPosition.BOTTOM,
     );
   }
@@ -62,8 +62,8 @@ class SigninController extends GetxController {
   void signInWithGoogle() {
     // TODO: Implement Google sign in logic
     Get.snackbar(
-      'Info',
-      'Google sign in coming soon',
+      'Info'.tr,
+      'Google sign in coming soon'.tr,
       snackPosition: SnackPosition.BOTTOM,
     );
   }

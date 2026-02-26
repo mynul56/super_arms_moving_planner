@@ -35,8 +35,8 @@ class ForgotpasswordController extends GetxController {
       );
     } else {
       Get.snackbar(
-        'Error',
-        'Please enter your email',
+        'Error'.tr,
+        'Please enter your email'.tr,
         snackPosition: SnackPosition.BOTTOM,
       );
     }

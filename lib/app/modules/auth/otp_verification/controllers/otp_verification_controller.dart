@@ -70,8 +70,8 @@ class OtpVerificationController extends GetxController {
 
     if (otp.length != 4) {
       Get.snackbar(
-        'Error',
-        'Please enter the complete OTP',
+        'Error'.tr,
+        'Please enter the complete OTP'.tr,
         snackPosition: SnackPosition.BOTTOM,
       );
       return;
@@ -86,8 +86,8 @@ class OtpVerificationController extends GetxController {
     if (_remainingSeconds == 0) {
       // TODO: Implement resend OTP logic
       Get.snackbar(
-        'Success',
-        'OTP has been resent to your email',
+        'Success'.tr,
+        'OTP has been resent to your email'.tr,
         snackPosition: SnackPosition.BOTTOM,
       );
       _startTimer();
