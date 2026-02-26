@@ -88,7 +88,6 @@ class AppTranslations extends Translations {
       '06 items': '06 items',
       'Consignment Note': 'Consignment Note',
       'Edit Consignment Note': 'Edit Consignment Note',
-      'Enter note...': 'Enter note...',
       'Save': 'Save',
       'Enter note': 'Enter note',
       'Pickup Point': 'Pickup Point',
@@ -280,7 +279,6 @@ class AppTranslations extends Translations {
       '06 items': '06 articles',
       'Consignment Note': 'Lettre de voiture',
       'Edit Consignment Note': 'Modifier la lettre de voiture',
-      'Enter note...': 'Entrez une note...',
       'Save': 'Enregistrer',
       'Enter note': 'Entrez une note',
       'Pickup Point': 'Point d\'enlèvement',
@@ -325,7 +323,6 @@ class AppTranslations extends Translations {
       'Please upload social security document':
           'Veuillez télécharger le document de sécurité sociale',
       'Please enter company name': 'Veuillez saisir le nom de l\'entreprise',
-      'Enter note...': 'Entrez une note...',
       'Please fill all fields': 'Veuillez remplir tous les champs',
       'null@gmail.com': 'null@gmail.com',
       'Enter Name': 'Saisir le nom',
